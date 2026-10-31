@@ -1,7 +1,7 @@
 <!doctype html><html lang="id"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e9f7ff">
 <title>Dashboard — AERIS Corporate Finance</title>
-   <link
+<link
   rel="icon"
   type="image/svg+xml"
   href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2338BDF8'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='17' fill='url(%23g)'/%3E%3Cpath d='M15 47 30 16h4l15 31M22 36h20' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
@@ -110,6 +110,11 @@
 @media(max-width:620px){.v4-view{gap:13px}.v4-feature-hero{padding:25px 20px;border-radius:20px}.v4-feature-copy h1{font-size:clamp(24px,6vw,31px);letter-spacing:-1px}.v4-feature-copy p{font-size:10.5px}.v4-hero-kicker{letter-spacing:.7px;font-size:8px}.v4-feature-toolbar{flex-direction:column;align-items:flex-start;gap:10px}.v4-toolbar-actions{width:100%}.v4-toolbar-actions .btn{flex:1}.v4-stat-grid,.v4-skel-stats{gap:9px}.v4-stat{padding:16px 14px;border-radius:15px;min-height:132px}.v4-stat strong{font-size:clamp(16px,4vw,21px)}.v4-stat-top span{font-size:8px}.v4-panel{padding:16px 12px;border-radius:18px}.v4-panel-head h3{font-size:12px}.v4-panel-head p{font-size:10px}.v4-panel-mark{font-size:7px}.v4-skel-hero{grid-template-columns:1fr;padding:23px 20px;min-height:185px}.v4-skel-ornament{display:none}.v4-skel-stat{padding:15px;min-height:125px}.v4-skel-table{padding:16px;overflow:hidden}}
 @media(max-width:370px){.v4-stat-grid,.v4-skel-stats{grid-template-columns:1fr}.v4-feature-copy h1{font-size:25px}.v4-stat{min-height:100px}}
 @media(prefers-reduced-motion:reduce){.v4-shimmer,.v4-skel-progress i{animation:none!important}}
+
+/* ==========================================================
+ AERIS V5 · Three Financial Statements — responsive premium UI
+ ========================================================== */
+.v5-report-view{display:grid;gap:18px;min-width:0}.v5-control{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:14px;align-items:end;padding:19px 22px;background:white;border:1px solid #dcebf5;border-radius:20px;box-shadow:0 12px 30px #12659a0a}.v5-control .field{min-width:0}.v5-control .field span{font-size:10px;font-weight:800;display:block;margin-bottom:7px;color:#527c99}.v5-control .input{min-height:43px}.v5-control .btn{height:43px}.v5-control-btns{display:flex;gap:8px;flex-wrap:wrap}.v5-panel{background:#fff;border:1px solid #dceaf5;border-radius:22px;min-width:0;padding:21px 23px;box-shadow:0 14px 33px #146e9a09}.v5-panel h3{margin:0;font-size:15px;color:#163f59;letter-spacing:-.3px}.v5-panel p{font-size:10.5px;line-height:1.75;color:#7895ab;margin:6px 0 0}.v5-check-list{display:grid;gap:9px;margin-top:15px}.v5-check{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;background:#f8fbfe;border:1px solid #e5f0f7;border-radius:11px;font-size:10.5px;line-height:1.7;color:#527189}.v5-check i{font-style:normal;flex:0 0 21px;width:21px;height:21px;border-radius:7px;display:grid;place-items:center;font-weight:800;background:#e0f7ee;color:#0e966e}.v5-check.warn i{background:#fff3dd;color:#ae791b}.v5-check.error i{background:#ffedf1;color:#e24e6c}.v5-check.warn{border-color:#f5e7cb;background:#fffdf8}.v5-check.error{border-color:#fad8e2;background:#fff9fa}.v5-tabbar{display:flex;gap:8px;overflow-x:auto;padding-bottom:3px;scrollbar-width:thin}.v5-tabbar button{flex:1 0 auto;min-height:44px;border:1px solid #dfeaf5;border-radius:12px;padding:10px 13px;background:#fff;color:#648397;font-size:10.5px;font-weight:800}.v5-tabbar button.active{background:linear-gradient(110deg,#108fca,#45bfe9);color:#fff;border-color:transparent;box-shadow:0 8px 18px #169bca24}.v5-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.v5-stat{border:1px solid #dcebf5;padding:18px 19px;border-radius:17px;background:linear-gradient(145deg,#fff,#fafdff);min-width:0}.v5-stat small{color:#849db0;font-weight:800;font-size:9px;letter-spacing:.4px}.v5-stat strong{display:block;color:#17445e;font-size:clamp(17px,1.7vw,24px);font-weight:800;letter-spacing:-.6px;margin-top:11px;overflow-wrap:anywhere}.v5-statement{margin-top:13px}.v5-statement-row{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;padding:12px 14px;border-bottom:1px solid #ebf2f8;color:#537189;font-size:11px;line-height:1.6}.v5-statement-row strong{font-weight:800;color:#153a52;white-space:nowrap;font-variant-numeric:tabular-nums}.v5-statement-row b{font-weight:800;color:#184460}.v5-statement-row small{display:block;color:#92a8b7;margin-top:2px;font-size:9px}.v5-statement-row.total{background:#eff9ff;border-radius:10px;border-bottom:0;margin-top:7px;font-weight:800;color:#16517b}.v5-statement-row.total strong{color:#087fae}.v5-statement-heading{background:#f5fbff;border-radius:10px;font-weight:800;color:#1c648d;letter-spacing:.4px;font-size:10.5px;margin-top:14px;padding:12px 14px}.v5-report-footer{font-size:10px;color:#7993a5;line-height:1.8}.v5-ready{color:#0c9979!important}.v5-empty-state{padding:36px 20px;text-align:center;background:linear-gradient(150deg,#fff,#f7fbfe);border:1px dashed #cce4f1;border-radius:17px;color:#849eaf}.v5-empty-state strong{display:block;font-size:16px;color:#164768;margin-bottom:8px}.v5-empty-state p{font-size:11px;line-height:1.7}.v5-map-grid{display:grid;gap:12px}.v5-map-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(115px,170px);gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eef4f9}.v5-map-row strong{font-size:10.5px;line-height:1.4;color:#234b66}.v5-map-row small{display:block;font-size:9px;color:#9caebb;margin-top:4px}.v5-map-row .select{min-height:40px;font-size:11px}.v5-map-tip{margin-top:15px;padding:13px;border-radius:12px;background:#f1faff;color:#487991;font-size:10px;line-height:1.75}.v5-statements-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.v5-actions{display:flex;gap:8px;flex-wrap:wrap}.v5-actions .btn{min-height:38px}.v5-rpc-busy{opacity:.65;pointer-events:none}@media(max-width:850px){.v5-control{grid-template-columns:1fr 1fr}.v5-control-btns{grid-column:1/-1}.v5-control-btns .btn{flex:1}}@media(max-width:600px){.v5-report-view{gap:12px}.v5-control{padding:15px 13px;gap:10px;border-radius:16px}.v5-stats{grid-template-columns:1fr 1fr;gap:9px}.v5-stat{padding:15px 13px;border-radius:14px}.v5-stat strong{font-size:17px}.v5-panel{padding:17px 13px;border-radius:17px}.v5-statement-row{padding:11px 6px;gap:8px;font-size:10px}.v5-statement-row strong{white-space:normal;text-align:right}.v5-control .btn{white-space:normal}.v5-tabbar button{padding:10px 11px}.v5-map-row{grid-template-columns:1fr;gap:7px}}@media(max-width:370px){.v5-control{grid-template-columns:1fr}.v5-control-btns{grid-column:auto}.v5-stats{grid-template-columns:1fr}}
 
 </style></head><body>
 <div class="app"><aside class="side" id="sidebar"><div class="side-brand"><div class="logo">A</div><div><div class="brand-name">aeris<span style="color:#37bdf1">.</span></div><div class="brand-sub">CORPORATE FINANCE</div></div><button type="button" id="closeSide" class="btn sm" style="margin-left:auto;display:none">×</button></div><nav class="side-scroll" id="navigation" aria-label="Navigasi aplikasi"><div class="nav-group">OVERVIEW</div><button class="nav active" data-view="dashboard" type="button"><span class="ni">▦</span><span>Dashboard</span></button><button class="nav" data-view="cashflow" type="button"><span class="ni">⌁</span><span>Cash Flow</span></button><div class="nav-group">BUSINESS OPERATIONS</div><button class="nav" data-view="transactions" type="button"><span class="ni">⇄</span><span>Transactions</span></button><button class="nav" data-view="accounts" type="button"><span class="ni">▣</span><span>Accounts & Banks</span></button><button class="nav" data-view="invoices" type="button"><span class="ni">↙</span><span>Accounts Receivable</span></button><button class="nav" data-view="bills" type="button"><span class="ni">↗</span><span>Accounts Payable</span></button><div class="nav-group">ACCOUNTING & CONTROL</div><button class="nav" data-view="coa" type="button"><span class="ni">▥</span><span>Chart of Accounts</span></button><button class="nav" data-view="ledger" type="button"><span class="ni">▤</span><span>Journal & Ledger</span></button><button class="nav" data-view="reconcile" type="button"><span class="ni">⇌</span><span>Bank Reconciliation</span></button></nav><div class="side-bottom"><strong>✦ AERIS Business Suite</strong><p>Finance operations, budgeting, receivables, payables & transparent audit trails.</p><div class="muted" style="margin-top:10px">Google Sheets · Private company tenants</div></div></aside>
@@ -892,6 +897,164 @@ skeleton=function(label='Menyiapkan laporan…'){
  const content=isTable?`<div class="v4-skel-table"><div class="v4-shimmer" style="width:34%;height:16px"></div><div class="v4-skel-thead"></div>${Array.from({length:5},()=>`<div class="v4-skel-tr"><i class="v4-shimmer"></i><i class="v4-shimmer"></i><i class="v4-shimmer"></i><i class="v4-shimmer"></i></div>`).join('')}</div>`:`<div class="v4-skel-chart"><div class="v4-shimmer" style="width:35%;height:15px"></div><div class="v4-skel-chart-inner">${Array.from({length:12},(_,i)=>`<i style="height:${22+(i*17)%65}%"></i>`).join('')}</div></div>`;
  return `<div class="view v4-skeleton" role="status" aria-label="${esc(label)}"><div class="v4-skel-hero"><div><span class="v4-skel-kicker"><i class="live"></i> AERIS · FINANCIAL INTELLIGENCE</span><h1>${esc(TITLES[S.view]||'Dashboard')}</h1><p>Menyiapkan data ${esc(S.org?.name||'perusahaan')}…</p><div class="v4-skel-progress"><i></i> Sinkronisasi modul</div></div><div class="v4-skel-ornament"><span class="v4-shimmer"></span><span class="v4-shimmer"></span><span class="v4-shimmer"></span></div></div><div class="v4-skel-stats">${stat}</div>${content}</div>`;
 };
+
+/* ============================================================
+ AERIS V5 — THREE FINANCIAL STATEMENTS GENERATOR
+ Standalone route; existing V1–V4 modules remain untouched.
+ ============================================================ */
+sections.find(group=>group.label==='INTELLIGENCE')?.items.unshift(['statements','Three Financial Statements','▧']);
+TITLES.statements='Three Financial Statements Generator';
+DESC.statements='Validasi jurnal, neraca dan arus kas berbasis akun posted; ekspor PDF atau XLSX.';
+const V5={start:today().slice(0,7)+'-01',end:today(),config:null,report:null,tab:'income',busy:false,error:'',orgId:''};
+const v5PeriodName=()=>V5.start+' s.d. '+V5.end;
+function v5Mark(label,value,extra=''){return `<div class="v5-stat"><small>${esc(label)}</small><strong class="${extra}">${esc(money(value))}</strong></div>`;}
+function v5AccountLines(rows){return rows.length?rows.map(r=>`<div class="v5-statement-row"><span><b>${esc(r.code)} · ${esc(r.name)}</b></span><strong class="${r.amount<0?'negative':''}">${esc(money(r.amount))}</strong></div>`).join(''):'<div class="v5-statement-row"><span>Tidak ada saldo pada kelompok ini</span><strong>—</strong></div>';}
+function v5Total(label,value){return `<div class="v5-statement-row total"><span>${esc(label)}</span><strong class="${value<0?'negative':''}">${esc(money(value))}</strong></div>`;}
+function v5Heading(t){return `<div class="v5-statement-heading">${esc(t)}</div>`;}
+function v5ReportBody(){
+ const r=V5.report?.statements;if(!r)return '<div class="v5-empty-state"><strong>Laporan belum dihasilkan</strong><p>Pilih tanggal awal dan akhir, lalu klik <b>Validasi & Buat Laporan</b>. Sistem hanya menggunakan jurnal yang telah posted.</p></div>';
+ if(V5.tab==='income'){
+  const x=r.income;return `<div class="v5-stats">${v5Mark('TOTAL PENDAPATAN',x.totalRevenue)}${v5Mark('TOTAL BEBAN',x.totalExpense)}${v5Mark('LABA / (RUGI) BERSIH',x.netProfit,x.netProfit<0?'negative':'v5-ready')}</div><section class="v5-statement">${v5Heading('PENDAPATAN · REVENUE')}${v5AccountLines(x.revenues)}${v5Total('Total Pendapatan',x.totalRevenue)}${v5Heading('BEBAN · EXPENSES')}${v5AccountLines(x.expenses)}${v5Total('Total Beban',x.totalExpense)}${v5Total('LABA / (RUGI) BERSIH',x.netProfit)}</section>`;
+ }
+ if(V5.tab==='balance'){
+  const x=r.balance;return `<div class="v5-stats">${v5Mark('TOTAL ASET',x.totalAssets)}${v5Mark('TOTAL LIABILITAS',x.totalLiabilities)}${v5Mark('TOTAL EKUITAS',x.totalEquity)}</div><section class="v5-statement">${v5Heading('ASET · ASSETS')}${v5AccountLines(x.assets)}${v5Total('TOTAL ASET',x.totalAssets)}${v5Heading('LIABILITAS · LIABILITIES')}${v5AccountLines(x.liabilities)}${v5Total('Total Liabilitas',x.totalLiabilities)}${v5Heading('EKUITAS · EQUITY')}${v5AccountLines(x.equityAccounts)}<div class="v5-statement-row"><span><b>Hasil usaha kumulatif belum ditutup</b><small>Laba akun nominal yang belum ditransfer ke ekuitas</small></span><strong>${money(x.retained)}</strong></div>${v5Total('TOTAL EKUITAS',x.totalEquity)}${v5Total('TOTAL LIABILITAS + EKUITAS',x.totalLiabilities+x.totalEquity)}${v5Total('SELISIH NERACA (HARUS 0)',x.difference)}</section>`;
+ }
+ const x=r.cash;return `<div class="v5-stats">${v5Mark('KAS AWAL',x.openingCash)}${v5Mark('PERUBAHAN KAS BERSIH',x.netChange)}${v5Mark('KAS AKHIR',x.closingCash)}</div><section class="v5-statement">${v5Heading('ARUS KAS AKTIVITAS OPERASI')}${v5AccountLines(x.operating)}${v5Total('Arus Kas Operasi',x.operatingTotal)}${v5Heading('ARUS KAS AKTIVITAS INVESTASI')}${v5AccountLines(x.investing)}${v5Total('Arus Kas Investasi',x.investingTotal)}${v5Heading('ARUS KAS AKTIVITAS PENDANAAN')}${v5AccountLines(x.financing)}${v5Total('Arus Kas Pendanaan',x.financingTotal)}${v5Total('KENAIKAN / (PENURUNAN) KAS',x.netChange)}${v5Total('KAS AWAL PERIODE',x.openingCash)}${v5Total('KAS AKHIR PERIODE',x.closingCash)}</section><p class="v5-report-footer">Metode langsung berbasis jurnal yang menggerakkan akun kas terpetakan. Pergerakan antar rekening kas yang saling meniadakan tidak dihitung sebagai kas operasi.</p>`;
+}
+function v5Header(){
+ return `<section class="v4-feature-hero"><div class="v4-feature-copy"><span class="v4-hero-kicker"><span class="live"></span> AERIS V5 · FINANCIAL REPORTING SUITE</span><h1>${esc(TITLES.statements)}</h1><p>${esc(DESC.statements)}</p></div><div class="v4-hero-asset" aria-hidden="true"><div class="v4-orbit o1"></div><div class="v4-orbit o2"></div><div class="v4-hero-graphic"><span>THREE FINANCIAL STATEMENTS</span><div class="v4-hero-pulse"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>AERIS <em>V5</em></strong></div></div></section><div class="v4-feature-toolbar"><div><strong>Reporting Workspace</strong><span>Income Statement · Balance Sheet · Cash Flow Statement</span></div><div class="v4-toolbar-actions"><button type="button" class="btn" data-v5="mapping">⚙ Klasifikasi Arus Kas</button></div></div>`;
+}
+function v5Page(){
+ const report=V5.report,v=report?.validation,ready=!!report?.valid;
+ const validation=v?`<section class="v5-panel"><div class="v5-statements-top"><div><h3>${ready?'Validasi laporan berhasil':'Validasi membutuhkan perbaikan'}</h3><p>${v.journalCount} jurnal posted diperiksa · ${v.periodJournalCount} jurnal dalam periode · ${v.draftCount} draft</p></div><span class="v4-pill ${ready?'ok':''}">${ready?'READY TO EXPORT':'PERLU PEMERIKSAAN'}</span></div><div class="v5-check-list">${(v.checks||[]).map(c=>`<div class="v5-check ${esc(c.level)}"><i>${c.level==='pass'?'✓':c.level==='warning'?'!':'×'}</i><span>${esc(c.message)}</span></div>`).join('')}</div></section>`:'';
+ const actions=ready?`<button class="btn" type="button" data-v5="excel">↓ Ekspor Excel</button><button class="btn blue" type="button" data-v5="pdf">↓ Ekspor PDF</button>`:'';
+ return `<div class="view v5-report-view">${v5Header()}
+  <div class="v5-control"><label class="field"><span>Tanggal awal periode</span><input id="v5Start" class="input" type="date" value="${esc(V5.start)}" max="9999-12-31"></label><label class="field"><span>Tanggal akhir periode</span><input id="v5End" class="input" type="date" value="${esc(V5.end)}" max="9999-12-31"></label><div class="v5-control-btns"><button type="button" class="btn blue" data-v5="generate" ${V5.busy?'disabled':''}>${V5.busy?'◴ Memvalidasi…':'✓ Validasi & Buat Laporan'}</button></div></div>
+  ${V5.error?`<div class="v5-check error"><i>×</i><span>${esc(V5.error)}</span></div>`:''}${validation}
+  <section class="v5-panel"><div class="v5-statements-top"><div><h3>Financial Statements ${ready?'· Tervalidasi':''}</h3><p>${esc(S.org?.name||'')} · Periode ${esc(v5PeriodName())} · IDR · Accrual journal basis</p></div><div class="v5-actions">${actions}</div></div><div class="v5-tabbar" style="margin:19px 0 15px" role="tablist" aria-label="Jenis laporan">${[['income','Income Statement · Laba Rugi'],['balance','Balance Sheet · Neraca'],['cash','Cash Flow Statement · Arus Kas']].map(([id,title])=>`<button type="button" role="tab" aria-selected="${V5.tab===id}" class="${V5.tab===id?'active':''}" data-v5-tab="${id}">${esc(title)}</button>`).join('')}</div>${v5ReportBody()}</section>
+  <p class="v5-report-footer">Angka laba rugi dan neraca berasal dari jurnal <b>posted</b>, bukan dari agregasi transaksi kas, invoice terbuka, estimasi pajak, atau aset analitik yang belum dijurnal. Laporan disusun untuk tinjauan internal dan perlu direview akuntan sebelum dipakai sebagai pelaporan resmi. Klasifikasi arus kas hanya menggunakan pemetaan yang disetujui.</p></div>`;
+}
+async function v5Ensure(force=false){
+ const orgId=S.org?.id;if(!orgId)return;
+ if(!force&&V5.config&&V5.orgId===orgId)return;
+ const resp=await rpc('getFinancialReportConfig',{},orgId);
+ if(S.org?.id!==orgId)return;
+ V5.config=resp;V5.orgId=orgId;
+}
+const v5BaseResetOrgData=resetOrgData;
+resetOrgData=function(){v5BaseResetOrgData();V5.config=null;V5.report=null;V5.orgId='';V5.error='';};
+const v5BaseNavigate=navigate;
+navigate=async function(view){
+ if(view!=='statements')return v5BaseNavigate(view);
+ const seq=++S.navSeq;S.view=view;closeSide();updateNav();
+ if(!S.org)return renderOnboarding();
+ if(V5.orgId&&V5.orgId!==S.org.id){V5.config=null;V5.report=null;}
+ if(!V5.config){$('content').innerHTML=skeleton('Memuat Three Financial Statements…');try{await v5Ensure();}catch(e){if(seq===S.navSeq){V5.error=e.message;toast(e.message,true);}}}
+ if(seq===S.navSeq){render();window.scrollTo(0,0);}
+};
+const v5BaseRender=render;
+render=function(){
+ if(S.view!=='statements')return v5BaseRender();
+ updateNav();if(!S.org)return renderOnboarding();
+ $('content').innerHTML=v5Page()+'<footer class="page-footer"><span>© AERIS Corporate Finance · Financial Statement Generator</span><span>Posted journal · Cash flow mapping · IDR</span></footer>';
+ v5Attach();
+};
+const v5BaseRefresh=refresh;
+refresh=async function(force=false){
+ if(S.view!=='statements')return v5BaseRefresh(force);
+ V5.report=null;V5.error='';
+ try{await v5Ensure(true);render();if(force)toast('Pengaturan laporan telah disinkronkan. Silakan validasi ulang.');}
+ catch(e){V5.error=e.message;render();toast(e.message,true);}
+};
+function v5Attach(){
+ const root=$('content');
+ root.querySelectorAll('[data-v5]').forEach(b=>b.addEventListener('click',()=>void v5Action(b.dataset.v5)));
+ root.querySelectorAll('[data-v5-tab]').forEach(b=>b.addEventListener('click',()=>{V5.tab=b.dataset.v5Tab;render();}));
+ [['v5Start','start'],['v5End','end']].forEach(([id,key])=>$(id)?.addEventListener('change',e=>{V5[key]=e.target.value;V5.report=null;V5.error='';render();}));
+}
+async function v5Action(action){
+ if(action==='mapping')return v5MappingModal();
+ if(action==='generate'){
+  if(V5.busy)return;
+  if(!V5.start||!V5.end||V5.start>V5.end)return toast('Periode laporan tidak valid.',true);
+  const orgId=S.org?.id,startDate=V5.start,endDate=V5.end;
+  V5.busy=true;V5.error='';V5.report=null;render();
+  try{const result=await rpc('generateFinancialStatements',{startDate,endDate},orgId);
+   if(S.org?.id!==orgId||V5.start!==startDate||V5.end!==endDate)return;
+   V5.report=result;if(!result.valid)toast('Validasi menemukan masalah. Perbaiki jurnal, pemetaan, atau saldo terlebih dahulu.',true);else toast('Tiga laporan keuangan berhasil dibuat dan siap diekspor.');
+  }catch(e){if(S.org?.id===orgId){V5.error=e.message;toast(e.message,true);}}
+  finally{V5.busy=false;if(S.org?.id===orgId&&S.view==='statements')render();}
+  return;
+ }
+ if(!V5.report?.valid)return toast('Jalankan validasi yang berhasil sebelum ekspor.',true);
+ try{if(action==='excel')await v5ExportXlsx();else if(action==='pdf')await v5ExportPdf();}
+ catch(e){toast('Ekspor gagal: '+e.message,true);}
+}
+function v5MappingModal(){
+ if(!canWrite())return toast('Hanya Owner dan Editor yang dapat mengatur klasifikasi arus kas.',true);
+ if(!V5.config)return toast('Konfigurasi belum dimuat. Klik sinkronisasi lalu coba lagi.',true);
+ const coa=V5.config.coa||[],mapped=new Map((V5.config.mappings||[]).map(x=>[String(x.accountId),String(x.cashFlowClass)])),cash=new Set((V5.config.accountLinks||[]).map(x=>String(x.ledgerAccountId)));
+ const entries=coa.filter(a=>!cash.has(String(a.id)));
+ if(!entries.length)return toast('Buat akun COA dan pemetaan rekening kas terlebih dahulu.',true);
+ const html=`<form id="activeModalForm"><div class="v5-map-grid">${entries.map(a=>{
+  const val=mapped.get(String(a.id))||(['revenue','expense'].includes(a.type)?'operating':'');
+  return `<label class="v5-map-row"><div><strong>${esc(a.code)} · ${esc(a.name)}</strong><small>Kelompok COA: ${esc(a.type)}</small></div><select class="select" data-v5-map="${esc(a.id)}"><option value="">Belum diklasifikasikan</option>${[['operating','Operasi'],['investing','Investasi'],['financing','Pendanaan']].map(([v,t])=>`<option value="${v}" ${val===v?'selected':''}>${t}</option>`).join('')}</select></label>`;}).join('')}</div><p class="v5-map-tip">Pilih kategori berdasarkan substansi transaksi. Akun aset nonkas, pinjaman, dan ekuitas tidak boleh ditebak otomatis. Akun kas ditentukan melalui Account Mapping. Untuk transaksi tanpa kas, pemetaan ini tidak membuat arus kas baru.</p></form>`;
+ openModal('Klasifikasi Arus Kas','Konfigurasi klasifikasi akun COA untuk kegiatan operasi, investasi, dan pendanaan.',html,'Simpan Klasifikasi');
+ $('activeModalForm').addEventListener('submit',async e=>{
+  e.preventDefault();const btn=$('modalSubmit');if(btn.disabled)return;btn.disabled=true;
+  const mappings=[...e.currentTarget.querySelectorAll('[data-v5-map]')].filter(el=>el.value).map(el=>({accountId:el.dataset.v5Map,cashFlowClass:el.value}));
+  const org=S.org?.id;
+  try{await rpc('saveFinancialMappings',{mappings,requestId:uuid()},org);closeModal();V5.report=null;await v5Ensure(true);if(S.org?.id===org){render();toast('Klasifikasi arus kas disimpan. Validasi kembali laporan.');}}
+  catch(err){toast(err.message,true);btn.disabled=false;}
+ });
+}
+let v5Scripts={};
+function v5Script(url,globalName){
+ if(globalName&&window[globalName])return Promise.resolve();
+ if(!v5Scripts[url])v5Scripts[url]=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=url;script.async=true;script.onload=()=>!globalName||window[globalName]?resolve():reject(new Error(globalName+' tidak ditemukan setelah memuat library.'));script.onerror=()=>reject(new Error('Library ekspor gagal diunduh. Periksa koneksi atau kebijakan CSP.'));document.head.append(script);});
+ return v5Scripts[url];
+}
+function v5ExportSheets(){
+ const s=V5.report.statements,v=V5.report.validation;
+ const safe=x=>{const z=String(x??'');return /^[=+@\-\t\r]/.test(z)?"'"+z:z;};
+ const heading=title=>[[safe(V5.report.organization+' · '+title)],['Periode',v5PeriodName()],['Mata uang','IDR'],[]];
+ const account=rows=>rows.map(x=>[safe(x.code+' · '+x.name),x.amount]);
+ const income=[...heading('Income Statement · Laba Rugi'),['PENDAPATAN', 'IDR'],...account(s.income.revenues),['TOTAL PENDAPATAN',s.income.totalRevenue],[],['BEBAN','IDR'],...account(s.income.expenses),['TOTAL BEBAN',s.income.totalExpense],[],['LABA / (RUGI) BERSIH',s.income.netProfit]];
+ const bs=[...heading('Balance Sheet · Neraca'),['ASET','IDR'],...account(s.balance.assets),['TOTAL ASET',s.balance.totalAssets],[],['LIABILITAS','IDR'],...account(s.balance.liabilities),['TOTAL LIABILITAS',s.balance.totalLiabilities],[],['EKUITAS','IDR'],...account(s.balance.equityAccounts),['Hasil usaha kumulatif belum ditutup',s.balance.retained],['TOTAL EKUITAS',s.balance.totalEquity],['LIABILITAS + EKUITAS',s.balance.totalLiabilities+s.balance.totalEquity],['SELISIH',s.balance.difference]];
+ const cash=[...heading('Cash Flow Statement · Arus Kas'),['OPERASI','IDR'],...account(s.cash.operating),['NET OPERASI',s.cash.operatingTotal],[],['INVESTASI','IDR'],...account(s.cash.investing),['NET INVESTASI',s.cash.investingTotal],[],['PENDANAAN','IDR'],...account(s.cash.financing),['NET PENDANAAN',s.cash.financingTotal],[],['PERUBAHAN KAS',s.cash.netChange],['KAS AWAL',s.cash.openingCash],['KAS AKHIR',s.cash.closingCash]];
+ const validation=[['AERIS · VALIDATION CHECKLIST'],['Periode',v5PeriodName()],['Jurnal posted',v.journalCount],['Draft periode',v.draftCount],[],['STATUS','HASIL'],...v.checks.map(x=>[x.level.toUpperCase(),safe(x.message)])];
+ return [['Laba Rugi',income],['Neraca',bs],['Arus Kas',cash],['Validasi',validation]];
+}
+async function v5ExportXlsx(){
+ await v5Script('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js','XLSX');
+ const XLSX=window.XLSX,wb=XLSX.utils.book_new();
+ for(const [name,rows] of v5ExportSheets()){
+  const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=[{wch:53},{wch:24}];
+  Object.keys(ws).filter(k=>!k.startsWith('!')).forEach(k=>{if(ws[k].t==='n')ws[k].z='#,##0.00;[Red](#,##0.00)';});
+  XLSX.utils.book_append_sheet(wb,ws,name);
+ }
+ XLSX.writeFile(wb,`AERIS_Three_Statements_${V5.start}_${V5.end}.xlsx`,{compression:true});
+ toast('Excel empat sheet berhasil dibuat.');
+}
+async function v5ExportPdf(){
+ await v5Script('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js','jspdf');
+ await v5Script('https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js',null);
+ const {jsPDF}=window.jspdf,doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'}),s=V5.report.statements;
+ if(typeof doc.autoTable!=='function')throw new Error('Plugin tabel PDF belum siap.');
+ const tr=x=>String(x??'').replace(/[\u2013\u2014]/g,'-');
+ const section=(title,rows)=>{
+  doc.setFillColor(12,135,187);doc.roundedRect(14,12,182,22,4,4,'F');doc.setFont('helvetica','bold');doc.setTextColor(255);doc.setFontSize(15);doc.text('AERIS  /  '+title,19,25);doc.setTextColor(39,67,84);doc.setFontSize(9);doc.setFont('helvetica','normal');doc.text(tr(V5.report.organization).slice(0,90),15,43);doc.text('Periode: '+v5PeriodName()+'    |    IDR    |    Posted Journal Basis',15,49);
+  doc.autoTable({startY:56,head:[['AKUN / URAIAN','NILAI (IDR)']],body:rows.map(x=>[tr(x[0]),typeof x[1]==='number'?new Intl.NumberFormat('id-ID',{maximumFractionDigits:2}).format(x[1]):tr(x[1]??'')]),theme:'striped',margin:{left:14,right:14,bottom:15},styles:{font:'helvetica',fontSize:8,cellPadding:3,textColor:[30,69,92],overflow:'linebreak'},headStyles:{fillColor:[24,149,203],textColor:255},columnStyles:{1:{halign:'right',cellWidth:61}},alternateRowStyles:{fillColor:[245,251,255]}});
+ };
+ const sheets=v5ExportSheets();
+ section('INCOME STATEMENT',sheets[0][1].slice(4));doc.addPage();
+ section('BALANCE SHEET',sheets[1][1].slice(4));doc.addPage();
+ section('CASH FLOW STATEMENT',sheets[2][1].slice(4));doc.addPage();
+ section('VALIDATION',sheets[3][1].slice(5));
+ const pageCount=doc.internal.getNumberOfPages();for(let i=1;i<=pageCount;i++){doc.setPage(i);doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(130);doc.text('AERIS CORPORATE FINANCE  |  Internal management report  |  '+i+' / '+pageCount,14,290);}
+ doc.save(`AERIS_Three_Statements_${V5.start}_${V5.end}.pdf`);
+ toast('PDF laporan berhasil dibuat.');
+}
 
 // Firebase guards the visible interface; backend independently verifies token + company role.
 onAuthStateChanged(auth,async user=>{if(!user){location.replace('index.html');return;}if(!user.emailVerified){await user.reload().catch(()=>{});if(!auth.currentUser?.emailVerified){location.replace('verify.html');return;}}S.user=auth.currentUser;await boot();});
