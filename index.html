@@ -1,83 +1,1851 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#4dbeee">
-<title>Masuk / Daftar — AERIS Corporate Finance</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#2aa9e0" />
+  <title>Masuk / Daftar — AERIS Corporate Finance</title>
 
-<!-- AERIS CORPORATE FINANCE — PREMIUM FAVICON -->
-<link
-  rel="icon"
-  type="image/svg+xml"
-  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2338BDF8'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='17' fill='url(%23g)'/%3E%3Cpath d='M15 47 30 16h4l15 31M22 36h20' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
-/>
+  <!-- PREMIUM AERIS FAVICON -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2359D5FF'/%3E%3Cstop offset='1' stop-color='%231B7EE5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='17' fill='url(%23g)'/%3E%3Cpath d='M16 48 30 16h4l14 32M23 36h18' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+  />
 
-<meta name="theme-color" content="#38BDF8" />
-<meta
-  name="application-name"
-  content="AERIS Corporate Finance"
-/>
+  <meta name="application-name" content="AERIS Corporate Finance" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script><script src="./config.js"></script>
-<style>
-:root{--blue:#128ac9;--sky:#38bdf8;--ink:#122b43;--muted:#7a8fa2;--border:#dcecf6}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink)}body{background:#f4faff}[hidden]{display:none!important}
-.auth-shell{display:grid;grid-template-columns:minmax(0,1fr) minmax(410px,500px);min-height:100dvh}.auth-hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(125deg,#259bd5 0%,#45bbed 55%,#98ddf7 100%);color:white;padding:clamp(26px,4vw,65px);display:flex;flex-direction:column;justify-content:space-between;gap:35px}.auth-hero:before{content:"";position:absolute;border-radius:50%;width:590px;height:590px;right:-220px;top:17%;border:1px solid #fff4;box-shadow:0 0 0 80px #fff1,0 0 0 160px #fff1;pointer-events:none}.auth-hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 4% 95%,#056ca340,transparent 42%);pointer-events:none}.hero-content,.brand,.hero-footer{position:relative;z-index:1}.brand{display:flex;align-items:center;gap:13px}.brand-mark{display:grid;place-items:center;width:49px;height:49px;border-radius:15px;background:#fff3;border:1px solid #fff7;font-size:23px;font-weight:800;box-shadow:0 12px 30px #076fa42c}.brand-title{font-size:29px;line-height:1;letter-spacing:-1.4px;font-weight:800}.brand-desc{font-size:8px;letter-spacing:2.5px;font-weight:800;margin-top:8px}.hero-content{max-width:730px}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #fff7;padding:9px 13px;border-radius:30px;font-size:9px;font-weight:800;letter-spacing:1.8px;background:#ffffff1e}.dot{width:8px;height:8px;background:#75f1d1;border-radius:50%;box-shadow:0 0 0 4px #75f1d122;display:inline-block}.auth-hero h1{font-size:clamp(40px,4.1vw,62px);line-height:1.11;letter-spacing:-.058em;margin:24px 0 17px;font-weight:800}.hero-description{font-size:14px;line-height:1.9;max-width:560px;color:#fffefeff}.hero-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:510px;gap:12px;margin-top:27px}.hero-card{padding:17px 20px;border:1px solid #fff6;border-radius:18px;background:#fff2;backdrop-filter:blur(9px)}.hero-card strong{font-size:18px}.hero-card p{font-size:10px;line-height:1.65;margin:7px 0 0;color:#ffffffeb}.hero-footer{font-size:10px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;color:#ffffffdf}.hero-pill{border:1px solid #fff6;border-radius:30px;padding:8px 12px;background:#fff2}
-.auth-right{position:relative;padding:22px;display:grid;place-items:center;background:radial-gradient(circle at 100% 0%,#d5f5ff,transparent 40%),#f7fbff}.auth-panel{width:100%;max-width:455px;background:#fff;border:1px solid #e5f2fa;border-radius:25px;padding:31px;box-shadow:0 21px 65px #18537b14}.panel-brand{display:flex;align-items:center;gap:10px}.small-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#36b0e7,#70d2f6);color:white;font-weight:800;box-shadow:0 8px 18px #4ebbee45}.small-kicker{font-size:9px;color:#82a0b5;font-weight:800;letter-spacing:1.2px}.small-title{font-size:11px;font-weight:800;margin-top:4px}.auth-panel h2{font-weight:800;font-size:29px;line-height:1.2;letter-spacing:-1.2px;margin:27px 0 6px}.subtitle{font-size:11px;line-height:1.8;color:var(--muted);margin:0}.tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:23px 0 21px;padding:4px;background:#f1f9fe;border:1px solid #e0eff8;border-radius:13px}.tab{border:0;padding:13px 8px;border-radius:10px;font:800 11px 'Plus Jakarta Sans';cursor:pointer;color:#6d879c;background:transparent}.tab[aria-selected="true"]{background:linear-gradient(125deg,#1595ce,#53c5f1);color:white;box-shadow:0 8px 18px #1595ce35}.field{margin-bottom:15px}.field label{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:7px;font-size:11px;font-weight:800}.field input{display:block;width:100%;height:47px;border:1px solid #dfeaf3;border-radius:12px;padding:0 14px;outline:0;color:var(--ink);background:#fff;font:600 12px 'Plus Jakarta Sans';transition:border-color .2s,box-shadow .2s}.field input:focus{border-color:#5ec6ed;box-shadow:0 0 0 4px #38bdf81d}.field input::placeholder{color:#a6b5c3}.field input[type=password]{padding-right:48px}.pass-field{position:relative}.pass-toggle{position:absolute;right:7px;top:5px;width:36px;height:36px;border:0;border-radius:9px;background:transparent;color:#748c9f;cursor:pointer}.pass-toggle:hover{background:#ebf9ff;color:#1388bd}.text-action{border:0;background:none;color:#078bc4;font:800 10px 'Plus Jakarta Sans';cursor:pointer}.primary{border:0;width:100%;min-height:47px;background:linear-gradient(105deg,#1599d7,#59c8ef);box-shadow:0 9px 20px #0d94d02b;color:white;border-radius:12px;font:800 12px 'Plus Jakarta Sans';cursor:pointer;transition:filter .2s,transform .2s}.primary:hover{filter:brightness(1.035);transform:translateY(-1px)}.primary:disabled{opacity:.55;cursor:wait}.divider{display:flex;align-items:center;gap:10px;color:#93a6b5;font-size:10px;margin:18px 0}.divider:before,.divider:after{content:"";height:1px;background:#e6f0f6;flex:1}.google{width:100%;min-height:46px;border:1px solid #e0ecf4;border-radius:12px;background:white;display:flex;align-items:center;justify-content:center;gap:10px;font:800 11px 'Plus Jakarta Sans';cursor:pointer}.google:hover{background:#f8fdff}.note{display:flex;align-items:flex-start;gap:11px;padding:14px;margin-top:20px;background:#f5fbff;border:1px solid #e3f1fa;border-radius:14px}.note strong{font-size:11px}.note p{font-size:10px;line-height:1.7;color:#7e94a6;margin:5px 0 0}.notice{padding:12px 13px;border:1px solid #f6d4da;background:#fff6f7;color:#c33856;border-radius:12px;font-size:11px;line-height:1.6;margin:12px 0}.notice.ok{border-color:#bfebda;background:#f0fff9;color:#147758}.extras{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:14px}.mini-link{border:0;background:transparent;color:#0d93c9;font:700 11px 'Plus Jakarta Sans';cursor:pointer}.mobile-hero{display:none}
-@media(max-width:1023px){.auth-shell{display:block}.auth-hero{display:none}.auth-right{padding:16px;min-height:100dvh;align-items:start}.mobile-hero{display:block;width:100%;padding:20px;border-radius:20px;background:linear-gradient(120deg,#178fc5,#64d2f7);color:white;margin-bottom:13px}.mobile-hero h1{font-size:24px;line-height:1.12;margin:13px 0 7px;letter-spacing:-.8px}.mobile-hero p{font-size:11px;line-height:1.65}.auth-panel{max-width:490px;margin:auto;padding:22px}.auth-panel h2{font-size:25px;margin-top:22px}}@media(max-width:420px){.auth-right{padding:10px}.auth-panel{padding:19px;border-radius:18px}.mobile-hero{padding:18px}.auth-panel h2{font-size:23px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./config.js"></script>
+
+  <style>
+    :root{
+      --bg:#edf8ff;
+      --bg-2:#f8fcff;
+      --panel:#ffffff;
+      --panel-2:rgba(255,255,255,.76);
+      --ink:#10283f;
+      --ink-soft:#244766;
+      --muted:#6c879f;
+      --line:#d8eaf7;
+      --line-2:rgba(255,255,255,.22);
+      --blue:#159edb;
+      --blue-2:#41c8f2;
+      --blue-3:#1178d6;
+      --sky:#7ee3ff;
+      --success:#4cd6a8;
+      --shadow:0 22px 70px rgba(17, 73, 118, .12);
+      --shadow-soft:0 12px 35px rgba(20, 88, 141, .10);
+      --shadow-glow:0 20px 65px rgba(74, 186, 240, .18);
+      --radius-xl:32px;
+      --radius-lg:24px;
+      --radius-md:18px;
+      --radius-sm:14px;
+      --container:1540px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      min-height:100%;
+      font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1100px 700px at 0% 0%, rgba(106,228,255,.20), transparent 52%),
+        radial-gradient(950px 650px at 100% 100%, rgba(84,180,255,.12), transparent 46%),
+        linear-gradient(180deg,#f4fbff 0%, #eef7fc 100%);
+      overflow-x:hidden;
+    }
+
+    [hidden]{display:none!important}
+
+    .page-wrap{
+      min-height:100dvh;
+      padding:20px;
+    }
+
+    .auth-shell{
+      max-width:var(--container);
+      margin:0 auto;
+      min-height:calc(100dvh - 40px);
+      display:grid;
+      grid-template-columns:minmax(0,1.18fr) minmax(400px, 510px);
+      gap:20px;
+      align-items:stretch;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      border-radius:36px;
+      min-height:760px;
+      background:
+        radial-gradient(900px 560px at 20% 85%, rgba(255,255,255,.11), transparent 58%),
+        radial-gradient(900px 700px at 100% 0%, rgba(255,255,255,.18), transparent 50%),
+        linear-gradient(135deg, #118bc8 0%, #2eb8eb 52%, #89dbfb 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.18),
+        0 28px 90px rgba(16, 84, 127, .16);
+      color:#fff;
+      isolation:isolate;
+      padding:34px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-8% -8% auto auto;
+      width:980px;
+      height:980px;
+      border-radius:50%;
+      background:
+        radial-gradient(circle at center, rgba(255,255,255,.05) 0 33%, transparent 33.2% 42%, rgba(255,255,255,.09) 42.2% 43%, transparent 43.2% 54%, rgba(255,255,255,.08) 54.2% 55%, transparent 55.2% 68%, rgba(255,255,255,.06) 68.2% 69%, transparent 69.2% 100%);
+      right:-260px;
+      top:-10px;
+      pointer-events:none;
+      z-index:0;
+      filter:blur(.2px);
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      left:-120px;
+      bottom:-160px;
+      width:520px;
+      height:520px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(4,88,135,.36), rgba(4,88,135,0) 70%);
+      opacity:.55;
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .hero-blur{
+      position:absolute;
+      border-radius:999px;
+      filter:blur(55px);
+      pointer-events:none;
+      z-index:0;
+      opacity:.95;
+    }
+
+    .hero-blur.one{
+      width:260px;
+      height:260px;
+      background:rgba(151,240,255,.28);
+      left:10%;
+      top:9%;
+    }
+
+    .hero-blur.two{
+      width:380px;
+      height:380px;
+      background:rgba(255,255,255,.13);
+      right:-60px;
+      bottom:6%;
+    }
+
+    .hero-top,
+    .hero-content,
+    .hero-bottom,
+    .auth-visual{
+      position:relative;
+      z-index:2;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:58px;
+      height:58px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      font-size:30px;
+      font-weight:800;
+      background:linear-gradient(180deg, rgba(255,255,255,.26), rgba(255,255,255,.12));
+      border:1px solid rgba(255,255,255,.34);
+      box-shadow:0 18px 34px rgba(7,81,125,.18);
+      backdrop-filter:blur(10px);
+      flex:0 0 auto;
+    }
+
+    .brand-title{
+      font-size:clamp(26px,2vw,36px);
+      line-height:1;
+      letter-spacing:-.05em;
+      font-weight:800;
+    }
+
+    .brand-sub{
+      margin-top:7px;
+      font-size:11px;
+      letter-spacing:.26em;
+      font-weight:800;
+      opacity:.94;
+      text-transform:uppercase;
+    }
+
+    .hero-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 15px;
+      margin-top:18px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.34);
+      background:rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.17em;
+      text-transform:uppercase;
+      width:max-content;
+      max-width:100%;
+      box-shadow:0 10px 24px rgba(8,93,142,.10);
+    }
+
+    .hero-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#76f2d2;
+      box-shadow:0 0 0 5px rgba(118,242,210,.15);
+      flex:0 0 auto;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(320px, 430px);
+      gap:18px;
+      align-items:center;
+      margin-top:14px;
+      flex:1;
+    }
+
+    .hero-copy{
+      max-width:660px;
+      padding-top:10px;
+    }
+
+    .hero h1{
+      margin:20px 0 14px;
+      font-size:clamp(45px, 5.25vw, 82px);
+      line-height:1.04;
+      letter-spacing:-.065em;
+      font-weight:800;
+      text-wrap:balance;
+    }
+
+    .hero p.lead{
+      margin:0;
+      max-width:610px;
+      color:rgba(255,255,255,.95);
+      font-size:18px;
+      line-height:1.8;
+      letter-spacing:-.01em;
+    }
+
+    .hero-meta{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:26px;
+      max-width:540px;
+    }
+
+    .meta-card{
+      min-width:0;
+      padding:18px 18px 16px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.28);
+      background:linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.10));
+      backdrop-filter:blur(12px);
+      box-shadow:0 18px 38px rgba(8,74,111,.11);
+      transition:transform .28s ease, box-shadow .28s ease, background .28s ease;
+    }
+
+    .meta-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 26px 46px rgba(10,84,126,.16);
+      background:linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,.11));
+    }
+
+    .meta-card strong{
+      display:block;
+      font-size:28px;
+      line-height:1.05;
+      letter-spacing:-.04em;
+      margin-bottom:8px;
+    }
+
+    .meta-card p{
+      margin:0;
+      font-size:13px;
+      line-height:1.65;
+      color:rgba(255,255,255,.92);
+    }
+
+    .auth-visual{
+      position:relative;
+      height:560px;
+      min-height:560px;
+    }
+
+    .card-float{
+      position:absolute;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.34);
+      background:linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.58));
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      box-shadow:
+        0 30px 70px rgba(8, 77, 118, .18),
+        inset 0 1px 0 rgba(255,255,255,.55);
+      color:#114160;
+      transition:transform .34s ease, box-shadow .34s ease;
+    }
+
+    .card-float:hover{
+      transform:translateY(-4px);
+      box-shadow:
+        0 36px 82px rgba(8, 77, 118, .22),
+        inset 0 1px 0 rgba(255,255,255,.58);
+    }
+
+    .float-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:rgba(18,145,211,.10);
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#1c7db4;
+      border:1px solid rgba(32,151,219,.12);
+    }
+
+    .kpi-card{
+      width:330px;
+      top:16px;
+      right:18px;
+      padding:18px;
+      transform:rotate(-4deg);
+    }
+
+    .kpi-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+
+    .kpi-icon{
+      width:46px;
+      height:46px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#dff5ff,#ffffff);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.82);
+      flex:0 0 auto;
+      color:#178ec9;
+    }
+
+    .kpi-title{
+      font-size:13px;
+      font-weight:700;
+      color:#597892;
+      line-height:1.4;
+    }
+
+    .kpi-value{
+      font-size:36px;
+      line-height:1;
+      font-weight:800;
+      letter-spacing:-.05em;
+      color:#112f49;
+      margin-top:2px;
+    }
+
+    .kpi-sub{
+      color:#6f8aa0;
+      font-size:12px;
+      margin-top:4px;
+      line-height:1.5;
+    }
+
+    .progress{
+      margin-top:14px;
+      width:100%;
+      height:10px;
+      border-radius:999px;
+      background:rgba(24,131,189,.12);
+      overflow:hidden;
+    }
+
+    .progress > span{
+      display:block;
+      width:68%;
+      height:100%;
+      border-radius:inherit;
+      background:linear-gradient(90deg,#39b9ef,#85ebff);
+      box-shadow:0 4px 16px rgba(57,185,239,.35);
+    }
+
+    .mini-stat{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      margin-top:12px;
+      font-size:12px;
+      color:#5d7891;
+    }
+
+    .dashboard-card{
+      width:420px;
+      left:0;
+      bottom:92px;
+      padding:20px 20px 18px;
+      transform:rotate(3deg);
+    }
+
+    .dashboard-card .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:16px;
+    }
+
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(17,135,198,.10);
+      color:#1a78ac;
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .chip .pulse{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:#49d5a3;
+      box-shadow:0 0 0 5px rgba(73,213,163,.14);
+    }
+
+    .chart-box{
+      height:150px;
+      border-radius:20px;
+      padding:16px;
+      background:linear-gradient(180deg, rgba(238,249,255,.92), rgba(255,255,255,.82));
+      border:1px solid rgba(17,135,198,.08);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .chart-grid{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(to top, rgba(17,137,201,.06) 1px, transparent 1px) 0 0/100% 32px,
+        linear-gradient(to right, rgba(17,137,201,.05) 1px, transparent 1px) 0 0/52px 100%;
+      pointer-events:none;
+    }
+
+    .chart-svg{
+      position:relative;
+      z-index:1;
+      width:100%;
+      height:100%;
+      display:block;
+    }
+
+    .chart-caption{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .chart-caption strong{
+      display:block;
+      font-size:30px;
+      line-height:1;
+      letter-spacing:-.05em;
+      color:#11314d;
+    }
+
+    .chart-caption span{
+      color:#6d879e;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .chart-badge{
+      padding:8px 10px;
+      border-radius:12px;
+      background:rgba(76,214,168,.13);
+      color:#159a72;
+      font-size:11px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .access-card{
+      width:210px;
+      right:44px;
+      bottom:12px;
+      padding:16px;
+      transform:rotate(-2deg);
+    }
+
+    .access-item{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .access-avatar{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#dff6ff,#fff);
+      color:#178bc5;
+      font-weight:800;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.92);
+      flex:0 0 auto;
+    }
+
+    .access-card strong{
+      display:block;
+      font-size:16px;
+      margin-bottom:3px;
+      line-height:1.2;
+      color:#153b57;
+    }
+
+    .access-card p{
+      margin:0;
+      font-size:12px;
+      line-height:1.55;
+      color:#688399;
+    }
+
+    .hero-bottom{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-top:18px;
+      color:rgba(255,255,255,.96);
+      font-size:13px;
+    }
+
+    .footer-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.26);
+      background:rgba(255,255,255,.10);
+      backdrop-filter:blur(10px);
+      font-weight:700;
+      box-shadow:0 10px 26px rgba(8,77,117,.10);
+    }
+
+    .footer-badge .lock{
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.16);
+      font-size:12px;
+    }
+
+    .auth-side{
+      position:relative;
+      min-width:0;
+      display:grid;
+      align-items:center;
+    }
+
+    .side-glow{
+      position:absolute;
+      inset:30px 0 30px 0;
+      border-radius:40px;
+      background:
+        radial-gradient(280px 220px at 100% 0%, rgba(132,224,255,.26), transparent 62%),
+        radial-gradient(280px 220px at 0% 100%, rgba(82,188,255,.12), transparent 66%);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .mobile-hero{
+      display:none;
+    }
+
+    .auth-card{
+      position:relative;
+      z-index:1;
+      width:100%;
+      max-width:510px;
+      margin-left:auto;
+      border-radius:36px;
+      border:1px solid rgba(217,235,246,.94);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.90));
+      box-shadow:
+        var(--shadow),
+        inset 0 1px 0 rgba(255,255,255,.75);
+      padding:28px;
+      overflow:hidden;
+    }
+
+    .auth-card::before{
+      content:"";
+      position:absolute;
+      inset:auto -60px -85px auto;
+      width:250px;
+      height:250px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(72,193,243,.12), rgba(72,193,243,0) 68%);
+      pointer-events:none;
+    }
+
+    .auth-card::after{
+      content:"";
+      position:absolute;
+      left:-70px;
+      top:-70px;
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(148,235,255,.12), rgba(148,235,255,0) 70%);
+      pointer-events:none;
+    }
+
+    .auth-header,
+    .auth-main,
+    .auth-footer{
+      position:relative;
+      z-index:1;
+    }
+
+    .panel-brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .panel-mark{
+      width:50px;
+      height:50px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      font-weight:800;
+      font-size:24px;
+      background:linear-gradient(135deg,#2db7eb,#6bdfff);
+      box-shadow:
+        0 14px 28px rgba(37,175,231,.30),
+        inset 0 1px 0 rgba(255,255,255,.36);
+      flex:0 0 auto;
+    }
+
+    .panel-kicker{
+      font-size:11px;
+      letter-spacing:.16em;
+      font-weight:800;
+      color:#7c9ab2;
+      text-transform:uppercase;
+      line-height:1.4;
+    }
+
+    .panel-title{
+      margin-top:4px;
+      font-size:17px;
+      line-height:1.25;
+      font-weight:800;
+      color:#183551;
+    }
+
+    .auth-card h2{
+      margin:24px 0 8px;
+      font-size:clamp(35px,2.5vw,50px);
+      line-height:1.04;
+      letter-spacing:-.06em;
+      font-weight:800;
+      color:#0f2840;
+      text-wrap:balance;
+    }
+
+    .subtitle{
+      margin:0;
+      color:#768da2;
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .tabs{
+      margin:24px 0 18px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:6px;
+      padding:6px;
+      border-radius:18px;
+      border:1px solid #deedf7;
+      background:linear-gradient(180deg,#f5fbff,#edf7fd);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.82);
+    }
+
+    .tab{
+      border:0;
+      min-height:56px;
+      border-radius:14px;
+      background:transparent;
+      color:#71889e;
+      font:800 14px 'Plus Jakarta Sans',sans-serif;
+      cursor:pointer;
+      transition:transform .25s ease, background .25s ease, box-shadow .25s ease, color .25s ease;
+      outline:none;
+    }
+
+    .tab:hover{
+      transform:translateY(-1px);
+      color:#356180;
+    }
+
+    .tab[aria-selected="true"]{
+      color:#fff;
+      background:linear-gradient(135deg,#1d9fdb,#59cef0);
+      box-shadow:0 15px 28px rgba(28,162,223,.25);
+    }
+
+    .notice{
+      margin:0 0 16px;
+      padding:15px 16px;
+      border-radius:16px;
+      border:1px solid #f4d5d9;
+      background:#fff6f7;
+      color:#c53b58;
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .notice.ok{
+      border-color:#bee8d8;
+      background:#effff8;
+      color:#127553;
+    }
+
+    .field{
+      margin-bottom:16px;
+    }
+
+    .field label{
+      margin-bottom:8px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+      font-size:13px;
+      font-weight:800;
+      color:#19344f;
+    }
+
+    .field input{
+      display:block;
+      width:100%;
+      height:58px;
+      border-radius:18px;
+      border:1px solid #dce9f3;
+      background:
+        linear-gradient(180deg, rgba(245,251,255,.96), rgba(255,255,255,.98));
+      color:#112d47;
+      font:600 14px 'Plus Jakarta Sans',sans-serif;
+      padding:0 18px;
+      outline:none;
+      transition:border-color .24s ease, box-shadow .24s ease, transform .18s ease, background .24s ease;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+    }
+
+    .field input::placeholder{
+      color:#a1b4c4;
+    }
+
+    .field input:focus{
+      border-color:#63caef;
+      box-shadow:0 0 0 5px rgba(56,189,248,.14), var(--shadow-soft);
+      background:#fff;
+    }
+
+    .pass-wrap{
+      position:relative;
+    }
+
+    .pass-wrap input{
+      padding-right:58px;
+    }
+
+    .pass-toggle{
+      position:absolute;
+      top:7px;
+      right:7px;
+      width:44px;
+      height:44px;
+      border:0;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:transparent;
+      color:#7991a7;
+      cursor:pointer;
+      transition:background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .pass-toggle:hover{
+      background:#edf9ff;
+      color:#168dc9;
+      transform:translateY(-1px);
+    }
+
+    .text-action{
+      border:0;
+      background:none;
+      color:#1298d5;
+      font:800 12px 'Plus Jakarta Sans',sans-serif;
+      cursor:pointer;
+      padding:0;
+      transition:opacity .2s ease, transform .2s ease;
+    }
+
+    .text-action:hover{
+      opacity:.86;
+      transform:translateY(-1px);
+    }
+
+    .primary{
+      position:relative;
+      overflow:hidden;
+      width:100%;
+      min-height:58px;
+      border:0;
+      border-radius:18px;
+      color:#fff;
+      background:linear-gradient(135deg,#169bd7 0%, #47c8ee 55%, #78ddfa 100%);
+      box-shadow:
+        0 16px 32px rgba(22,155,215,.24),
+        inset 0 1px 0 rgba(255,255,255,.22);
+      font:800 15px 'Plus Jakarta Sans',sans-serif;
+      cursor:pointer;
+      transition:transform .24s ease, box-shadow .24s ease, filter .24s ease;
+      margin-top:6px;
+    }
+
+    .primary::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+      transform:translateX(-120%);
+      transition:transform .8s ease;
+    }
+
+    .primary:hover{
+      transform:translateY(-2px);
+      box-shadow:
+        0 22px 38px rgba(22,155,215,.28),
+        inset 0 1px 0 rgba(255,255,255,.24);
+      filter:brightness(1.02);
+    }
+
+    .primary:hover::before{
+      transform:translateX(120%);
+    }
+
+    .primary:disabled{
+      opacity:.6;
+      cursor:wait;
+      transform:none;
+      box-shadow:0 12px 24px rgba(22,155,215,.15);
+    }
+
+    .divider{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin:20px 0;
+      color:#91a4b5;
+      font-size:12px;
+      line-height:1;
+    }
+
+    .divider::before,
+    .divider::after{
+      content:"";
+      flex:1;
+      height:1px;
+      background:linear-gradient(90deg, transparent, #d7e6f1, transparent);
+    }
+
+    .google{
+      width:100%;
+      min-height:58px;
+      padding:0 18px;
+      border-radius:18px;
+      border:1px solid #dfebf4;
+      background:rgba(255,255,255,.9);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      color:#17324d;
+      font:800 15px 'Plus Jakarta Sans',sans-serif;
+      cursor:pointer;
+      transition:transform .24s ease, background .24s ease, box-shadow .24s ease, border-color .24s ease;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.84);
+    }
+
+    .google:hover{
+      transform:translateY(-2px);
+      background:#fff;
+      border-color:#cfe4f1;
+      box-shadow:0 16px 28px rgba(17,78,122,.08);
+    }
+
+    .extras{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .mini-link{
+      border:0;
+      background:transparent;
+      color:#0e93cc;
+      font:800 13px 'Plus Jakarta Sans',sans-serif;
+      cursor:pointer;
+      padding:0;
+    }
+
+    .mini-link:hover{
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .trust-note{
+      margin-top:22px;
+      padding:18px;
+      border-radius:22px;
+      border:1px solid #e1eef7;
+      background:
+        linear-gradient(180deg, rgba(245,251,255,.94), rgba(255,255,255,.96));
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.88);
+    }
+
+    .trust-icon{
+      width:44px;
+      height:44px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      color:#1a90ca;
+      background:linear-gradient(135deg,#edf9ff,#fff);
+      box-shadow:0 10px 22px rgba(43,160,214,.09);
+      flex:0 0 auto;
+    }
+
+    .trust-note strong{
+      display:block;
+      font-size:16px;
+      line-height:1.3;
+      color:#183550;
+    }
+
+    .trust-note p{
+      margin:5px 0 0;
+      color:#7890a4;
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .mobile-top-visual{
+      display:none;
+    }
+
+    @media (max-width: 1240px){
+      .auth-shell{
+        grid-template-columns:minmax(0,1fr) minmax(380px, 470px);
+      }
+
+      .hero{
+        min-height:720px;
+      }
+
+      .hero-grid{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .auth-visual{
+        height:420px;
+        min-height:420px;
+        max-width:520px;
+        margin-top:6px;
+      }
+
+      .kpi-card{
+        right:18px;
+        top:0;
+      }
+
+      .dashboard-card{
+        bottom:60px;
+      }
+
+      .access-card{
+        right:24px;
+      }
+    }
+
+    @media (max-width: 1080px){
+      .page-wrap{
+        padding:14px;
+      }
+
+      .auth-shell{
+        min-height:auto;
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+
+      .hero{
+        display:none;
+      }
+
+      .auth-side{
+        align-items:start;
+      }
+
+      .auth-card{
+        max-width:100%;
+        margin:0;
+        padding:20px;
+        border-radius:28px;
+      }
+
+      .mobile-hero{
+        display:block;
+        position:relative;
+        overflow:hidden;
+        border-radius:28px;
+        padding:22px;
+        margin-bottom:14px;
+        background:
+          radial-gradient(500px 300px at 100% 0%, rgba(255,255,255,.18), transparent 55%),
+          linear-gradient(135deg,#118bc8 0%, #33bced 54%, #89dbfb 100%);
+        color:#fff;
+        box-shadow:0 22px 58px rgba(12,82,126,.18);
+      }
+
+      .mobile-hero::before{
+        content:"";
+        position:absolute;
+        width:420px;
+        height:420px;
+        border-radius:50%;
+        right:-180px;
+        top:-80px;
+        background:
+          radial-gradient(circle at center, rgba(255,255,255,.04) 0 33%, transparent 33.2% 42%, rgba(255,255,255,.08) 42.2% 43%, transparent 43.2% 54%, rgba(255,255,255,.07) 54.2% 55%, transparent 55.2% 68%);
+        pointer-events:none;
+      }
+
+      .mobile-hero > *{
+        position:relative;
+        z-index:1;
+      }
+
+      .mobile-hero h1{
+        margin:16px 0 8px;
+        font-size:34px;
+        line-height:1.06;
+        letter-spacing:-.05em;
+        font-weight:800;
+      }
+
+      .mobile-hero p{
+        margin:0;
+        font-size:14px;
+        line-height:1.75;
+        color:rgba(255,255,255,.95);
+        max-width:95%;
+      }
+
+      .mobile-top-visual{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+        margin-top:18px;
+      }
+
+      .mobile-mini-card{
+        padding:14px;
+        border-radius:18px;
+        border:1px solid rgba(255,255,255,.24);
+        background:rgba(255,255,255,.14);
+        backdrop-filter:blur(10px);
+      }
+
+      .mobile-mini-card strong{
+        display:block;
+        font-size:16px;
+        line-height:1.15;
+        margin-bottom:6px;
+      }
+
+      .mobile-mini-card span{
+        display:block;
+        font-size:12px;
+        line-height:1.55;
+        color:rgba(255,255,255,.92);
+      }
+
+      .side-glow{
+        display:none;
+      }
+    }
+
+    @media (max-width: 640px){
+      .page-wrap{
+        padding:10px;
+      }
+
+      .mobile-hero{
+        padding:18px;
+        border-radius:24px;
+      }
+
+      .mobile-hero h1{
+        font-size:30px;
+      }
+
+      .mobile-top-visual{
+        grid-template-columns:1fr;
+      }
+
+      .auth-card{
+        padding:16px;
+        border-radius:22px;
+      }
+
+      .panel-mark{
+        width:44px;
+        height:44px;
+        border-radius:15px;
+        font-size:22px;
+      }
+
+      .panel-kicker{
+        font-size:10px;
+      }
+
+      .panel-title{
+        font-size:15px;
+      }
+
+      .auth-card h2{
+        margin:20px 0 8px;
+        font-size:30px;
+      }
+
+      .subtitle{
+        font-size:14px;
+      }
+
+      .tabs{
+        padding:5px;
+        gap:5px;
+        border-radius:16px;
+      }
+
+      .tab{
+        min-height:50px;
+        font-size:13px;
+      }
+
+      .field{
+        margin-bottom:14px;
+      }
+
+      .field label{
+        font-size:12px;
+      }
+
+      .field input{
+        height:54px;
+        border-radius:16px;
+        font-size:14px;
+        padding:0 16px;
+      }
+
+      .pass-wrap input{
+        padding-right:54px;
+      }
+
+      .pass-toggle{
+        width:40px;
+        height:40px;
+        top:7px;
+        right:7px;
+        border-radius:12px;
+      }
+
+      .primary,
+      .google{
+        min-height:54px;
+        border-radius:16px;
+        font-size:14px;
+      }
+
+      .trust-note{
+        margin-top:18px;
+        padding:15px;
+        border-radius:18px;
+      }
+
+      .trust-note strong{
+        font-size:15px;
+      }
+
+      .trust-note p{
+        font-size:12px;
+      }
+
+      .extras{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+    }
+
+    @media (max-width: 420px){
+      .mobile-hero h1{
+        font-size:27px;
+      }
+
+      .auth-card h2{
+        font-size:27px;
+      }
+
+      .subtitle{
+        font-size:13px;
+      }
+
+      .brand-mark{
+        width:44px;
+        height:44px;
+        border-radius:14px;
+        font-size:22px;
+      }
+
+      .brand-title{
+        font-size:26px;
+      }
+
+      .brand-sub{
+        font-size:9px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{
+        transition:none !important;
+        animation:none !important;
+        scroll-behavior:auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="auth-shell">
-  <aside class="auth-hero" aria-label="Tentang AERIS Finance">
-    <div class="brand"><div class="brand-mark">A</div><div><div class="brand-title">aeris<span style="opacity:.6">.</span></div><div class="brand-desc">CORPORATE FINANCE STUDIO</div></div></div>
-    <div class="hero-content">
-      <span class="eyebrow"><span class="dot"></span>FINANCIAL OPERATIONS, REIMAGINED</span>
-      <h1>Keuangan bisnis.<br>Lebih terkendali.</h1>
-      <p class="hero-description">Kelola arus kas, invoice, anggaran departemen, rekening perusahaan, dan laporan keuangan—dalam satu workspace terintegrasi untuk seluruh tim.</p>
-      <div class="hero-cards"><div class="hero-card"><strong>One company, one truth.</strong><p>Satu sumber data keuangan yang dipakai bersama oleh tim dengan akses berbeda.</p></div><div class="hero-card"><strong>Built for clarity.</strong><p>Analitik operasional, pemantauan kewajiban, dan jejak audit yang transparan.</p></div></div>
+  <div class="page-wrap">
+    <div class="auth-shell">
+      <!-- DESKTOP HERO -->
+      <aside class="hero" aria-label="Tentang AERIS Corporate Finance">
+        <span class="hero-blur one"></span>
+        <span class="hero-blur two"></span>
+
+        <div class="hero-top">
+          <div class="brand">
+            <div class="brand-mark">A</div>
+            <div>
+              <div class="brand-title">aeris<span style="opacity:.68;">.</span></div>
+              <div class="brand-sub">Corporate Finance Studio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <span class="hero-kicker">
+            <span class="hero-dot"></span>
+            Financial operations, elevated
+          </span>
+
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <h1>Finance teamwork.<br>More elegant.<br>More in control.</h1>
+              <p class="lead">
+                Kelola arus kas, budgeting, invoice, approval, akun perusahaan, dan pelaporan
+                dalam satu workspace yang aman, modern, dan dirancang untuk tim keuangan yang
+                butuh kejelasan operasional setiap hari.
+              </p>
+
+              <div class="hero-meta">
+                <div class="meta-card">
+                  <strong>One source of truth.</strong>
+                  <p>
+                    Satu pusat data finansial untuk memudahkan koordinasi tim, monitoring, dan
+                    pengambilan keputusan.
+                  </p>
+                </div>
+                <div class="meta-card">
+                  <strong>Built for precision.</strong>
+                  <p>
+                    Struktur yang rapi untuk approval, cash visibility, analitik, dan jejak audit
+                    yang transparan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- VISUALIZATION / FLOATING PANELS -->
+            <div class="auth-visual" aria-hidden="true">
+              <div class="card-float kpi-card">
+                <div class="kpi-head">
+                  <div style="display:flex;align-items:center;gap:12px;min-width:0;">
+                    <div class="kpi-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M7 14.5 10.2 11l3 2.4L17 8.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="m15.8 8.8 2.2-.2-.3 2.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div style="min-width:0;">
+                      <div class="kpi-title">Cash runway & budget health</div>
+                      <div class="kpi-value">78%</div>
+                    </div>
+                  </div>
+                  <span class="float-pill">healthy</span>
+                </div>
+                <div class="kpi-sub">Stabilitas kas operasional dan efisiensi budget lintas departemen.</div>
+                <div class="progress"><span></span></div>
+                <div class="mini-stat">
+                  <span>Budget allocated</span>
+                  <strong style="color:#164260;">Rp 482,4 Jt</strong>
+                </div>
+              </div>
+
+              <div class="card-float dashboard-card">
+                <div class="row">
+                  <span class="chip"><span class="pulse"></span> Real-time finance overview</span>
+                  <span style="font-size:11px;font-weight:800;color:#7d96a9;">+12.8%</span>
+                </div>
+
+                <div class="chart-box">
+                  <div class="chart-grid"></div>
+                  <svg class="chart-svg" viewBox="0 0 320 150" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#25B1E8"/>
+                        <stop offset="100%" stop-color="#64E0FF"/>
+                      </linearGradient>
+                      <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#4FD1F4" stop-opacity=".32"/>
+                        <stop offset="100%" stop-color="#4FD1F4" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M16 118 C42 104, 58 96, 78 102 S118 112, 140 89 S183 65, 206 78 S246 98, 272 58 S295 37, 304 32"
+                          fill="none" stroke="url(#lineGrad)" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M16 118 C42 104, 58 96, 78 102 S118 112, 140 89 S183 65, 206 78 S246 98, 272 58 S295 37, 304 32 L304 150 L16 150 Z"
+                          fill="url(#areaGrad)"/>
+                    <g fill="#1DA8E0">
+                      <circle cx="78" cy="102" r="4"/>
+                      <circle cx="140" cy="89" r="4"/>
+                      <circle cx="206" cy="78" r="4"/>
+                      <circle cx="272" cy="58" r="4"/>
+                      <circle cx="304" cy="32" r="5"/>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="chart-caption">
+                  <div>
+                    <strong>Rp 1,24 M</strong>
+                    <span>Net cash movement · 30 hari terakhir</span>
+                  </div>
+                  <div class="chart-badge">▲ +18.4%</div>
+                </div>
+              </div>
+
+              <div class="card-float access-card">
+                <div class="access-item">
+                  <div class="access-avatar">A</div>
+                  <div>
+                    <strong>Team access</strong>
+                    <p>Finance, Ops, dan approver tersinkron dalam satu workspace.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <span>© AERIS Finance · Premium corporate finance workspace</span>
+          <span class="footer-badge">
+            <span class="lock">🔒</span>
+            Secure access · organized approvals · cleaner visibility
+          </span>
+        </div>
+      </aside>
+
+      <!-- AUTH SIDE -->
+      <main class="auth-side">
+        <div class="side-glow" aria-hidden="true"></div>
+
+        <!-- MOBILE HERO -->
+        <section class="mobile-hero" aria-label="Tentang AERIS Corporate Finance versi mobile">
+          <div class="brand">
+            <div class="brand-mark" style="width:46px;height:46px;border-radius:15px;font-size:24px;">A</div>
+            <div>
+              <div class="brand-title" style="font-size:28px;">aeris<span style="opacity:.68;">.</span></div>
+              <div class="brand-sub">Corporate Finance Studio</div>
+            </div>
+          </div>
+
+          <span class="hero-kicker" style="margin-top:16px;">
+            <span class="hero-dot"></span>
+            Financial operations, elevated
+          </span>
+
+          <h1>Keuangan tim.<br>Lebih rapi. Lebih elegan.</h1>
+          <p>
+            Satu workspace modern untuk cash flow, budgeting, approval, dan pelaporan
+            keuangan perusahaan.
+          </p>
+
+          <div class="mobile-top-visual">
+            <div class="mobile-mini-card">
+              <strong>Realtime visibility</strong>
+              <span>Cash movement, approval, dan budget lebih mudah dipantau.</span>
+            </div>
+            <div class="mobile-mini-card">
+              <strong>Private workspace</strong>
+              <span>Akses aman untuk tim dengan struktur kerja yang lebih terorganisasi.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-card">
+          <div class="auth-header">
+            <div class="panel-brand">
+              <div class="panel-mark">A</div>
+              <div>
+                <div class="panel-kicker">AERIS / Member Access</div>
+                <div class="panel-title">Corporate Finance Workspace</div>
+              </div>
+            </div>
+
+            <h2 id="headline">Selamat datang kembali</h2>
+            <p id="subhead" class="subtitle">
+              Masuk untuk melanjutkan aktivitas keuangan perusahaan Anda dengan tampilan workspace yang aman dan terstruktur.
+            </p>
+          </div>
+
+          <div class="auth-main">
+            <div class="tabs" id="tabs" role="tablist" aria-label="Pilihan autentikasi">
+              <button class="tab" type="button" data-mode="login" role="tab" aria-selected="true">Masuk</button>
+              <button class="tab" type="button" data-mode="register" role="tab" aria-selected="false">Daftar akun</button>
+            </div>
+
+            <div id="result" class="notice" role="status" aria-live="polite" hidden></div>
+
+            <form id="authForm" novalidate>
+              <div class="field" id="nameWrap" hidden>
+                <label for="name">Nama lengkap</label>
+                <input
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  minlength="2"
+                  maxlength="90"
+                  placeholder="Masukkan nama lengkap Anda"
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Alamat email kerja</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  placeholder="nama@perusahaan.com"
+                />
+              </div>
+
+              <div class="field" id="passwordWrap">
+                <label for="password">
+                  <span>Password</span>
+                  <button id="forgotBtn" type="button" class="text-action">Lupa password?</button>
+                </label>
+                <div class="pass-wrap">
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    minlength="8"
+                    autocomplete="current-password"
+                    placeholder="Masukkan password"
+                    required
+                  />
+                  <button class="pass-toggle" type="button" aria-label="Tampilkan password" data-toggle-password="password">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.8"/>
+                      <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="field" id="confirmWrap" hidden>
+                <label for="confirm">Ulangi password</label>
+                <div class="pass-wrap">
+                  <input
+                    id="confirm"
+                    name="confirm"
+                    type="password"
+                    minlength="8"
+                    autocomplete="new-password"
+                    placeholder="Ulangi password"
+                  />
+                  <button class="pass-toggle" type="button" aria-label="Tampilkan password" data-toggle-password="confirm">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.8"/>
+                      <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <button class="primary" id="submitBtn" type="submit">Masuk ke AERIS</button>
+            </form>
+
+            <div id="googleLoginArea">
+              <div class="divider">Atau lanjutkan dengan</div>
+
+              <button id="googleLoginBtn" class="google" type="button">
+                <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
+                  <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                  <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.25 5.48-4.76 7.18l7.73 6C44.42 38.03 46.98 31.88 46.98 24.55z"/>
+                  <path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.2A23.9 23.9 0 0 0 0 24c0 3.87.92 7.52 2.56 10.78l7.97-6.19z"/>
+                  <path fill="#34A853" d="M24 48c6.48 0 11.92-2.13 15.89-5.8l-7.73-6C30.01 37.65 27.27 38.5 24 38.5c-6.26 0-11.57-4.22-13.47-9.91l-7.97 6.19C6.51 42.62 14.62 48 24 48z"/>
+                </svg>
+                Lanjutkan dengan Google
+              </button>
+            </div>
+
+            <div class="extras">
+              <button class="mini-link" id="resendBtn" type="button" hidden>Kirim ulang verifikasi</button>
+              <button class="mini-link" id="backBtn" type="button" hidden>← Kembali ke login</button>
+            </div>
+          </div>
+
+          <div class="auth-footer">
+            <div class="trust-note">
+              <div class="trust-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3 6 5.2v5.1c0 4.3 2.8 8.2 6 9.7 3.2-1.5 6-5.4 6-9.7V5.2L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="m9.3 12 1.8 1.8 3.8-4.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Private corporate workspace</strong>
+                <p>
+                  Autentikasi dikelola Firebase. Data tiap perusahaan dapat dipisahkan secara aman,
+                  sementara akses anggota dan validasi workspace dapat dikendalikan dari backend.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <div class="hero-footer"><span>© AERIS Finance · Modern corporate finance workspace</span><span class="hero-pill">● Secure business access</span></div>
-  </aside>
-  <main class="auth-right"><div style="width:100%;max-width:455px">
-    <div class="mobile-hero"><div class="brand" style="gap:10px"><span class="brand-mark" style="width:36px;height:36px;font-size:18px">A</span><strong>aeris.</strong></div><h1>Keuangan bisnis.<br>Lebih terkendali.</h1><p>Workspace keuangan perusahaan yang aman, terorganisasi, dan kolaboratif.</p></div>
-    <section class="auth-panel">
-      <div class="panel-brand"><div class="small-mark">A</div><div><div class="small-kicker">AERIS / MEMBER ACCESS</div><div class="small-title">Corporate Finance Workspace</div></div></div>
-      <h2 id="headline">Selamat datang kembali</h2><p id="subhead" class="subtitle">Masuk untuk mengelola keuangan perusahaan Anda.</p>
-      <div class="tabs" id="tabs" role="tablist"><button class="tab" type="button" data-mode="login" role="tab" aria-selected="true">Masuk</button><button class="tab" type="button" data-mode="register" role="tab" aria-selected="false">Daftar akun</button></div>
-      <div id="result" class="notice" role="status" aria-live="polite" hidden></div>
-      <form id="authForm">
-        <div class="field" id="nameWrap" hidden><label for="name">Nama lengkap</label><input id="name" name="name" autocomplete="name" minlength="2" maxlength="90" placeholder="Nama lengkap Anda"></div>
-        <div class="field"><label for="email">Alamat email kerja</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="nama@perusahaan.com"></div>
-        <div class="field" id="passwordWrap"><label for="password">Password <button id="forgotBtn" type="button" class="text-action">Lupa password?</button></label><div class="pass-field"><input id="password" name="password" type="password" minlength="8" autocomplete="current-password" placeholder="Masukkan password" required><button class="pass-toggle" type="button" aria-label="Tampilkan password" data-toggle-password="password">◉</button></div></div>
-        <div class="field" id="confirmWrap" hidden><label for="confirm">Ulangi password</label><div class="pass-field"><input id="confirm" name="confirm" type="password" minlength="8" autocomplete="new-password" placeholder="Ulangi password"><button class="pass-toggle" type="button" aria-label="Tampilkan password" data-toggle-password="confirm">◉</button></div></div>
-        <button class="primary" id="submitBtn" type="submit">Masuk ke AERIS</button>
-      </form>
-      <div id="googleLoginArea"><div class="divider">Atau lanjutkan dengan</div><button id="googleLoginBtn" class="google" type="button"><svg width="19" height="19" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.25 5.48-4.76 7.18l7.73 6C44.42 38.03 46.98 31.88 46.98 24.55z"/><path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.2A23.9 23.9 0 0 0 0 24c0 3.87.92 7.52 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.92-2.13 15.89-5.8l-7.73-6C30.01 37.65 27.27 38.5 24 38.5c-6.26 0-11.57-4.22-13.47-9.91l-7.97 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Lanjutkan dengan Google</button></div>
-      <div class="extras"><button class="mini-link" id="resendBtn" type="button" hidden>Kirim ulang verifikasi</button><button class="mini-link" id="backBtn" type="button" hidden>← Kembali ke login</button></div>
-      <div class="note"><div style="font-size:20px">♧</div><div><strong>Private corporate workspace</strong><p>Autentikasi dikelola Firebase. Data tiap perusahaan disimpan pada spreadsheet terpisah dan hak akses anggota diperiksa oleh backend.</p></div></div>
-    </section>
-  </div></main>
-</div>
-<script type="module">
-import {initializeApp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
-import {getAuth,setPersistence,browserLocalPersistence,signInWithEmailAndPassword,createUserWithEmailAndPassword,signInWithPopup,GoogleAuthProvider,sendEmailVerification,sendPasswordResetEmail,updateProfile,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
-const cfg=window.AERIS_CONFIG||{},$=x=>document.getElementById(x);let mode='login',pendingUser=null,busy=false;
-const configured=cfg.firebase?.apiKey&&!cfg.firebase.apiKey.includes('PASTE_')&&!cfg.firebase.apiKey.includes('YOUR_');
-if(!configured){show('Isi Firebase Web Config pada config.js terlebih dahulu.');$('submitBtn').disabled=true;$('googleLoginBtn').disabled=true;}
-const auth=configured?getAuth(initializeApp(cfg.firebase)):null;if(auth)setPersistence(auth,browserLocalPersistence).catch(console.error);
-function show(msg,ok=false){const el=$('result');el.hidden=false;el.textContent=msg;el.className='notice'+(ok?' ok':'');}
-function clear(){ $('result').hidden=true; }
-function setBusy(v){busy=v;$('submitBtn').disabled=v;$('googleLoginBtn').disabled=v;$('submitBtn').textContent=v?'Memproses…':(mode==='login'?'Masuk ke AERIS':mode==='register'?'Buat akun gratis':'Kirim tautan reset');}
-function changeMode(next){mode=next;clear();$('tabs').hidden=mode==='forgot';$('nameWrap').hidden=mode!=='register';$('confirmWrap').hidden=mode!=='register';$('passwordWrap').hidden=mode==='forgot';$('googleLoginArea').hidden=mode==='forgot';$('backBtn').hidden=mode!=='forgot';$('name').required=mode==='register';$('confirm').required=mode==='register';$('password').required=mode!=='forgot';$('password').autocomplete=mode==='login'?'current-password':'new-password';$('headline').textContent=({login:'Selamat datang kembali',register:'Buat akun AERIS',forgot:'Pulihkan akses akun'})[mode];$('subhead').textContent=({login:'Masuk untuk mengelola keuangan perusahaan Anda.',register:'Daftarkan akun, lalu buat atau bergabung ke perusahaan.',forgot:'Masukkan email kerja untuk menerima tautan reset password.'})[mode];document.querySelectorAll('[data-mode]').forEach(el=>el.setAttribute('aria-selected',String(el.dataset.mode===mode)));setBusy(false);}
-document.querySelectorAll('[data-mode]').forEach(el=>el.addEventListener('click',()=>changeMode(el.dataset.mode)));
-$('forgotBtn').addEventListener('click',()=>changeMode('forgot'));
-$('backBtn').addEventListener('click',()=>changeMode('login'));
-document.querySelectorAll('[data-toggle-password]').forEach(b=>b.addEventListener('click',()=>{const x=$(b.dataset.togglePassword);x.type=x.type==='password'?'text':'password';b.setAttribute('aria-label',x.type==='password'?'Tampilkan password':'Sembunyikan password');}));
-function emailAction(){return {url:new URL('./verify.html',location.href).href,handleCodeInApp:false};}
-$('authForm').addEventListener('submit',async e=>{e.preventDefault();if(busy||!auth)return;setBusy(true);try{const email=$('email').value.trim(),password=$('password').value;if(mode==='login'){const cred=await signInWithEmailAndPassword(auth,email,password);if(!cred.user.emailVerified){pendingUser=cred.user;await sendEmailVerification(cred.user,emailAction()).catch(()=>{});$('resendBtn').hidden=false;show('Email belum diverifikasi. Periksa kotak masuk atau spam, lalu buka link verifikasi.');return;}location.replace('main.html');}else if(mode==='register'){const name=$('name').value.trim();if(name.length<2)throw new Error('Nama lengkap minimal 2 karakter.');if(password!==$('confirm').value)throw new Error('Konfirmasi password tidak cocok.');const cred=await createUserWithEmailAndPassword(auth,email,password);await updateProfile(cred.user,{displayName:name});pendingUser=cred.user;await sendEmailVerification(cred.user,emailAction());$('resendBtn').hidden=false;show('Akun dibuat. Tautan verifikasi email telah dikirim. Setelah verifikasi, masuk kembali ke AERIS.',true);}else{await sendPasswordResetEmail(auth,email,{url:new URL('./verify.html',location.href).href});show('Jika email terdaftar, tautan reset password akan dikirim. Periksa juga folder spam.',true);}}catch(error){const map={'auth/email-already-in-use':'Email sudah digunakan.','auth/invalid-credential':'Email atau password salah.','auth/weak-password':'Password kurang kuat.','auth/too-many-requests':'Terlalu banyak percobaan. Coba nanti.','auth/popup-closed-by-user':'Login Google dibatalkan.','auth/unauthorized-domain':'Domain belum diizinkan pada Firebase Authentication.'};show(map[error.code]||error.message||'Autentikasi gagal.');}finally{setBusy(false);}});
-$('googleLoginBtn').addEventListener('click',async()=>{if(busy||!auth)return;setBusy(true);try{const provider=new GoogleAuthProvider();const {user}=await signInWithPopup(auth,provider);if(!user.emailVerified)throw new Error('Email Google belum terverifikasi.');location.replace('main.html');}catch(e){show(e.message||'Login Google gagal.');}finally{setBusy(false);}});
-$('resendBtn').addEventListener('click',async()=>{try{if(!auth.currentUser)throw new Error('Silakan login kembali terlebih dahulu.');await sendEmailVerification(auth.currentUser,emailAction());show('Tautan verifikasi dikirim ulang.',true);}catch(e){show(e.message);}});
-if(auth)onAuthStateChanged(auth,user=>{if(user?.emailVerified)location.replace('main.html');});
-</script>
-</body></html>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
+    import {
+      getAuth,
+      setPersistence,
+      browserLocalPersistence,
+      signInWithEmailAndPassword,
+      createUserWithEmailAndPassword,
+      signInWithPopup,
+      GoogleAuthProvider,
+      sendEmailVerification,
+      sendPasswordResetEmail,
+      updateProfile,
+      onAuthStateChanged
+    } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
+
+    const cfg = window.AERIS_CONFIG || {};
+    const $ = (id) => document.getElementById(id);
+
+    let mode = 'login';
+    let pendingUser = null;
+    let busy = false;
+
+    const configured =
+      cfg.firebase?.apiKey &&
+      !cfg.firebase.apiKey.includes('PASTE_') &&
+      !cfg.firebase.apiKey.includes('YOUR_');
+
+    if (!configured) {
+      show('Isi Firebase Web Config pada config.js terlebih dahulu.');
+      $('submitBtn').disabled = true;
+      $('googleLoginBtn').disabled = true;
+    }
+
+    const auth = configured ? getAuth(initializeApp(cfg.firebase)) : null;
+    if (auth) {
+      setPersistence(auth, browserLocalPersistence).catch(console.error);
+    }
+
+    function show(msg, ok = false) {
+      const el = $('result');
+      el.hidden = false;
+      el.textContent = msg;
+      el.className = 'notice' + (ok ? ' ok' : '');
+    }
+
+    function clearNotice() {
+      $('result').hidden = true;
+      $('result').textContent = '';
+    }
+
+    function submitText() {
+      if (busy) return 'Memproses…';
+      if (mode === 'login') return 'Masuk ke AERIS';
+      if (mode === 'register') return 'Buat akun AERIS';
+      return 'Kirim tautan reset';
+    }
+
+    function setBusy(state) {
+      busy = state;
+      $('submitBtn').disabled = state;
+      $('googleLoginBtn').disabled = state;
+      $('submitBtn').textContent = submitText();
+    }
+
+    function changeMode(next) {
+      mode = next;
+      clearNotice();
+
+      $('tabs').hidden = mode === 'forgot';
+      $('nameWrap').hidden = mode !== 'register';
+      $('confirmWrap').hidden = mode !== 'register';
+      $('passwordWrap').hidden = mode === 'forgot';
+      $('googleLoginArea').hidden = mode === 'forgot';
+      $('backBtn').hidden = mode !== 'forgot';
+
+      $('name').required = mode === 'register';
+      $('confirm').required = mode === 'register';
+      $('password').required = mode !== 'forgot';
+      $('password').autocomplete = mode === 'login' ? 'current-password' : 'new-password';
+
+      $('headline').textContent = ({
+        login: 'Selamat datang kembali',
+        register: 'Buat akun AERIS',
+        forgot: 'Pulihkan akses akun'
+      })[mode];
+
+      $('subhead').textContent = ({
+        login: 'Masuk untuk melanjutkan pengelolaan finance workspace perusahaan Anda.',
+        register: 'Daftarkan akun untuk mulai membuat atau bergabung ke workspace perusahaan.',
+        forgot: 'Masukkan email kerja Anda untuk menerima tautan reset password.'
+      })[mode];
+
+      document.querySelectorAll('[data-mode]').forEach(el => {
+        el.setAttribute('aria-selected', String(el.dataset.mode === mode));
+      });
+
+      setBusy(false);
+    }
+
+    document.querySelectorAll('[data-mode]').forEach(el => {
+      el.addEventListener('click', () => changeMode(el.dataset.mode));
+    });
+
+    $('forgotBtn').addEventListener('click', () => changeMode('forgot'));
+    $('backBtn').addEventListener('click', () => changeMode('login'));
+
+    document.querySelectorAll('[data-toggle-password]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = $(btn.dataset.togglePassword);
+        const isHidden = input.type === 'password';
+        input.type = isHidden ? 'text' : 'password';
+        btn.setAttribute('aria-label', isHidden ? 'Sembunyikan password' : 'Tampilkan password');
+      });
+    });
+
+    function emailAction() {
+      return {
+        url: new URL('./verify.html', location.href).href,
+        handleCodeInApp: false
+      };
+    }
+
+    $('authForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (busy || !auth) return;
+
+      setBusy(true);
+
+      try {
+        const email = $('email').value.trim();
+        const password = $('password').value;
+
+        if (mode === 'login') {
+          const cred = await signInWithEmailAndPassword(auth, email, password);
+
+          if (!cred.user.emailVerified) {
+            pendingUser = cred.user;
+            await sendEmailVerification(cred.user, emailAction()).catch(() => {});
+            $('resendBtn').hidden = false;
+            show('Email belum diverifikasi. Silakan cek inbox atau folder spam, lalu buka link verifikasi.');
+            return;
+          }
+
+          location.replace('main.html');
+        }
+
+        else if (mode === 'register') {
+          const name = $('name').value.trim();
+
+          if (name.length < 2) throw new Error('Nama lengkap minimal 2 karakter.');
+          if (password !== $('confirm').value) throw new Error('Konfirmasi password tidak cocok.');
+
+          const cred = await createUserWithEmailAndPassword(auth, email, password);
+          await updateProfile(cred.user, { displayName: name });
+
+          pendingUser = cred.user;
+          await sendEmailVerification(cred.user, emailAction());
+
+          $('resendBtn').hidden = false;
+          show('Akun berhasil dibuat. Tautan verifikasi email telah dikirim. Setelah verifikasi, silakan login kembali ke AERIS.', true);
+        }
+
+        else {
+          await sendPasswordResetEmail(auth, email, {
+            url: new URL('./verify.html', location.href).href
+          });
+
+          show('Jika email terdaftar, tautan reset password akan dikirim. Cek inbox dan folder spam Anda.', true);
+        }
+      } catch (error) {
+        const map = {
+          'auth/email-already-in-use': 'Email sudah digunakan.',
+          'auth/invalid-credential': 'Email atau password salah.',
+          'auth/weak-password': 'Password kurang kuat.',
+          'auth/too-many-requests': 'Terlalu banyak percobaan. Coba lagi beberapa saat.',
+          'auth/popup-closed-by-user': 'Login Google dibatalkan.',
+          'auth/unauthorized-domain': 'Domain belum diizinkan pada Firebase Authentication.'
+        };
+        show(map[error.code] || error.message || 'Autentikasi gagal.');
+      } finally {
+        setBusy(false);
+      }
+    });
+
+    $('googleLoginBtn').addEventListener('click', async () => {
+      if (busy || !auth) return;
+
+      setBusy(true);
+      try {
+        const provider = new GoogleAuthProvider();
+        const { user } = await signInWithPopup(auth, provider);
+
+        if (!user.emailVerified) {
+          throw new Error('Email Google belum terverifikasi.');
+        }
+
+        location.replace('main.html');
+      } catch (e) {
+        show(e.message || 'Login Google gagal.');
+      } finally {
+        setBusy(false);
+      }
+    });
+
+    $('resendBtn').addEventListener('click', async () => {
+      try {
+        if (!auth.currentUser && !pendingUser) {
+          throw new Error('Silakan login kembali terlebih dahulu.');
+        }
+
+        await sendEmailVerification(auth.currentUser || pendingUser, emailAction());
+        show('Tautan verifikasi berhasil dikirim ulang.', true);
+      } catch (e) {
+        show(e.message || 'Gagal mengirim ulang verifikasi.');
+      }
+    });
+
+    if (auth) {
+      onAuthStateChanged(auth, (user) => {
+        if (user?.emailVerified) {
+          location.replace('main.html');
+        }
+      });
+    }
+
+    changeMode('login');
+  </script>
+</body>
+</html>
