@@ -3,145 +3,6 @@
 <title>Dashboard — AERIS Corporate Finance</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com" defer></script><script src="./config.js"></script>
-<link
-  rel="icon"
-  type="image/svg+xml"
-  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2338BDF8'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='17' fill='url(%23g)'/%3E%3Cpath d='M15 47 30 16h4l15 31M22 36h20' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
-/>
-<style>
-/* ============================================
-   AERIS V4 — MOBILE SIDEBAR FIX
-   Fix overlay, scrolling, and touch navigation
-   ============================================ */
-
-@media (max-width: 850px) {
-
-  /* Sidebar harus berada di atas overlay */
-  #sidebar.side {
-    position: fixed !important;
-
-    top: 0 !important;
-    left: 0 !important;
-    bottom: auto !important;
-
-    width: min(290px, 84vw) !important;
-    height: 100vh !important;
-    height: 100dvh !important;
-
-    z-index: 110 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-
-    overflow: hidden !important;
-
-    background: #ffffff !important;
-
-    transform: translateX(-105%);
-    transition: transform .25s ease !important;
-
-    box-shadow:
-      18px 0 55px rgba(12, 53, 87, .16) !important;
-  }
-
-  /* Ketika menu terbuka */
-  #sidebar.side.open {
-    transform: translateX(0) !important;
-  }
-
-  /* Overlay hanya menutupi konten belakang */
-  #navOverlay.overlay {
-    position: fixed !important;
-    inset: 0 !important;
-
-    z-index: 100 !important;
-
-    background: rgba(10, 34, 57, .42) !important;
-
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-  }
-
-  #navOverlay[hidden] {
-    display: none !important;
-  }
-
-  /* Brand tetap berada di atas */
-  #sidebar .side-brand {
-    flex: 0 0 auto !important;
-    background: #fff !important;
-  }
-
-  /* INI BAGIAN PENTING:
-     Navigasi bisa scroll secara independen */
-  #sidebar #navigation.side-scroll {
-    display: block !important;
-
-    flex: 1 1 auto !important;
-
-    min-height: 0 !important;
-    height: auto !important;
-
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-
-    padding: 15px 13px 25px !important;
-
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
-    touch-action: pan-y;
-
-    scrollbar-width: thin;
-    scrollbar-color: #b9ddeb transparent;
-  }
-
-  /* Tampilan scrollbar */
-  #sidebar #navigation::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  #sidebar #navigation::-webkit-scrollbar-thumb {
-    background: #baddeb;
-    border-radius: 10px;
-  }
-
-  /* Footer tidak menimpa area menu */
-  #sidebar .side-bottom {
-    flex: 0 0 auto !important;
-    margin: 10px 13px 13px !important;
-  }
-
-  /* Tombol close yang sebelumnya tersembunyi */
-  #closeSide {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-
-    width: 34px;
-    height: 34px;
-
-    border-radius: 10px;
-  }
-
-  /* Kunci scroll halaman belakang saat menu terbuka */
-  body.scroll-lock {
-    overflow: hidden !important;
-  }
-}
-
-/* HP dengan tinggi layar kecil */
-@media (max-width: 850px) and (max-height: 650px) {
-  #sidebar .side-bottom {
-    display: none !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #sidebar.side {
-    transition: none !important;
-  }
-}
-</style>
 <style>
 :root{--sky:#29b3e9;--blue:#148bc7;--navy:#0c3557;--ink:#132c43;--muted:#8197a9;--border:#dcebf4;--bg:#f6faff;--white:#fff;--mint:#0ba785;--red:#f35f72}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);font:12px 'Plus Jakarta Sans',sans-serif;color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.52}[hidden]{display:none!important}a{color:inherit;text-decoration:none}svg{display:block}body.modal-open{overflow:hidden}.app{min-height:100dvh;display:flex}.side{position:fixed;inset:0 auto 0 0;width:264px;z-index:20;background:linear-gradient(180deg,#ffffff,#fafdff);border-right:1px solid #e0ecf4;display:flex;flex-direction:column}.side-brand{display:flex;align-items:center;gap:11px;padding:24px 23px 21px;border-bottom:1px solid #e9f1f6}.logo{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#1c9ed4,#78d7f6);box-shadow:0 9px 18px #23b2e93b;color:#fff;font-size:22px;font-weight:800}.brand-name{font-size:24px;font-weight:800;letter-spacing:-1.4px;line-height:1}.brand-sub{color:#91a9bb;font-size:8px;letter-spacing:1.5px;margin-top:6px;font-weight:800}.side-scroll{overflow:auto;flex:1;padding:16px 14px}.nav-group{margin:14px 9px 7px;color:#9aafbd;font-size:9px;font-weight:800;letter-spacing:1.6px}.nav{width:100%;display:flex;align-items:center;gap:11px;border:0;text-align:left;padding:11px 12px;border-radius:13px;color:#647b8e;background:transparent;font-size:11px;font-weight:700;transition:background .18s,color .18s;margin-bottom:3px}.nav:hover{background:#eff9ff;color:#0b7db8}.nav.active{background:linear-gradient(108deg,#1698d0,#56c6ee);color:#fff;box-shadow:0 10px 20px #1ba5de35}.nav .ni{width:25px;height:25px;border-radius:9px;background:#e9f4fb;color:#2b95c5;display:grid;place-items:center;flex-shrink:0;font-size:13px}.nav.active .ni{background:#ffffff30;color:#fff}.side-bottom{margin:13px;border:1px solid #d6eafa;border-radius:16px;padding:13px;background:linear-gradient(145deg,#effaff,#fff)}.side-bottom strong{font-size:11px}.side-bottom p{font-size:10px;line-height:1.6;color:#819aad;margin:7px 0 0}.workspace{margin-left:264px;width:calc(100% - 264px);min-width:0}.topbar{position:sticky;top:0;z-index:15;height:75px;padding:0 25px;display:flex;align-items:center;gap:14px;background:#ffffffee;border-bottom:1px solid #e5eff7;backdrop-filter:blur(18px)}.burger{display:none}.crumb{display:flex;min-width:0;align-items:center;gap:12px;flex:1}.crumb-icon{width:37px;height:37px;display:grid;place-items:center;border-radius:12px;background:#effaff;color:#279ed3;font-size:17px}.crumb-kicker{font-size:9px;letter-spacing:1.5px;font-weight:800;color:#a0b3c0}.crumb-label{font-weight:800;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.top-actions{display:flex;align-items:center;gap:9px}.status{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;border:1px solid #e4f0f5;border-radius:999px;padding:9px 12px;color:#6a8a9e;font-weight:700;font-size:10px}.live{width:7px;height:7px;border-radius:100%;background:#0fcba4;box-shadow:0 0 0 4px #0fcba418;flex-shrink:0}.top-btn{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid #daeaf4;background:#fff;color:#45697f;border-radius:11px;height:38px;padding:0 12px;font-weight:800;font-size:10px;white-space:nowrap}.top-btn:hover{background:#f1faff}.top-btn.primary{color:#fff;background:linear-gradient(110deg,#148ac8,#4bc2ee);border:0;box-shadow:0 8px 19px #148ac833}.avatar{width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:#dff4ff;color:#0077ab;font-weight:800}.content{padding:24px clamp(16px,2.6vw,35px) 45px;max-width:1700px;margin:auto}.view{animation:enter .25s ease both}@keyframes enter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.hero{min-height:245px;position:relative;overflow:hidden;border-radius:27px;padding:32px 36px;background:linear-gradient(114deg,#1493d1 0%,#41b9eb 57%,#9ee4fb 100%);color:#fff;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(245px,.8fr);align-items:center;gap:24px;box-shadow:0 17px 34px #139cc625;border:1px solid #ffffff8c}.hero:before{content:"";position:absolute;border:1px solid #ffffff40;border-radius:50%;width:560px;height:560px;right:-200px;top:-150px;box-shadow:0 0 0 55px #ffffff12,0 0 0 120px #ffffff09}.hero>*{position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;border-radius:100px;border:1px solid #ffffff66;padding:7px 13px;background:#ffffff22;font-size:9px;letter-spacing:1.7px;font-weight:800}.hero h1{font-size:clamp(27px,3vw,39px);line-height:1.13;letter-spacing:-1.8px;margin:18px 0 11px;font-weight:800}.hero p{font-size:11px;line-height:1.9;max-width:600px;color:#ffffffed}.hero-side{border:1px solid #ffffff66;background:#ffffff27;padding:21px 22px;border-radius:22px;backdrop-filter:blur(12px)}.hero-side span{display:block;font-size:9px;letter-spacing:1.5px;font-weight:800;color:#ffffffe8}.hero-side strong{display:block;font-size:clamp(25px,2.8vw,35px);margin:12px 0;letter-spacing:-1.6px;overflow-wrap:anywhere}.hero-side footer{display:flex;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px solid #ffffff44;font-size:9px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:25px 0 15px}.section-title h2{font-size:20px;font-weight:800;letter-spacing:-.6px;margin:0}.section-title p{font-size:11px;color:var(--muted);line-height:1.6;margin:5px 0 0}.metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.metric{min-width:0;padding:21px;background:linear-gradient(145deg,#fff,#fbfdff);border:1px solid #e0ecf5;border-radius:21px;box-shadow:0 9px 23px #174b6a08}.metric-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.metric label{font-size:9px;font-weight:800;letter-spacing:.5px;color:#91a3b2}.metric .metric-icon{width:33px;height:33px;border-radius:11px;display:grid;place-items:center;background:#ebfaff;color:#149dd4}.metric strong{display:block;font-size:clamp(19px,2vw,27px);letter-spacing:-1.1px;margin:17px 0 8px;overflow-wrap:anywhere}.metric p{font-size:10px;color:#96a8b7;margin:0}.positive{color:#059f80!important}.negative{color:#ef5c74!important}.panels{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:17px;margin-top:20px}.panel{min-width:0;background:#fff;border:1px solid #dfeaf3;border-radius:22px;padding:23px;box-shadow:0 8px 24px #13507708}.panel-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:15px}.panel h3{margin:0;font-size:14px;font-weight:800;letter-spacing:-.3px}.chip{border-radius:8px;background:#ecf9ff;color:#278fc2;font-size:9px;padding:7px 10px;font-weight:800}.chart-bars{display:flex;align-items:flex-end;gap:11px;height:200px;padding-top:10px;border-bottom:1px solid #e5f0f5}.chart-col{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px;flex:1;min-width:0;height:100%}.chart-pair{display:flex;align-items:flex-end;gap:3px;height:100%;width:100%;justify-content:center}.chart-up,.chart-down{border-radius:7px 7px 0 0;width:min(38%,22px);min-height:3px}.chart-up{background:linear-gradient(#38bcf0,#b1e9fb)}.chart-down{background:linear-gradient(#ff92ac,#f9d0dc)}.chart-month{color:#95a9ba;font-size:9px;margin-top:6px}.legend{display:flex;gap:17px;margin-top:14px;color:#839bac;font-size:10px}.legend i{display:inline-block;width:8px;height:8px;border-radius:3px;margin-right:5px}.link-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #edf3f7}.link-row:last-child{border:0}.link-row strong{font-size:11px}.link-row small{display:block;margin-top:5px;color:#96a8b8;font-size:9px}.money{font-size:12px;font-weight:800;white-space:nowrap}.view-intro{padding:25px;background:linear-gradient(125deg,#effbff,#fff);border:1px solid #dcedf7;border-radius:22px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:20px}.view-intro h1{font-size:23px;line-height:1.25;font-weight:800;letter-spacing:-.6px;margin:0}.view-intro p{font-size:11px;color:#8196a8;line-height:1.7;margin:7px 0 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:11px;min-height:39px;padding:10px 14px;border:1px solid #dceaf3;background:white;color:#4f7187;font-weight:800;font-size:10px;white-space:nowrap}.btn:hover{background:#f3fbff}.btn.blue{background:linear-gradient(110deg,#128dc8,#51c3ed);color:white;border:0;box-shadow:0 8px 16px #148dc52d}.btn.danger{color:#d74261;background:#fff7f8;border-color:#f8dfe5}.btn.sm{min-height:31px;padding:7px 10px;font-size:9px}.btn:focus-visible,.nav:focus-visible{outline:3px solid #7cdaff;outline-offset:2px}.table-wrap{overflow:auto;width:100%;border:1px solid #e3edf4;border-radius:16px}table{border-collapse:collapse;width:100%;min-width:650px}thead{background:#f5faff;color:#91a5b5;font-size:9px;text-transform:uppercase;letter-spacing:.8px}th{text-align:left;padding:14px;white-space:nowrap}td{padding:14px;border-top:1px solid #edf3f7;font-size:11px;color:#4c6578}td strong{color:#1f394f}.badge{display:inline-block;padding:6px 9px;background:#edf8fd;color:#168cbe;border-radius:8px;font-size:9px;font-weight:800}.badge.paid,.badge.approved{background:#e8faf4;color:#078b6d}.badge.overdue,.badge.rejected{background:#fff1f2;color:#e2576c}.badge.open,.badge.pending{background:#fff8e9;color:#c78e17}.muted{font-size:10px;color:#879eaf;line-height:1.7}.empty{text-align:center;padding:38px 20px;color:#8ca2b3;font-size:11px;line-height:1.8}.empty b{display:block;font-size:14px;color:#1e4259;margin-bottom:6px}.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.input,.select,.textarea{width:100%;min-width:0;min-height:45px;border-radius:11px;border:1px solid #dcebf5;background:#fff;padding:10px 13px;color:#183e54;outline:0;font-size:12px}.textarea{min-height:85px;resize:vertical}.input:focus,.select:focus,.textarea:focus{border-color:#48c0ef;box-shadow:0 0 0 3px #38bdf820}.field{display:block;min-width:0}.field>span{display:block;color:#557287;font-size:10px;font-weight:800;margin-bottom:8px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field.wide{grid-column:1/-1}.modal-root{position:fixed;z-index:100;inset:0;display:grid;place-items:center;padding:15px;background:#0b2e4988;backdrop-filter:blur(8px)}.modal{display:flex;flex-direction:column;width:min(650px,100%);max-height:min(90dvh,850px);overflow:hidden;background:white;border:1px solid #d9eef8;border-radius:25px;box-shadow:0 30px 80px #0c324d4c}.modal-head{padding:24px 26px;background:linear-gradient(112deg,#118acb,#56c6f0);color:white;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.modal-head h2{font-size:23px;margin:10px 0 5px;line-height:1.2;letter-spacing:-.6px}.modal-head p{font-size:10px;color:#ffffffe6;line-height:1.6}.close{width:34px;height:34px;display:grid;place-items:center;background:#ffffff2b;border:1px solid #ffffff70;border-radius:10px;color:white;font-size:19px}.modal-body{overflow:auto;padding:24px 26px;min-height:0}.modal-actions{display:flex;justify-content:flex-end;gap:10px;padding:16px 26px;border-top:1px solid #e6f0f5;background:#fbfdff}.toast-host{position:fixed;right:19px;bottom:19px;z-index:120;display:grid;gap:9px;width:min(360px,calc(100vw - 28px))}.toast{padding:15px 17px;background:#fff;border:1px solid #cfeaf4;border-left:4px solid #2db5e9;box-shadow:0 15px 40px #103e5930;border-radius:13px;font-size:11px;line-height:1.6;color:#365b70}.toast.err{border-left-color:#ee5372}.overlay{position:fixed;z-index:40;inset:0;background:#062b4480}.onboard{min-height:60dvh;display:grid;place-items:center}.onboard-box{width:min(700px,100%);padding:33px;background:white;border:1px solid #dbeef7;border-radius:26px;box-shadow:0 25px 70px #10466917}.onboard-box h2{font-size:27px;letter-spacing:-1px;margin:12px 0}.onboard-box p{color:#829aab;line-height:1.7;font-size:12px}.onboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:22px}.onboard-card{padding:20px;border:1px solid #d9edf7;border-radius:18px;background:#f8fcff}.onboard-card h3{font-size:15px;margin:0 0 13px}.onboard-card label{display:block;margin:10px 0 6px;font-size:10px;font-weight:800}.small-stat{display:flex;gap:12px;flex-wrap:wrap}.small-stat>div{padding:16px;background:#f5fbff;border:1px solid #e4eff7;border-radius:14px;min-width:170px;flex:1}.small-stat strong{display:block;font-size:20px;margin:7px 0}.small-stat span{color:#819bad;font-size:10px}.screen-loader{min-height:280px;display:grid;place-content:center;text-align:center;gap:14px}.skeleton{background:linear-gradient(90deg,#eaf5fb,#fff,#eaf5fb);background-size:200% 100%;animation:shimmer 1.35s linear infinite;border-radius:10px}@keyframes shimmer{to{background-position-x:-200%}}.sk-row{height:17px;width:240px;max-width:60vw;margin:auto}.sk-big{height:120px;width:min(500px,80vw);margin:auto;border-radius:23px}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.mini-grid .panel{padding:20px}.mini-grid strong{display:block;font-size:22px;margin-top:10px}.page-footer{margin-top:33px;border-top:1px solid #e0edf5;padding-top:15px;color:#9cadbb;font-size:9px;display:flex;justify-content:space-between}.scroll-lock{overflow:hidden}
 @media(max-width:1180px){.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.hero-side{max-width:450px}.panels{grid-template-columns:1fr}.side{width:232px}.workspace{margin-left:232px;width:calc(100% - 232px)}}
@@ -244,6 +105,20 @@
 @media(max-width:620px){.v4-view{gap:13px}.v4-feature-hero{padding:25px 20px;border-radius:20px}.v4-feature-copy h1{font-size:clamp(24px,6vw,31px);letter-spacing:-1px}.v4-feature-copy p{font-size:10.5px}.v4-hero-kicker{letter-spacing:.7px;font-size:8px}.v4-feature-toolbar{flex-direction:column;align-items:flex-start;gap:10px}.v4-toolbar-actions{width:100%}.v4-toolbar-actions .btn{flex:1}.v4-stat-grid,.v4-skel-stats{gap:9px}.v4-stat{padding:16px 14px;border-radius:15px;min-height:132px}.v4-stat strong{font-size:clamp(16px,4vw,21px)}.v4-stat-top span{font-size:8px}.v4-panel{padding:16px 12px;border-radius:18px}.v4-panel-head h3{font-size:12px}.v4-panel-head p{font-size:10px}.v4-panel-mark{font-size:7px}.v4-skel-hero{grid-template-columns:1fr;padding:23px 20px;min-height:185px}.v4-skel-ornament{display:none}.v4-skel-stat{padding:15px;min-height:125px}.v4-skel-table{padding:16px;overflow:hidden}}
 @media(max-width:370px){.v4-stat-grid,.v4-skel-stats{grid-template-columns:1fr}.v4-feature-copy h1{font-size:25px}.v4-stat{min-height:100px}}
 @media(prefers-reduced-motion:reduce){.v4-shimmer,.v4-skel-progress i{animation:none!important}}
+
+
+/* AERIS V5 Three Statements — additive styling */
+.fs-page{display:flex;flex-direction:column;gap:18px;min-width:0}
+.fs-hero{position:relative;overflow:hidden;padding:31px clamp(19px,3vw,34px);border-radius:24px;background:linear-gradient(116deg,#0c527d 0%,#178bc5 53%,#68d2f1 100%);color:#fff;box-shadow:0 18px 34px #158fc72e;border:1px solid #ffffff61}
+.fs-hero:before{content:"";position:absolute;inset:-150px -100px auto auto;width:400px;height:400px;border-radius:50%;border:1px solid #ffffff60;box-shadow:0 0 0 55px #ffffff16,0 0 0 110px #ffffff0d;pointer-events:none}
+.fs-hero > *{position:relative}.fs-eyebrow{font-size:9px;font-weight:800;letter-spacing:1.9px;color:#ddf8ff}.fs-hero h1{font-size:clamp(24px,3vw,34px);letter-spacing:-1.5px;line-height:1.2;margin:14px 0 10px;font-weight:800}.fs-hero p{margin:0;max-width:700px;line-height:1.8;color:#e3f7ff;font-size:11px}
+.fs-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.fs-kpi{border:1px solid #e0edf5;background:#fff;border-radius:17px;padding:18px;min-width:0}.fs-kpi span{display:block;color:#7697a8;font-weight:800;font-size:9px;letter-spacing:.6px}.fs-kpi strong{display:block;margin:11px 0 7px;font-size:clamp(16px,1.8vw,23px);letter-spacing:-.8px;overflow-wrap:anywhere}.fs-kpi small{color:#92a7b7;font-size:9px;line-height:1.6}
+.fs-panel{border:1px solid #dfebf4;border-radius:20px;padding:22px;background:#fff;box-shadow:0 10px 27px #12568308;min-width:0}.fs-panel h2{margin:0 0 7px;font-weight:800;font-size:16px;letter-spacing:-.5px}.fs-hint{color:#829baa;font-size:10.5px;line-height:1.8;margin:0 0 16px}.fs-filters{display:flex;align-items:end;flex-wrap:wrap;gap:11px}.fs-filters label{display:flex;flex-direction:column;gap:7px;color:#6b8499;font-weight:800;font-size:10px;min-width:155px;flex:1}.fs-filters input,.fs-filters select{width:100%;min-height:40px;border:1px solid #d7e7f1;border-radius:10px;background:#fafdff;color:#1d4b68;padding:8px 11px;max-width:100%}.fs-filters button{min-height:40px}.fs-toolbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center}.fs-actions{display:flex;flex-wrap:wrap;gap:8px}.fs-tabs{display:flex;gap:7px;overflow:auto;scrollbar-width:thin;padding:4px;background:#f0f8fd;border-radius:12px;max-width:100%}.fs-tabs button{flex:1;white-space:nowrap;border:0;background:transparent;color:#668da2;font-weight:800;padding:11px 12px;border-radius:9px;font-size:10px}.fs-tabs button.active{background:#fff;color:#1089c4;box-shadow:0 5px 14px #206f9c14}
+.fs-status{display:flex;gap:13px;align-items:flex-start;padding:14px 15px;background:#eefbf6;border:1px solid #c9f1df;color:#126b56;border-radius:12px;font-size:10px;line-height:1.7}.fs-status.bad{background:#fff6f6;color:#aa4155;border-color:#f6d5dc}.fs-status b{font-size:11px}.fs-issues{display:grid;gap:7px;margin-top:12px}.fs-issue{border-radius:10px;border:1px solid #f5d4da;background:#fff8f9;padding:11px 13px;font-size:10px;line-height:1.6;color:#974758}.fs-issue.warn{background:#fffaf1;border-color:#f2dfbd;color:#8f6927}
+.fs-statement{width:100%;min-width:0}.fs-lines{width:100%;border-collapse:collapse;min-width:0}.fs-lines th{font-size:9px;color:#6e91a7;border-bottom:1px solid #dceaf3;padding:13px 12px;background:#f6fbff}.fs-lines td{font-size:10.5px;padding:13px 12px;border-top:1px solid #eef3f7;line-height:1.5}.fs-lines td:last-child,.fs-lines th:last-child{text-align:right;font-variant-numeric:tabular-nums}.fs-lines .fs-section td{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:#1487bc;background:#f2faff;font-weight:800}.fs-lines .fs-total td{background:#f8fcff;font-weight:800;color:#183c56;border-top:2px solid #d4e9f5}.fs-lines .fs-grand td{background:#e9f8ff;font-weight:800;color:#0769a0;font-size:12px;border-top:2px solid #9bd6f3}.fs-amount{white-space:nowrap;font-weight:700}.fs-code{color:#91adbc;margin-right:8px;font-size:9px}.fs-empty{color:#90a5b6;text-align:center;padding:24px 12px!important}.fs-note{border-left:3px solid #36aee0;background:#f3faff;border-radius:8px;padding:12px;font-size:10px;line-height:1.8;color:#648396;margin-top:14px}
+.fs-mappings{margin-top:10px;max-height:410px;overflow:auto;border:1px solid #dfebf2;border-radius:12px}.fs-map{padding:11px 13px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid #edf3f7}.fs-map:last-child{border:0}.fs-map-name{min-width:0}.fs-map-name strong{display:block;color:#2d536a;font-size:11px}.fs-map-name small{display:block;color:#8fa6b6;font-size:9px;margin-top:4px}.fs-map-control{display:flex;align-items:center;gap:7px;flex-shrink:0}.fs-map select{max-width:155px;min-width:122px;min-height:35px;border-radius:9px;border:1px solid #d8e7f0;color:#3d6c83;padding:7px;font-size:10px;background:#fff}.fs-map .btn{min-height:35px}.fs-map-linked{font-size:9px;color:#148cbf;font-weight:800}
+@media(max-width:980px){.fs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.fs-hero{padding:26px 21px}.fs-panel{padding:16px 13px}.fs-grid{gap:9px}.fs-kpi{padding:15px 12px}.fs-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.fs-filters label{min-width:0}.fs-filters .fs-wide{grid-column:1/-1}.fs-filters .fs-run{grid-column:1/-1;width:100%}.fs-tabs{width:100%}.fs-tabs button{padding:10px 8px;font-size:9px}.fs-toolbar{align-items:stretch}.fs-actions{width:100%}.fs-actions .btn{flex:1}.fs-map{align-items:stretch;flex-direction:column}.fs-map-control{width:100%}.fs-map-control select{flex:1;max-width:none}.fs-lines th,.fs-lines td{padding:12px 6px;font-size:9px}.fs-code{display:block;margin:0 0 4px}.fs-page{gap:12px}}
 
 </style></head><body>
 <div class="app"><aside class="side" id="sidebar"><div class="side-brand"><div class="logo">A</div><div><div class="brand-name">aeris<span style="color:#37bdf1">.</span></div><div class="brand-sub">CORPORATE FINANCE</div></div><button type="button" id="closeSide" class="btn sm" style="margin-left:auto;display:none">×</button></div><nav class="side-scroll" id="navigation" aria-label="Navigasi aplikasi"><div class="nav-group">OVERVIEW</div><button class="nav active" data-view="dashboard" type="button"><span class="ni">▦</span><span>Dashboard</span></button><button class="nav" data-view="cashflow" type="button"><span class="ni">⌁</span><span>Cash Flow</span></button><div class="nav-group">BUSINESS OPERATIONS</div><button class="nav" data-view="transactions" type="button"><span class="ni">⇄</span><span>Transactions</span></button><button class="nav" data-view="accounts" type="button"><span class="ni">▣</span><span>Accounts & Banks</span></button><button class="nav" data-view="invoices" type="button"><span class="ni">↙</span><span>Accounts Receivable</span></button><button class="nav" data-view="bills" type="button"><span class="ni">↗</span><span>Accounts Payable</span></button><div class="nav-group">ACCOUNTING & CONTROL</div><button class="nav" data-view="coa" type="button"><span class="ni">▥</span><span>Chart of Accounts</span></button><button class="nav" data-view="ledger" type="button"><span class="ni">▤</span><span>Journal & Ledger</span></button><button class="nav" data-view="reconcile" type="button"><span class="ni">⇌</span><span>Bank Reconciliation</span></button></nav><div class="side-bottom"><strong>✦ AERIS Business Suite</strong><p>Finance operations, budgeting, receivables, payables & transparent audit trails.</p><div class="muted" style="margin-top:10px">Google Sheets · Private company tenants</div></div></aside>
@@ -1026,6 +901,153 @@ skeleton=function(label='Menyiapkan laporan…'){
  const content=isTable?`<div class="v4-skel-table"><div class="v4-shimmer" style="width:34%;height:16px"></div><div class="v4-skel-thead"></div>${Array.from({length:5},()=>`<div class="v4-skel-tr"><i class="v4-shimmer"></i><i class="v4-shimmer"></i><i class="v4-shimmer"></i><i class="v4-shimmer"></i></div>`).join('')}</div>`:`<div class="v4-skel-chart"><div class="v4-shimmer" style="width:35%;height:15px"></div><div class="v4-skel-chart-inner">${Array.from({length:12},(_,i)=>`<i style="height:${22+(i*17)%65}%"></i>`).join('')}</div></div>`;
  return `<div class="view v4-skeleton" role="status" aria-label="${esc(label)}"><div class="v4-skel-hero"><div><span class="v4-skel-kicker"><i class="live"></i> AERIS · FINANCIAL INTELLIGENCE</span><h1>${esc(TITLES[S.view]||'Dashboard')}</h1><p>Menyiapkan data ${esc(S.org?.name||'perusahaan')}…</p><div class="v4-skel-progress"><i></i> Sinkronisasi modul</div></div><div class="v4-skel-ornament"><span class="v4-shimmer"></span><span class="v4-shimmer"></span><span class="v4-shimmer"></span></div></div><div class="v4-skel-stats">${stat}</div>${content}</div>`;
 };
+
+/* ================================================================
+ AERIS V5 — Three Financial Statements Generator
+ Only journal-based statements: no duplicate cash tracker aggregation.
+ ================================================================ */
+const fsAccountingGroup=sections.find(x=>x.label==='ACCOUNTING & CONTROL');
+if(fsAccountingGroup)fsAccountingGroup.items.push(['statements','Three Financial Statements','▧']);
+else sections.push({label:'ACCOUNTING REPORTING',items:[['statements','Three Financial Statements','▧']]});
+TITLES.statements='Three Financial Statements Generator';
+DESC.statements='Validasi jurnal posted, laporan laba rugi, neraca, dan arus kas, serta ekspor PDF/Excel.';
+const fsState={org:'',from:'',to:'',preset:'month',tab:'income',data:null,loading:false,error:'',showMapping:false,seq:0};
+function fsPeriod(key){
+ const now=today(),yy=Number(now.slice(0,4)),mm=Number(now.slice(5,7));
+ if(key==='year')return [String(yy)+'-01-01',now];
+ if(key==='quarter')return [String(yy)+'-'+String(1+3*Math.floor((mm-1)/3)).padStart(2,'0')+'-01',now];
+ return [now.slice(0,7)+'-01',now];
+}
+function fsOrgReset(){if(fsState.org!==S.org?.id){fsState.org=S.org?.id||'';fsState.data=null;fsState.error='';fsState.preset='month';[fsState.from,fsState.to]=fsPeriod('month');fsState.tab='income';fsState.showMapping=false;fsState.seq++;}}
+function fsDataValid(){return !!fsState.data?.valid&&fsState.data?.company&&fsState.data?.from===fsState.from&&fsState.data?.to===fsState.to;}
+async function fsLoad(){
+ if(!S.org)return;fsOrgReset();const org=S.org.id,seq=++fsState.seq,from=fsState.from,to=fsState.to;
+ if(!from||!to||from>to){fsState.error='Pilih rentang tanggal yang valid.';fsState.data=null;render();return;}
+ fsState.loading=true;fsState.error='';render();
+ try{const data=await rpc('getFinancialStatements',{from,to},org);
+  if(S.org?.id!==org||fsState.seq!==seq)return;
+  fsState.data=data;fsState.error='';
+ }catch(e){if(S.org?.id===org&&fsState.seq===seq){fsState.data=null;fsState.error=e.message||'Laporan gagal diproses.';toast(fsState.error,true);}}
+ finally{if(S.org?.id===org&&fsState.seq===seq){fsState.loading=false;render();}}
+}
+function fsRow(label,value,cls='',code=''){
+ return `<tr class="${cls}"><td>${code?`<span class="fs-code">${esc(code)}</span>`:''}${esc(label)}</td><td class="fs-amount">${esc(money(value))}</td></tr>`;
+}
+function fsSection(label){return `<tr class="fs-section"><td colspan="2">${esc(label)}</td></tr>`;}
+function fsDetail(rows){return rows.length?rows.map(x=>fsRow(x.name,x.amount,'',x.code)).join(''):'<tr><td colspan="2" class="fs-empty">Tidak ada saldo pada kategori ini.</td></tr>';}
+function fsTable(body){return `<div class="fs-statement"><table class="fs-lines"><thead><tr><th>AKUN / KETERANGAN</th><th>NILAI (IDR)</th></tr></thead><tbody>${body}</tbody></table></div>`;}
+function fsStatementHTML(tab,d){
+ if(tab==='income'){
+  const i=d.income;
+  return fsTable(fsSection('Pendapatan')+fsDetail(i.revenues)+fsRow('Total Pendapatan',i.totalRevenue,'fs-total')+fsSection('Beban')+fsDetail(i.expenses)+fsRow('Total Beban',i.totalExpense,'fs-total')+fsRow('Laba / (Rugi) Bersih',i.netIncome,'fs-grand'));
+ }
+ if(tab==='balance'){
+  const b=d.balance;
+  return fsTable(fsSection('Aset')+fsDetail(b.assets)+fsRow('Total Aset',b.totalAssets,'fs-total')+fsSection('Liabilitas')+fsDetail(b.liabilities)+fsRow('Total Liabilitas',b.totalLiabilities,'fs-total')+fsSection('Ekuitas')+fsDetail(b.equity)+fsRow('Ekuitas dalam COA',b.bookEquity,'fs-total')+fsRow('Laba / (Rugi) sebelum periode ini yang belum ditutup',b.priorProfit)+fsRow('Laba / (Rugi) periode berjalan',b.periodProfit)+fsRow('Total Ekuitas termasuk laba kumulatif',b.totalEquity,'fs-total')+fsRow('Total Liabilitas + Ekuitas',b.totalLiabilities+b.totalEquity,'fs-grand')+fsRow('Selisih Neraca (harus 0)',b.balanceDifference,'fs-total'));
+ }
+ const c=d.cashflow;
+ return fsTable(fsSection('Aktivitas Operasi')+fsDetail(c.details.operating)+fsRow('Arus Kas Operasi',c.operating,'fs-total')+fsSection('Aktivitas Investasi')+fsDetail(c.details.investing)+fsRow('Arus Kas Investasi',c.investing,'fs-total')+fsSection('Aktivitas Pendanaan')+fsDetail(c.details.financing)+fsRow('Arus Kas Pendanaan',c.financing,'fs-total')+fsRow('Kenaikan / (Penurunan) Kas Bersih',c.netCashFlows,'fs-grand')+fsSection('Rekonsiliasi Kas')+fsRow('Kas dan Setara Kas Awal Periode',c.openingCash)+fsRow('Perubahan Kas menurut Buku Besar',c.movement)+fsRow('Kas dan Setara Kas Akhir Periode',c.closingCash,'fs-grand'));
+}
+function fsPill(sev,label){return `<div class="fs-status ${sev==='bad'?'bad':''}"><span style="font-size:18px">${sev==='bad'?'!':'✓'}</span><div><b>${esc(label)}</b><div>${sev==='bad'?'Perbaiki validasi dan pemetaan sebelum melakukan ekspor.':'Jurnal posted dan rekonsiliasi saldo memenuhi pemeriksaan otomatis.'}</div></div></div>`;}
+function fsIssueHtml(items,kind){return items.map(i=>`<div class="fs-issue ${kind==='warn'?'warn':''}"><b>${esc(i.code)}</b> — ${esc(i.message)}</div>`).join('');}
+function fsMappingPanel(d){
+ return `<section class="fs-panel" id="fsMappingPanel"><div class="fs-toolbar"><div><h2>Pemetaan Akun Arus Kas</h2><p class="fs-hint">Klasifikasikan akun COA untuk arus kas. Kas otomatis terdeteksi dari Account Links jika tidak ditimpa. Simpan satu akun lalu validasi kembali.</p></div><div class="fs-actions"><span class="badge">${d.mappings.length} akun COA</span>${canWrite()?'<button type="button" class="btn blue sm" id="fsSaveAllMappings">✓ Simpan Semua</button>':''}</div></div><div class="fs-mappings">${d.mappings.map(a=>`<div class="fs-map"><div class="fs-map-name"><strong>${esc(a.code)} · ${esc(a.name)}</strong><small>${esc(a.type)} ${a.suggestedCash?'<span class="fs-map-linked">· Tertaut ke rekening bank</span>':''}</small></div><div class="fs-map-control"><select data-fs-class="${esc(a.id)}" aria-label="Klasifikasi arus kas untuk akun ${esc(a.code)}"><option value="unmapped" ${!a.class?'selected':''}>Belum dipetakan</option>${[['cash','Kas / Bank'],['operating','Operasi'],['investing','Investasi'],['financing','Pendanaan']].map(([value,label])=>`<option value="${value}" ${a.class===value?'selected':''}>${label}</option>`).join('')}</select>${canWrite()?`<button type="button" class="btn sm" data-fs-save="${esc(a.id)}">Simpan</button>`:''}</div></div>`).join('')||'<div class="fs-empty">Belum ada akun COA.</div>'}</div><p class="fs-note">Pemetaan bukan pengganti kebijakan akuntansi perusahaan. Periksa klasifikasi setiap akun khususnya aset tetap, utang pembiayaan, dan ekuitas.</p></section>`;
+}
+function fsPage(){
+ fsOrgReset();const d=fsState.data,valid=fsDataValid(),v=d?.validation;
+ const tabs=[['income','Income Statement'],['balance','Balance Sheet'],['cashflow','Cash Flow Statement']];
+ return `<div class="view fs-page"><section class="fs-hero"><span class="fs-eyebrow">AERIS · CORPORATE ACCOUNTING & REPORTING</span><h1>Three Financial Statements Generator</h1><p>Bangun tiga laporan keuangan terintegrasi dari buku besar berdasarkan jurnal yang telah di-posting. Periksa keseimbangan, status jurnal, dan klasifikasi arus kas sebelum ekspor.</p></section>
+ <section class="fs-panel"><h2>Periode dan Validasi</h2><p class="fs-hint">Akses hanya untuk organisasi aktif · laporan nominal Rupiah (IDR) · snapshot dibuat dari posted journal.</p><div class="fs-filters"><label class="fs-wide">Pilih periode<select id="fsPreset"><option value="month" ${fsState.preset==='month'?'selected':''}>Bulan ini</option><option value="quarter" ${fsState.preset==='quarter'?'selected':''}>Kuartal berjalan</option><option value="year" ${fsState.preset==='year'?'selected':''}>Tahun berjalan</option><option value="custom" ${fsState.preset==='custom'?'selected':''}>Custom range</option></select></label><label>Tanggal Awal<input type="date" id="fsFrom" value="${esc(fsState.from)}"></label><label>Tanggal Akhir<input type="date" id="fsTo" value="${esc(fsState.to)}"></label><button class="btn blue fs-run" id="fsGenerate" type="button" ${fsState.loading?'disabled':''}>${fsState.loading?'⟳ Memvalidasi…':'✓ Validasi & Buat Laporan'}</button></div></section>
+ ${fsState.loading?'<div class="fs-panel" role="status">⟳ Mengambil jurnal dan memvalidasi saldo laporan…</div>':''}
+ ${fsState.error?`<div class="fs-status bad"><b>Gagal memuat:</b> ${esc(fsState.error)}</div>`:''}
+ ${d?`<div class="fs-grid"><div class="fs-kpi"><span>JURNAL POSTED · PERIODE</span><strong>${v.postedCount}</strong><small>${v.draftCount} draft belum posting</small></div><div class="fs-kpi"><span>LABA / (RUGI) BERSIH</span><strong>${money(d.income.netIncome)}</strong><small>Akumulasi periode yang dipilih</small></div><div class="fs-kpi"><span>TOTAL ASET</span><strong>${money(d.balance.totalAssets)}</strong><small>Saldo sampai ${esc(d.to)}</small></div><div class="fs-kpi"><span>ARUS KAS BERSIH</span><strong>${money(d.cashflow.movement)}</strong><small>Mutasi akun kas menurut jurnal</small></div></div>
+ <section class="fs-panel">${fsPill(d.valid?'ok':'bad',d.valid?'Validasi berhasil · Laporan dapat diekspor':v.errors.length+' masalah validasi perlu ditangani')}${v.errors.length?`<div class="fs-issues">${fsIssueHtml(v.errors,'error')}</div>`:''}${v.warnings.length?`<div class="fs-issues">${fsIssueHtml(v.warnings,'warn')}</div>`:''}</section>`:''}
+ ${d&&valid?`<section class="fs-panel"><div class="fs-toolbar"><div><h2>Financial Statements</h2><p class="fs-hint">${esc(d.company)} · ${esc(d.from)} — ${esc(d.to)} · Dihasilkan ${esc(d.generatedAt.replace('T',' ').slice(0,19))} UTC</p></div><div class="fs-actions"><button class="btn" type="button" id="fsPdf">↓ PDF</button><button class="btn blue" type="button" id="fsXlsx">↓ Excel .xlsx</button></div></div><div class="fs-tabs" role="tablist" aria-label="Jenis laporan">${tabs.map(([key,title])=>`<button type="button" role="tab" aria-selected="${fsState.tab===key}" data-fs-tab="${key}" class="${fsState.tab===key?'active':''}">${title}</button>`).join('')}</div><div style="margin-top:16px">${fsStatementHTML(fsState.tab,d)}</div><div class="fs-note">${fsState.tab==='cashflow'?'Arus kas diklasifikasikan berdasarkan pasangan akun non-kas pada jurnal yang mengubah saldo kas. Jurnal nonkas dan transfer antar akun kas dikecualikan.':fsState.tab==='income'?'Laba rugi mencakup akun pendapatan/beban pada rentang tanggal terpilih, dari jurnal posted saja.':'Neraca adalah posisi saldo kumulatif hingga tanggal akhir. Laba kumulatif yang belum ditutup ikut dihitung dalam ekuitas tanpa membuat jurnal baru.'}</div></section>`:''}
+ ${d?`<section class="fs-panel"><div class="fs-toolbar"><div><h2>Konfigurasi Arus Kas</h2><p class="fs-hint">Pilih kategori setiap akun sesuai aktivitas akuntansinya.</p></div><button class="btn sm" id="fsToggleMappings">${fsState.showMapping?'Sembunyikan pemetaan':'Atur Pemetaan Akun'}</button></div></section>${fsState.showMapping?fsMappingPanel(d):''}`:''}
+ <div class="fs-note">Laporan bersifat internal dan belum diaudit. Transaksi kas pada modul operasional tidak otomatis menjadi jurnal posted; lakukan pembukuan dahulu melalui Journal & Ledger atau Smart Journal. PDF menggunakan dialog cetak browser (pilih Save as PDF). Ekspor Excel diproses lokal di browser.</div></div>`;
+}
+function fsAttach(){
+ $('fsPreset')?.addEventListener('change',e=>{fsState.preset=e.target.value;if(fsState.preset!=='custom')[fsState.from,fsState.to]=fsPeriod(fsState.preset);fsState.data=null;render();});
+ $('fsFrom')?.addEventListener('change',e=>{fsState.from=e.target.value;fsState.preset='custom';fsState.data=null;render();});
+ $('fsTo')?.addEventListener('change',e=>{fsState.to=e.target.value;fsState.preset='custom';fsState.data=null;render();});
+ $('fsGenerate')?.addEventListener('click',()=>void fsLoad());
+ $('fsPdf')?.addEventListener('click',fsExportPdf);
+ $('fsXlsx')?.addEventListener('click',fsExportXlsx);
+ $('fsToggleMappings')?.addEventListener('click',()=>{fsState.showMapping=!fsState.showMapping;render();});
+ $('content').querySelectorAll('[data-fs-tab]').forEach(b=>b.addEventListener('click',()=>{fsState.tab=b.dataset.fsTab;render();}));
+ $('fsSaveAllMappings')?.addEventListener('click',async e=>{
+  const btn=e.currentTarget;btn.disabled=true;
+  try{const mappings=[...$('content').querySelectorAll('[data-fs-class]')].map(el=>({accountId:el.dataset.fsClass,cashFlowClass:el.value}));
+   const result=await rpc('saveStatementMappings',{mappings,requestId:uuid()});toast((result.saved||0)+' pemetaan akun diperbarui.');await fsLoad();
+  }catch(e){toast(e.message,true);btn.disabled=false;}
+ });
+ $('content').querySelectorAll('[data-fs-save]').forEach(b=>b.addEventListener('click',async()=>{
+  const a=b.dataset.fsSave,select=$('content').querySelector('[data-fs-class="'+a+'"]');if(!select)return;
+  b.disabled=true;try{await rpc('saveStatementMapping',{accountId:a,cashFlowClass:select.value,requestId:uuid()});toast('Pemetaan akun disimpan.');await fsLoad();}catch(e){toast(e.message,true);b.disabled=false;}
+ }));
+}
+const fsPrevNavigate=navigate,fsPrevRender=render,fsPrevRefresh=refresh;
+navigate=async function(view){if(view!=='statements')return fsPrevNavigate(view);
+ ++S.navSeq;S.view=view;closeSide();updateNav();if(!S.org)return renderOnboarding();fsOrgReset();render();
+ if(!fsState.data)await fsLoad();window.scrollTo({top:0,behavior:'instant'});
+};
+render=function(){if(S.view!=='statements')return fsPrevRender();updateNav();if(!S.org)return renderOnboarding();$('content').innerHTML=fsPage()+'<footer class="page-footer"><span>© AERIS · Statement Reporting</span><span>Company-scoped posted journals · Internal reporting</span></footer>';fsAttach();};
+refresh=async function(force=false){if(S.view==='statements')return fsLoad();return fsPrevRefresh(force);};
+
+// Export shapes used by both independent PDF and native Excel outputs.
+function fsWorkbookRows(d){
+ const intro=(name)=>[['AERIS CORPORATE FINANCE'],[d.company],[name],[`Periode: ${d.from} — ${d.to}`],[`Generated UTC: ${d.generatedAt}`],[],['Kode','Akun / Keterangan','IDR']];
+ const row=a=>[String(a.code),a.name,a.amount];const text=(name,value)=>['',name,value];
+ const income=[...intro('Income Statement'),['','PENDAPATAN',''],...d.income.revenues.map(row),text('Total Pendapatan',d.income.totalRevenue),[],['','BEBAN',''],...d.income.expenses.map(row),text('Total Beban',d.income.totalExpense),[],text('Laba / (Rugi) Bersih',d.income.netIncome)];
+ const b=d.balance,balance=[...intro('Balance Sheet'),['','ASET',''],...b.assets.map(row),text('Total Aset',b.totalAssets),[],['','LIABILITAS',''],...b.liabilities.map(row),text('Total Liabilitas',b.totalLiabilities),[],['','EKUITAS',''],...b.equity.map(row),text('Saldo Akun Ekuitas',b.bookEquity),text('Laba sebelum periode belum ditutup',b.priorProfit),text('Laba periode berjalan',b.periodProfit),text('Total Ekuitas',b.totalEquity),text('Total Liabilitas + Ekuitas',b.totalLiabilities+b.totalEquity),text('Selisih Neraca',b.balanceDifference)];
+ const c=d.cashflow,cf=[...intro('Cash Flow Statement'),['','ARUS KAS OPERASI',''],...c.details.operating.map(row),text('Arus Kas Operasi',c.operating),[],['','ARUS KAS INVESTASI',''],...c.details.investing.map(row),text('Arus Kas Investasi',c.investing),[],['','ARUS KAS PENDANAAN',''],...c.details.financing.map(row),text('Arus Kas Pendanaan',c.financing),[],text('Arus Kas Bersih',c.netCashFlows),[],text('Kas Awal',c.openingCash),text('Perubahan Kas',c.movement),text('Kas Akhir',c.closingCash)];
+ const validation=[['AERIS VALIDATION REPORT'],[`Periode: ${d.from} — ${d.to}`],['Status','VALID'],['Posted journals',d.validation.postedCount],['Draft journals',d.validation.draftCount],['Selisih Neraca',d.validation.balanceDifference],['Selisih Kas',d.validation.cashDifference],[],['Peringatan'],...d.validation.warnings.map(x=>[x.code,x.message])];
+ return [income,balance,cf,validation];
+}
+const fsXml=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+function fsSheetXml(rows){
+ const col=n=>{let s='';for(n++;n;n=Math.floor((n-1)/26))s=String.fromCharCode(65+(n-1)%26)+s;return s;};
+ const content=rows.map((r,i)=>`<row r="${i+1}">${r.map((x,j)=>{
+  if(x===null||x===undefined||x==='')return '';
+  const cell=col(j)+(i+1),style=i===0||i===6?' s="2"':typeof x==='number'?' s="1"':'';
+  return typeof x==='number'&&Number.isFinite(x)?`<c r="${cell}"${style}><v>${x}</v></c>`:`<c r="${cell}"${style} t="inlineStr"><is><t xml:space="preserve">${fsXml(x)}</t></is></c>`;
+ }).join('')}</row>`).join('');
+ return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><dimension ref="A1:C${rows.length}"/><sheetViews><sheetView workbookViewId="0"/></sheetViews><sheetFormatPr defaultRowHeight="17"/><cols><col min="1" max="1" width="18" customWidth="1"/><col min="2" max="2" width="56" customWidth="1"/><col min="3" max="3" width="23" customWidth="1"/></cols><sheetData>${content}</sheetData></worksheet>`;
+}
+function fsCrc32(bytes){let c=0xffffffff;for(const x of bytes){c^=x;for(let i=0;i<8;i++)c=(c>>>1)^((c&1)?0xedb88320:0);}return (c^0xffffffff)>>>0;}
+function fsZip(entries){
+ const te=new TextEncoder(),locals=[],centers=[];let offset=0;
+ const u16=(arr,pos,val)=>{arr[pos]=val&255;arr[pos+1]=(val>>>8)&255;};
+ const u32=(arr,pos,val)=>{u16(arr,pos,val);u16(arr,pos+2,Math.floor(val/65536));};
+ for(const [path,value] of entries){const name=te.encode(path),data=te.encode(value),crc=fsCrc32(data);
+  const local=new Uint8Array(30+name.length+data.length);u32(local,0,0x04034b50);u16(local,4,20);u16(local,6,0x800);u16(local,8,0);u32(local,14,crc);u32(local,18,data.length);u32(local,22,data.length);u16(local,26,name.length);local.set(name,30);local.set(data,30+name.length);locals.push(local);
+  const center=new Uint8Array(46+name.length);u32(center,0,0x02014b50);u16(center,4,20);u16(center,6,20);u16(center,8,0x800);u32(center,16,crc);u32(center,20,data.length);u32(center,24,data.length);u16(center,28,name.length);u32(center,42,offset);center.set(name,46);centers.push(center);offset+=local.length;
+ }
+ const cdLength=centers.reduce((n,a)=>n+a.length,0),total=offset+cdLength+22,zip=new Uint8Array(total);let ptr=0;
+ [...locals,...centers].forEach(a=>{zip.set(a,ptr);ptr+=a.length;});
+ const end=new Uint8Array(22);u32(end,0,0x06054b50);u16(end,8,entries.length);u16(end,10,entries.length);u32(end,12,cdLength);u32(end,16,offset);zip.set(end,ptr);return zip;
+}
+function fsBuildXlsx(d){
+ const names=['Income Statement','Balance Sheet','Cash Flow','Validasi'];const sheets=fsWorkbookRows(d),entry=[];
+ entry.push(['[Content_Types].xml',`<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>${names.map((_,i)=>`<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')}</Types>`]);
+ entry.push(['_rels/.rels',`<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`]);
+ entry.push(['xl/workbook.xml',`<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>${names.map((n,i)=>`<sheet name="${fsXml(n)}" sheetId="${i+1}" r:id="rId${i+1}"/>`).join('')}</sheets></workbook>`]);
+ entry.push(['xl/_rels/workbook.xml.rels',`<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${names.map((_,i)=>`<Relationship Id="rId${i+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i+1}.xml"/>`).join('')}<Relationship Id="rId${names.length+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`]);
+ entry.push(['xl/styles.xml',`<?xml version="1.0" encoding="UTF-8"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="1"><numFmt numFmtId="164" formatCode="#,##0;[Red](#,##0);&quot;-&quot;"/></numFmts><fonts count="2"><font><sz val="11"/><name val="Aptos"/></font><font><b/><color rgb="FF147AAE"/><sz val="11"/><name val="Aptos"/></font></fonts><fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFEAF8FF"/><bgColor indexed="64"/></patternFill></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="3"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="164" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/><xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`]);
+ sheets.forEach((x,i)=>entry.push([`xl/worksheets/sheet${i+1}.xml`,fsSheetXml(x)]));return fsZip(entry);
+}
+function fsExportXlsx(){
+ if(!fsDataValid())return toast('Validasi laporan terlebih dahulu.',true);
+ try{const d=fsState.data,bytes=fsBuildXlsx(d),blob=new Blob([bytes],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`AERIS_Three_Statements_${d.from}_${d.to}.xlsx`;a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);toast('Excel 4 sheet berhasil disiapkan.');}catch(err){toast('Ekspor Excel gagal: '+err.message,true);}
+}
+function fsExportPdf(){
+ if(!fsDataValid())return toast('Validasi laporan terlebih dahulu.',true);
+ const d=fsState.data,w=window.open('','_blank');if(!w)return toast('Izinkan pop-up untuk mencetak PDF.',true);
+ const blocks=[['INCOME STATEMENT',fsStatementHTML('income',d)],['BALANCE SHEET',fsStatementHTML('balance',d)],['CASH FLOW STATEMENT',fsStatementHTML('cashflow',d)]];
+ const html=`<!doctype html><html lang="id"><head><meta charset="utf-8"><title>AERIS Financial Statements ${esc(d.from)} – ${esc(d.to)}</title><style>@page{size:A4;margin:16mm 15mm}body{font:11px Arial,sans-serif;color:#183d54;margin:0}header{border-bottom:3px solid #1595c9;margin-bottom:19px;padding-bottom:14px}h1{font-size:24px;margin:0;color:#116b99}header p{color:#607f91;line-height:1.65}h2{font-size:15px;color:#0d6494;margin:20px 0 13px}section{break-before:page}section:first-of-type{break-before:auto}table{border-collapse:collapse;width:100%;table-layout:fixed}th{padding:8px;text-align:left;font-size:10px;color:#61879a;background:#f0f8fc}th:last-child,td:last-child{text-align:right;width:35%}td{padding:8px;border-bottom:1px solid #e7eff4}tr.fs-section td{background:#ebf8fd;color:#1477a6;font-weight:bold}tr.fs-total td{background:#f4faff;font-weight:bold}tr.fs-grand td{background:#dff4ff;font-weight:bold}.fs-code{display:inline-block;width:70px;color:#8fa4b6}.fs-note{margin-top:14px;color:#7a8c9b}.fs-empty{text-align:center}footer{margin-top:30px;font-size:9px;color:#8398a8}@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body><header><h1>AERIS · Financial Statements</h1><p><strong>${esc(d.company)}</strong> · ${esc(d.from)} s.d. ${esc(d.to)} · Currency IDR<br>Generated UTC ${esc(d.generatedAt)} · Validasi jurnal posted: LULUS</p></header>${blocks.map(([title,body])=>`<section><h2>${title}</h2>${body}</section>`).join('')}<footer>Laporan internal berdasarkan posted journals. Belum diaudit dan tidak menggantikan pemeriksaan akuntan.</footer><script>window.onload=()=>{window.focus();setTimeout(()=>window.print(),300)};<\/script></body></html>`;
+ w.document.open();w.document.write(html);w.document.close();
+}
+
 
 // Firebase guards the visible interface; backend independently verifies token + company role.
 onAuthStateChanged(auth,async user=>{if(!user){location.replace('index.html');return;}if(!user.emailVerified){await user.reload().catch(()=>{});if(!auth.currentUser?.emailVerified){location.replace('verify.html');return;}}S.user=auth.currentUser;await boot();});
