@@ -30,9 +30,55 @@
 @media(max-width:900px){.aeris-load-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.aeris-dialog-overlay{padding:9px;align-items:center}.aeris-dialog{width:100%;max-height:calc(100dvh - 18px);border-radius:19px}.aeris-dialog-head{padding:18px 18px 21px}.aeris-dialog-mark{flex-basis:44px;height:44px;border-radius:13px;font-size:23px}.aeris-dialog-heading{gap:11px;margin-top:14px}.aeris-dialog-heading h2{font-size:21px}.aeris-dialog-body{padding:19px 17px}.aeris-dialog .form-grid{grid-template-columns:minmax(0,1fr);gap:15px}.aeris-dialog .field.wide{grid-column:auto}.aeris-dialog-footer{padding:14px 17px}.aeris-dialog-safe{display:none}.aeris-dialog-buttons{width:100%;justify-content:flex-end}.aeris-dialog-footer .btn{flex:1;min-width:0;padding:11px}.aeris-load-hero{grid-template-columns:minmax(0,1fr);padding:23px 20px}.aeris-load-side{display:none}.aeris-load-stats{gap:9px}.aeris-load-card{height:118px;padding:16px}.aeris-load-panels{grid-template-columns:minmax(0,1fr)}#toasts.toast-host{left:12px;right:12px;top:auto;bottom:14px;width:auto}}
 @media(prefers-reduced-motion:reduce){.aeris-notice,.aeris-dialog,.aeris-load-spinner,.aeris-skel,.aeris-notice::after{animation:none!important}}
+/* =========================================================
+   AERIS V3 Premium — compact accounting UI, loading, modal
+   ========================================================= */
+:root{--aeris-glow:#28a9e0;--aeris-light:#e8f8ff;--aeris-ink:#183b54}
+.aeris-v3-header{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(122deg,#168bc9 0%,#38b6e7 56%,#80e2f8 100%);border-radius:24px;padding:32px 34px;min-height:188px;display:flex;justify-content:space-between;align-items:center;gap:25px;box-shadow:0 22px 48px rgba(29,142,201,.15);border:1px solid rgba(255,255,255,.3);color:white;margin-bottom:22px}
+.aeris-v3-header:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.24);width:360px;height:360px;border-radius:50%;right:-125px;top:-205px;box-shadow:0 0 0 60px rgba(255,255,255,.035),0 0 0 124px rgba(255,255,255,.025);z-index:-1}
+.aeris-v3-header h1{font-size:clamp(24px,2.55vw,37px);font-weight:850;letter-spacing:-.052em;line-height:1.15;margin:13px 0 9px;color:#fff;max-width:670px}
+.aeris-v3-header p{font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.9);max-width:620px;margin:0}
+.aeris-v3-tag{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.29);border-radius:99px;font-size:9px;font-weight:800;letter-spacing:1.4px;color:#fff}
+.aeris-v3-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;z-index:1}
+.aeris-v3-actions .btn{background:rgba(255,255,255,.94)!important;border-color:rgba(255,255,255,.65)!important;color:#086a9e!important;font-weight:800;box-shadow:0 8px 16px rgba(12,98,153,.11)}
+.aeris-v3-actions .btn.blue{background:#fff!important;color:#087ab6!important}
+.aeris-v3-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:17px}
+.aeris-v3-stats-five{grid-template-columns:repeat(5,minmax(0,1fr))}
+.aeris-v3-stat{min-width:0;background:linear-gradient(145deg,#fff,#f9fdff);border:1px solid #dbeefa;border-radius:20px;padding:19px 20px;box-shadow:0 8px 26px rgba(29,102,143,.045);display:flex;flex-direction:column;gap:9px}
+.aeris-v3-stat small{color:#7d9db2;font-size:9.5px;font-weight:850;letter-spacing:.7px;line-height:1.4}
+.aeris-v3-stat strong{color:#17415a;font-size:clamp(17px,1.8vw,26px);font-weight:850;letter-spacing:-.044em;line-height:1.12;overflow-wrap:anywhere}
+.aeris-v3-stat span{font-size:10px;color:#8da4b2;line-height:1.6}
+.aeris-v3-panel{background:#fff;border:1px solid #dcecf6;box-shadow:0 10px 35px rgba(32,119,166,.035);border-radius:24px;padding:22px;margin-bottom:17px;min-width:0}
+.aeris-v3-panel-head{margin-bottom:16px}.aeris-v3-panel-head h3{font-size:16px;font-weight:850;color:#173a52;letter-spacing:-.025em;margin:0 0 5px}.aeris-v3-panel-head p{margin:0;color:#8ba3b3;font-size:11.5px;line-height:1.7}
+.aeris-v3-panel .panel{padding:0;border:0;box-shadow:none;background:transparent}.aeris-v3-panel .panel-head{margin-bottom:12px}
+.aeris-v3-table{width:100%;border-collapse:separate;border-spacing:0}.aeris-v3-table th{text-align:left;font-size:10px;color:#8ca8b9;letter-spacing:.5px;font-weight:800;padding:13px 13px;border-bottom:1px solid #dfeef5;white-space:nowrap}.aeris-v3-table td{font-size:11px;color:#31536a;padding:16px 13px;border-bottom:1px solid #edf4f8;vertical-align:middle}.aeris-v3-table td strong{color:#153d56}.aeris-v3-table tbody tr:hover{background:#f7fcff}
+.aeris-v3-table .btn{margin:2px}.aeris-v3-empty{text-align:center;padding:35px 12px;color:#8b9eaa;font-size:12px}
+.aeris-v3-chip{display:inline-flex;padding:6px 11px;border:1px solid #ffe4c7;background:#fffaee;color:#ae772f;border-radius:99px;font-size:10px;font-weight:800;white-space:nowrap}.aeris-v3-chip.ok{border-color:#c7f0e4;color:#078b6f;background:#eafaf4}
+.aeris-v3-progress{width:110px;max-width:100%;height:7px;border-radius:99px;background:#e5eff5;overflow:hidden;margin-bottom:6px}.aeris-v3-progress i{display:block;height:100%;border-radius:99px}
+.aeris-v3-footnote{font-size:11px;line-height:1.85;color:#7a9aad;margin:16px 0}
+.aeris-v3-journal-head,.aeris-v3-journal-row{display:grid;grid-template-columns:minmax(140px,2fr) minmax(95px,1fr) minmax(95px,1fr);gap:9px;align-items:center}.aeris-v3-journal-head{color:#8ca4b4;font-size:10px;letter-spacing:.8px;font-weight:800;margin:16px 0 7px}.aeris-v3-journal-row{margin-bottom:8px}.aeris-v3-journal-row .input,.aeris-v3-journal-row .select{min-width:0}
+.aeris-v3-journal-tools{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:16px 0;flex-wrap:wrap}.aeris-v3-journal-tools strong{font-size:11px;color:#24799e}.aeris-v3-journal-details>div{display:flex;justify-content:space-between;gap:12px;padding:12px 2px;border-bottom:1px solid #e4eff6;font-size:11px}.aeris-v3-journal-details b{color:#0d709c}
+.aeris-v3-checks{display:grid;gap:12px;margin:8px 0}.aeris-v3-checks label{display:flex;gap:9px;align-items:start;font-size:12px;color:#496779}.aeris-v3-checks input{accent-color:#159acc;width:17px;height:17px;flex-shrink:0}
+.aeris-v3-payment-total{font-size:25px;font-weight:900;letter-spacing:-.04em;color:#137fae}
+.aeris-v3-error{max-width:620px;margin:55px auto;text-align:center;padding:40px;border:1px solid #d4e9f6;border-radius:24px;background:white}.aeris-v3-error strong{font-size:20px;color:#184661}.aeris-v3-error p{color:#758c9a;font-size:12px;line-height:1.8;margin:12px}
+/* All dialogs use same high-end sky-blue system and stack cleanly on phones. */
+#modalRoot.aeris-dialog-overlay .aeris-dialog{width:min(740px,calc(100vw - 28px));max-height:min(90dvh,900px);display:flex;flex-direction:column;overflow:hidden;border-radius:25px;border:1px solid rgba(255,255,255,.55);box-shadow:0 36px 110px rgba(6,59,96,.23)}
+#modalRoot .aeris-dialog-head{background:linear-gradient(125deg,#0788c2,#30b7eb 67%,#8ae0f4)!important;flex:0 0 auto}
+#modalRoot .aeris-dialog-body{overflow-y:auto;min-height:0;flex:1 1 auto;overscroll-behavior:contain}
+#modalRoot .aeris-dialog-footer{flex:0 0 auto;background:linear-gradient(180deg,#fff,#f8fcff);border-top:1px solid #e6f1f7}
+#modalRoot input:focus-visible,#modalRoot select:focus-visible,#modalRoot textarea:focus-visible{outline:3px solid rgba(48,183,235,.18);border-color:#46bdeb}
+/* Only one skeleton, painted in initial HTML; no empty intermediate frame. */
+.aeris-v3-first-load{width:100%;margin:0;animation:aerisV3Appear .22s ease-out}
+.aeris-v3-first-load .aeris-load-hero{min-height:215px}.aeris-v3-first-load .aeris-load-hero h1{max-width:540px;font-size:clamp(20px,2.7vw,34px)}
+@keyframes aerisV3Appear{from{opacity:.6;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1200px){.aeris-v3-stats-five{grid-template-columns:repeat(3,minmax(0,1fr))}.aeris-v3-header{padding:25px}}
+@media(max-width:750px){.aeris-v3-stats,.aeris-v3-stats-five{grid-template-columns:repeat(2,minmax(0,1fr))}.aeris-v3-header{flex-direction:column;align-items:flex-start;min-height:0;gap:17px;padding:24px 20px}.aeris-v3-actions{justify-content:flex-start}.aeris-v3-panel{padding:16px 12px;border-radius:17px}.aeris-v3-stat{padding:15px 13px;border-radius:16px}.aeris-v3-stat strong{font-size:18px}.aeris-v3-panel-head{padding:0 4px}#modalRoot.aeris-dialog-overlay .aeris-dialog{width:calc(100vw - 16px);max-height:calc(100dvh - 16px);border-radius:19px}.aeris-v3-journal-head,.aeris-v3-journal-row{grid-template-columns:minmax(102px,1.3fr) repeat(2,minmax(68px,1fr));gap:5px}.aeris-v3-journal-row .input,.aeris-v3-journal-row .select{padding-left:6px;padding-right:6px;font-size:11px}}
+@media(max-width:380px){.aeris-v3-stats,.aeris-v3-stats-five{grid-template-columns:1fr}.aeris-v3-header h1{font-size:26px}.aeris-v3-tag{letter-spacing:.4px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.aeris-v3-first-load{animation:none!important}}
+
 </style></head><body>
-<div class="app"><aside class="side" id="sidebar"><div class="side-brand"><div class="logo">A</div><div><div class="brand-name">aeris<span style="color:#37bdf1">.</span></div><div class="brand-sub">CORPORATE FINANCE</div></div><button type="button" id="closeSide" class="btn sm" style="margin-left:auto;display:none">×</button></div><nav class="side-scroll" id="navigation" aria-label="Navigasi aplikasi"></nav><div class="side-bottom"><strong>✦ AERIS Business Suite</strong><p>Finance operations, budgeting, receivables, payables & transparent audit trails.</p><div class="muted" style="margin-top:10px">Google Sheets · Private company tenants</div></div></aside>
-<div class="workspace"><header class="topbar"><button id="menuBtn" class="burger" type="button" aria-label="Buka menu">☰</button><div class="crumb"><div class="crumb-icon">✦</div><div style="min-width:0"><div class="crumb-kicker">CORPORATE FINANCE WORKSPACE</div><div class="crumb-label">AERIS / <span id="crumb">Dashboard</span></div></div></div><div class="top-actions"><span class="status" id="sync"><span class="live"></span>Terhubung</span><button id="quickAdd" class="top-btn primary" type="button">＋ <span class="quick-label">Transaksi Baru</span></button><button id="refreshBtn" class="top-btn" title="Sinkronkan data" type="button">↻</button><button class="top-btn top-profile" id="profileBtn" type="button"><span class="avatar" id="avatar">A</span><span class="top-profile-label" id="profileName">Akun</span></button></div></header><main class="content" id="content" tabindex="-1"><div class="screen-loader"><div class="sk-big skeleton"></div><div class="sk-row skeleton"></div></div></main></div></div>
+<div class="app"><aside class="side" id="sidebar"><div class="side-brand"><div class="logo">A</div><div><div class="brand-name">aeris<span style="color:#37bdf1">.</span></div><div class="brand-sub">CORPORATE FINANCE</div></div><button type="button" id="closeSide" class="btn sm" style="margin-left:auto;display:none">×</button></div><nav class="side-scroll" id="navigation" aria-label="Navigasi aplikasi"><div class="nav-group">OVERVIEW</div><button class="nav active" data-view="dashboard" type="button"><span class="ni">▦</span><span>Dashboard</span></button><button class="nav" data-view="cashflow" type="button"><span class="ni">⌁</span><span>Cash Flow</span></button><div class="nav-group">BUSINESS OPERATIONS</div><button class="nav" data-view="transactions" type="button"><span class="ni">⇄</span><span>Transactions</span></button><button class="nav" data-view="accounts" type="button"><span class="ni">▣</span><span>Accounts & Banks</span></button><button class="nav" data-view="invoices" type="button"><span class="ni">↙</span><span>Accounts Receivable</span></button><button class="nav" data-view="bills" type="button"><span class="ni">↗</span><span>Accounts Payable</span></button><div class="nav-group">ACCOUNTING & CONTROL</div><button class="nav" data-view="coa" type="button"><span class="ni">▥</span><span>Chart of Accounts</span></button><button class="nav" data-view="ledger" type="button"><span class="ni">▤</span><span>Journal & Ledger</span></button><button class="nav" data-view="reconcile" type="button"><span class="ni">⇌</span><span>Bank Reconciliation</span></button></nav><div class="side-bottom"><strong>✦ AERIS Business Suite</strong><p>Finance operations, budgeting, receivables, payables & transparent audit trails.</p><div class="muted" style="margin-top:10px">Google Sheets · Private company tenants</div></div></aside>
+<div class="workspace"><header class="topbar"><button id="menuBtn" class="burger" type="button" aria-label="Buka menu">☰</button><div class="crumb"><div class="crumb-icon">✦</div><div style="min-width:0"><div class="crumb-kicker">CORPORATE FINANCE WORKSPACE</div><div class="crumb-label">AERIS / <span id="crumb">Dashboard</span></div></div></div><div class="top-actions"><span class="status" id="sync"><span class="live"></span>Terhubung</span><button id="quickAdd" class="top-btn primary" type="button">＋ <span class="quick-label">Transaksi Baru</span></button><button id="refreshBtn" class="top-btn" title="Sinkronkan data" type="button">↻</button><button class="top-btn top-profile" id="profileBtn" type="button"><span class="avatar" id="avatar">A</span><span class="top-profile-label" id="profileName">Akun</span></button></div></header><main class="content" id="content" tabindex="-1"><div class="view aeris-loading-page aeris-v3-first-load" role="status" aria-label="Memuat AERIS"><section class="aeris-load-hero"><div><span class="aeris-load-kicker">✦ AERIS · CORPORATE FINANCE</span><h1>Menyiapkan workspace keuangan</h1><p>Menyiapkan laporan dan ringkasan kas perusahaan.</p><div class="aeris-load-status"><i class="aeris-load-spinner"></i> Menghubungkan secara aman <span class="aeris-load-dots">···</span></div></div><div class="aeris-load-side"><div class="aeris-skel" style="width:68%;height:13px"></div><div class="aeris-skel" style="width:90%;height:38px"></div><div class="aeris-skel" style="width:100%;height:1px"></div><div class="aeris-skel" style="width:53%;height:13px"></div></div></section><div class="aeris-load-stats"><div class="aeris-load-card"><div class="aeris-skel" style="width:50%;height:12px"></div><div class="aeris-skel" style="width:75%;height:30px"></div><div class="aeris-skel" style="width:43%;height:11px"></div></div><div class="aeris-load-card"><div class="aeris-skel" style="width:57%;height:12px"></div><div class="aeris-skel" style="width:79%;height:30px"></div><div class="aeris-skel" style="width:35%;height:11px"></div></div><div class="aeris-load-card"><div class="aeris-skel" style="width:50%;height:12px"></div><div class="aeris-skel" style="width:70%;height:30px"></div><div class="aeris-skel" style="width:33%;height:11px"></div></div><div class="aeris-load-card"><div class="aeris-skel" style="width:55%;height:12px"></div><div class="aeris-skel" style="width:80%;height:30px"></div><div class="aeris-skel" style="width:46%;height:11px"></div></div></div><div class="aeris-load-panels"><div class="aeris-load-panel"><div class="aeris-skel" style="width:41%;height:13px"></div><div class="aeris-load-chart"><i style="height:35%"></i><i style="height:60%"></i><i style="height:49%"></i><i style="height:72%"></i><i style="height:56%"></i><i style="height:81%"></i><i style="height:62%"></i><i style="height:76%"></i></div></div><div class="aeris-load-panel"><div class="aeris-skel" style="width:49%;height:13px"></div><div class="aeris-load-item"><span class="aeris-skel" style="height:34px;width:32px"></span><span class="aeris-skel" style="height:12px;width:70%"></span></div><div class="aeris-load-item"><span class="aeris-skel" style="height:34px;width:32px"></span><span class="aeris-skel" style="height:12px;width:68%"></span></div><div class="aeris-load-item"><span class="aeris-skel" style="height:34px;width:32px"></span><span class="aeris-skel" style="height:12px;width:73%"></span></div></div></div></div></main></div></div>
 <div id="navOverlay" class="overlay" hidden></div><div id="modalRoot" hidden></div><div class="toast-host" id="toasts" aria-live="polite"></div>
 <script type="module">
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
@@ -305,6 +351,307 @@ async function changeRole(id,role){
  if(role==='remove'&&!await aerisConfirm_('Cabut akses anggota ini dari perusahaan?',{title:'Cabut akses anggota',danger:true})){render();return;}
  try{await rpc('setRole',{id,role});toast('Akses anggota telah diperbarui.');S.loaded.delete('Members');await loadTeam();render();}catch(e){toast(e.message,true);render();}
 }
+/* ============================================================
+   AERIS V3 — ACCOUNTING / PROCUREMENT / FINANCE OPERATIONS
+   Progressive enhancement of V2, no Firebase changes.
+   ============================================================ */
+sections.splice(3,0,
+ {label:'ACCOUNTING & CONTROL',items:[
+   ['coa','Chart of Accounts','▥'],['ledger','Journal & General Ledger','▤'],
+   ['smartjournal','Smart Journal','✧'],['reconcile','Bank Reconciliation','⇌'],
+   ['closing','Financial Closing','◈']]},
+ {label:'REVENUE & PROCUREMENT',items:[
+   ['araging','AR Aging Analysis','◷'],['credit','Customer Credit Limits','◉'],
+   ['quotes','Quotation & Sales Orders','▣'],['procurement','Purchase Orders','⬡'],
+   ['vendorpay','Vendor Payment Center','↗']]} 
+);
+Object.assign(TITLES,{
+ coa:'Chart of Accounts',ledger:'General Ledger & Journal Entries',smartjournal:'Smart Journal Automation',
+ reconcile:'Bank Reconciliation Center',closing:'Financial Closing & Period Lock',
+ araging:'Accounts Receivable Aging',credit:'Customer Credit Management',
+ quotes:'Quotation & Sales Orders',procurement:'Purchase Orders & Three-Way Matching',
+ vendorpay:'Vendor Payment Center'
+});
+Object.assign(DESC,{
+ coa:'Struktur akun debit–kredit perusahaan dan pemetaan rekening kas.',
+ ledger:'Draft, validasi keseimbangan, posting jurnal, dan buku besar.',
+ smartjournal:'Konversi transaksi kas menjadi draft jurnal yang perlu ditinjau.',
+ reconcile:'Impor CSV mutasi bank, cocokkan transaksi, dan identifikasi selisih.',
+ closing:'Checklist tutup buku dan pembatasan penulisan pada periode tertutup.',
+ araging:'Umur piutang untuk prioritas penagihan dan pengelolaan DSO.',
+ credit:'Limit kredit pelanggan, penggunaan limit, dan indikator risiko.',
+ quotes:'Penawaran harga, konversi penawaran ke sales order.',
+ procurement:'Purchase Order, penerimaan, serta pencocokan tagihan vendor.',
+ vendorpay:'Pencatatan pembayaran massal tagihan tanpa transfer bank otomatis.'
+});
+const AERIS_V3_BUNDLES={
+ coa:['COA','AccountLinks','Accounts'],
+ ledger:['Journals','JournalLines','COA'],
+ smartjournal:['Transactions','COA','AccountLinks','Accounts'],
+ reconcile:['BankStatements','Transactions','Accounts'],
+ closing:['PeriodLocks','Journals'],
+ araging:['Invoices','Contacts'],
+ credit:['CreditLimits','Invoices','Contacts'],
+ quotes:['Quotations','SalesOrders','Contacts'],
+ procurement:['PurchaseOrders','GoodsReceipts','POMatches','Bills','Contacts'],
+ vendorpay:['Bills','Accounts','PaymentBatches']
+};
+const AERIS_V3_FIELDS={
+ COA:()=>[X('code','Kode akun (misalnya 1101)','text',{required:true}),X('name','Nama akun','text',{required:true}),X('type','Jenis akun','select',{items:[['asset','Aset'],['liability','Liabilitas'],['equity','Ekuitas'],['revenue','Pendapatan'],['expense','Beban']]}),X('parentId','Akun induk','select',{items:[['','— Tidak ada —'],...getRows('COA').map(r=>[r.id,r.code+' · '+r.name])]}),X('active','Status akun','select',{items:[['true','Aktif'],['false','Tidak aktif']]})],
+ AccountLinks:()=>[X('bankAccountId','Rekening bisnis','select',{required:true,items:options('Accounts')}),X('ledgerAccountId','COA aset kas/bank','select',{required:true,items:[['','Pilih akun aset'],...getRows('COA').filter(r=>r.type==='asset').map(r=>[r.id,r.code+' · '+r.name])]})],
+ CreditLimits:()=>[X('customerId','Pelanggan','select',{required:true,items:options('Contacts','customer').concat(getRows('Contacts').filter(c=>c.kind==='both').map(c=>[c.id,c.name]))}),X('limitAmount','Limit kredit (Rp)','money',{required:true}),X('warnPercent','Peringatan pada (%)','number'),X('notes','Keterangan','textarea',{wide:true})],
+ Quotations:()=>[X('number','Nomor quotation','text',{required:true}),X('customerId','Pelanggan','select',{items:options('Contacts','customer').concat(getRows('Contacts').filter(c=>c.kind==='both').map(c=>[c.id,c.name])),required:true}),X('date','Tanggal','date',{required:true}),X('validUntil','Berlaku sampai','date',{required:true}),X('amount','Nilai penawaran','money',{required:true}),X('status','Status','select',{items:[['draft','Draft'],['sent','Dikirim'],['accepted','Disetujui'],['rejected','Ditolak']]}),X('notes','Catatan penawaran','textarea',{wide:true})],
+ SalesOrders:()=>[X('number','Nomor SO','text',{required:true}),X('quotationId','Quotation sumber','select',{items:options('Quotations')}),X('customerId','Pelanggan','select',{items:options('Contacts','customer'),required:true}),X('date','Tanggal','date',{required:true}),X('amount','Nilai order','money',{required:true}),X('status','Status','select',{items:[['draft','Draft'],['approved','Disetujui'],['closed','Selesai'],['cancelled','Batal']]}),X('notes','Catatan','textarea',{wide:true})],
+ PurchaseOrders:()=>[X('number','Nomor PO','text',{required:true}),X('vendorId','Vendor','select',{items:options('Contacts','vendor').concat(getRows('Contacts').filter(c=>c.kind==='both').map(c=>[c.id,c.name])),required:true}),X('date','Tanggal','date',{required:true}),X('amount','Nilai PO','money',{required:true}),X('status','Status','select',{items:[['draft','Draft'],['approved','Disetujui'],['closed','Selesai'],['cancelled','Batal']]}),X('notes','Deskripsi pesanan','textarea',{wide:true})],
+ GoodsReceipts:()=>[X('poId','Purchase Order','select',{items:options('PurchaseOrders'),required:true}),X('date','Tanggal penerimaan','date',{required:true}),X('amount','Nilai barang/jasa diterima','money',{required:true}),X('notes','Berita acara penerimaan','textarea',{wide:true})]
+};
+const legacyFields=fields;
+fields=function(table){return AERIS_V3_FIELDS[table]?.()||legacyFields(table);};
+Object.assign(TCOL,{
+ COA:[['code','KODE'],['name','AKUN'],['type','KLASIFIKASI'],['active','AKTIF']],
+ AccountLinks:[['bankAccountId','REKENING BISNIS'],['ledgerAccountId','AKUN COA']],
+ CreditLimits:[['customerId','PELANGGAN'],['limitAmount','LIMIT'],['warnPercent','WARNING %']],
+ Quotations:[['number','PENAWARAN'],['customerId','PELANGGAN'],['date','TANGGAL'],['amount','NILAI'],['status','STATUS']],
+ SalesOrders:[['number','SALES ORDER'],['customerId','PELANGGAN'],['date','TANGGAL'],['amount','NILAI'],['status','STATUS']],
+ PurchaseOrders:[['number','PURCHASE ORDER'],['vendorId','VENDOR'],['date','TANGGAL'],['amount','NILAI'],['status','STATUS']],
+ GoodsReceipts:[['poId','NO. PO'],['date','TANGGAL'],['amount','NILAI DITERIMA']]
+});
+const legacyCell=cell;
+cell=function(table,record,key){
+ if(['ledgerAccountId','parentId'].includes(key)){const a=pick('COA',record[key]);return esc(a.code?`${a.code} · ${a.name}`:'—');}
+ if(key==='poId')return esc(labelFor('PurchaseOrders',record[key]));
+ if(key==='bankAccountId')return esc(labelFor('Accounts',record[key]));
+ if(['limitAmount'].includes(key))return '<strong>'+esc(money(record[key]))+'</strong>';
+ if(['customerId','vendorId'].includes(key))return esc(labelFor('Contacts',record[key]));
+ return legacyCell(table,record,key);
+};
+const legacyBoot=boot;
+boot=async function(){
+ S.user=auth.currentUser;
+ updateNav();
+ // Immediately display the final dashboard skeleton; no intermediate blank screen.
+ if(!S.loaded.has('Accounts')&&!$('content').querySelector('.aeris-v3-first-load'))$('content').innerHTML=skeleton('Menyiapkan workspace keuangan');
+ setSync('Menghubungkan…');
+ const started=performance.now();
+ try{
+  const preference=sessionStorage.getItem('aeris:lastOrg');
+  const result=await rpc('bootstrap',{},preference||'');
+  S.orgs=result.organizations||[];
+  if(!S.orgs.length){S.org=null;resetOrgData();renderOnboarding();setSync('Pilih organisasi');return;}
+  const selected=result.snapshot?.organization;
+  S.org=S.orgs.find(o=>o.id===selected?.id)||S.orgs[0];
+  const snap=result.snapshot;
+  if(snap){Object.assign(S.data,snap.data||{});(snap.loadedTables||Object.keys(snap.data||{})).forEach(t=>S.loaded.add(t));sessionStorage.setItem('aeris:lastOrg',S.org.id);}
+  setSync('Sinkron '+String(snap?.serverTime||'').slice(11,16));
+  render();
+  console.info('[AERIS V3] bootstrap',Math.round(performance.now()-started),'ms');
+ }catch(err){
+  console.error('[AERIS V3] bootstrap failed',err);
+  toast(err.message,true);
+  $('content').innerHTML=`<section class="aeris-v3-error"><strong>Workspace gagal dimuat</strong><p>${esc(err.message)}</p><button class="btn blue" id="aerisBootRetry">Coba lagi</button></section>`;
+  $('aerisBootRetry')?.addEventListener('click',()=>void boot());
+ }
+};
+async function aerisV3Ensure(view,{force=false}={}){
+ const tables=AERIS_V3_BUNDLES[view]||[],need=force?tables:tables.filter(t=>!S.loaded.has(t));
+ if(!need.length)return;
+ const org=S.org?.id,epoch=S.orgSeq,key=org+':bundle:'+need.slice().sort().join('|');
+ if(S.loading.has(key))return S.loading.get(key);
+ const task=(async()=>{
+  const reply=await rpc('loadBundle',{tables:need,force},org);
+  if(S.org?.id!==org||S.orgSeq!==epoch)return;
+  Object.entries(reply.tables||{}).forEach(([name,rows])=>{S.data[name]=rows;S.loaded.add(name);delete S.errors[name];});
+ })();
+ S.loading.set(key,task);
+ try{await task;}finally{if(S.loading.get(key)===task)S.loading.delete(key);}
+}
+const legacyNavigate=navigate;
+navigate=async function(view){
+ if(!AERIS_V3_BUNDLES[view])return legacyNavigate(view);
+ const seq=++S.navSeq;
+ S.view=view;closeSide();updateNav();
+ if(!S.org)return renderOnboarding();
+ // Render current known data immediately, or the correct module skeleton.
+ render();
+ try{await aerisV3Ensure(view);}
+ catch(e){if(seq===S.navSeq){S.errors[view]=e.message;toast(e.message,true);}}
+ if(seq===S.navSeq){render();window.scrollTo({top:0,behavior:'instant'});}
+};
+const legacyRefresh=refresh;
+refresh=async function(force=false){
+ if(!AERIS_V3_BUNDLES[S.view])return legacyRefresh(force);
+ const view=S.view;await legacyRefresh(false);
+ if(force){await aerisV3Ensure(view,{force:true});if(S.view===view)render();toast('Data diperbarui.');}
+};
+const legacyRender=render;
+render=function(){
+ if(!AERIS_V3_BUNDLES[S.view])return legacyRender();
+ updateNav();if(!S.org)return renderOnboarding();
+ const required=AERIS_V3_BUNDLES[S.view];
+ if(required.some(t=>!S.loaded.has(t))){
+   const err=S.errors[S.view];
+   $('content').innerHTML=err?`<section class="aeris-v3-error"><strong>Gagal memuat ${esc(TITLES[S.view])}</strong><p>${esc(err)}</p><button id="aerisV3Retry" class="btn blue">Muat ulang</button></section>`:skeleton('Menyiapkan '+TITLES[S.view]);
+   $('aerisV3Retry')?.addEventListener('click',()=>{delete S.errors[S.view];void navigate(S.view);});return;
+ }
+ $('content').innerHTML=aerisV3Page(S.view)+'<footer class="page-footer"><span>© AERIS · Corporate Finance Workspace</span><span>Data perusahaan privat · Audit-ready workflow</span></footer>';
+ attachViewEvents();aerisV3Attach();
+};
+function aerisV3Header(title,subtitle,actions=''){
+ return `<div class="aeris-v3-header"><div><div class="aeris-v3-tag"><span class="live"></span> AERIS · FINANCIAL OPERATING SYSTEM</div><h1>${esc(title)}</h1><p>${esc(subtitle)}</p></div><div class="aeris-v3-actions">${actions}</div></div>`;
+}
+function aerisV3Stat(label,value,detail=''){
+ return `<div class="aeris-v3-stat"><small>${esc(label)}</small><strong>${esc(String(value))}</strong><span>${esc(detail)}</span></div>`;
+}
+function aerisV3Panel(title,description,body){return `<section class="aeris-v3-panel"><div class="aeris-v3-panel-head"><div><h3>${esc(title)}</h3><p>${esc(description)}</p></div></div>${body}</section>`;}
+function aerisV3RowsTable(cols,rows){
+ return `<div class="table-wrap"><table class="aeris-v3-table"><thead><tr>${cols.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.length?rows.join(''):`<tr><td colspan="${cols.length}"><div class="aeris-v3-empty">Belum ada data. Lengkapi data perusahaan untuk menggunakan fitur ini.</div></td></tr>`}</tbody></table></div>`;
+}
+const aerisV3Btn=(action,text,id='',extra='')=>`<button type="button" class="btn sm ${extra}" data-v3="${esc(action)}" data-id="${esc(id)}">${esc(text)}</button>`;
+function aerisV3Page(view){
+ if(view==='coa'){
+  const c=getRows('COA'),links=getRows('AccountLinks');
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],canWrite()?aerisV3Btn('addCOA','＋ Akun Baru','','blue')+aerisV3Btn('addAccountLinks','↗ Pemetaan Bank'):'')}
+  <div class="aeris-v3-stats">${aerisV3Stat('TOTAL COA',c.length+' akun','Aset, utang, ekuitas, pendapatan & biaya')}${aerisV3Stat('AKUN ASET',c.filter(x=>x.type==='asset').length+' akun','Akun kas dan piutang')}${aerisV3Stat('PEMETAAN REKENING',links.length+' terhubung','Untuk saran jurnal kas')}</div>
+  ${aerisV3Panel('Daftar Akun (COA)','Akun disusun menurut kode dan klasifikasi. Perubahan tidak menghapus histori jurnal.',dataTable('COA'))}
+  ${aerisV3Panel('Pemetaan Rekening Kas','Hubungkan rekening bisnis ke akun aset pada COA agar Smart Journal dapat memberi saran.',dataTable('AccountLinks'))}</div>`;
+ }
+ if(view==='ledger'){
+  const j=getRows('Journals').slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))),lines=getRows('JournalLines'),posted=j.filter(x=>x.status==='posted');
+  const total=lines.filter(l=>posted.some(j=>j.id===l.journalId)).reduce((s,x)=>s+num(x.debit),0);
+  const trs=j.map(x=>`<tr><td><strong>${esc(x.number)}</strong><div class="muted">${esc(x.date)}</div></td><td>${esc(x.memo)}</td><td><span class="aeris-v3-chip ${x.status==='posted'?'ok':''}">${esc(x.status)}</span></td><td>${money(lines.filter(l=>l.journalId===x.id).reduce((s,l)=>s+num(l.debit),0))}</td><td>${x.status==='draft'&&isOwner()?aerisV3Btn('postJournal','Posting',x.id,'blue'):aerisV3Btn('detailsJournal','Detail',x.id)}</td></tr>`);
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],canWrite()?aerisV3Btn('newJournal','＋ Jurnal Baru','','blue'):'')}<div class="aeris-v3-stats">${aerisV3Stat('JURNAL TERBUAT',j.length+' jurnal')}${aerisV3Stat('SUDAH POSTING',posted.length+' jurnal')}${aerisV3Stat('TOTAL DEBIT POSTED',money(total),'Sama dengan total kredit')}</div>${aerisV3Panel('Buku Jurnal','Jurnal harus seimbang sebelum disimpan. Posting hanya oleh Owner.',aerisV3RowsTable(['NOMOR / TANGGAL','DESKRIPSI','STATUS','TOTAL DEBIT','AKSI'],trs))}</div>`;
+ }
+ if(view==='smartjournal'){
+  const all=getRows('Transactions').slice().reverse().slice(0,80),linked=getRows('AccountLinks').length;
+  const rows=all.map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.description)}</td><td>${x.type==='income'?'Pemasukan':'Pengeluaran'}</td><td><strong>${money(x.amount)}</strong></td><td>${canWrite()?aerisV3Btn('suggestJournal','Buat Draft',x.id,'blue'):''}</td></tr>`);
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],aerisV3Btn('goCoa','Atur COA dan mapping'))}<div class="aeris-v3-stats">${aerisV3Stat('TRANSAKSI',getRows('Transactions').length)}${aerisV3Stat('REKENING TERPETAKAN',linked+' rekening')}${aerisV3Stat('STATUS AUTOMATION','Review wajib','Tidak memposting jurnal tanpa persetujuan')}</div>${aerisV3Panel('Jurnal berbasis transaksi','Klik Buat Draft. Sistem memetakan akun, lalu pengguna memverifikasi sebelum menyimpan.',aerisV3RowsTable(['TANGGAL','TRANSAKSI','ARUS','NOMINAL','AKSI'],rows))}</div>`;
+ }
+ if(view==='reconcile'){
+  const rows=getRows('BankStatements'),matched=rows.filter(x=>x.status==='matched').length;
+  const lines=rows.slice().reverse().slice(0,150).map(r=>`<tr><td>${esc(r.date)}</td><td><strong>${esc(r.description)}</strong><div class="muted">${esc(r.reference||'')}</div></td><td>${money(r.amount)}</td><td><span class="aeris-v3-chip ${r.status==='matched'?'ok':''}">${r.status==='matched'?'Cocok':'Belum cocok'}</span></td><td>${r.status==='matched'?'✓':canWrite()?aerisV3Btn('matchBank','Cocokkan',r.id,'blue'):''}</td></tr>`);
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],canWrite()?aerisV3Btn('importBank','↑ Impor CSV','','blue'):'')}<div class="aeris-v3-stats">${aerisV3Stat('MUTASI',rows.length+' baris')}${aerisV3Stat('TERCOCOKKAN',matched+' baris')}${aerisV3Stat('PERLU PEMERIKSAAN',rows.length-matched+' baris')}</div>${aerisV3Panel('Mutasi Rekening','Impor CSV dengan kolom date,description,reference,amount. Nominal negatif = uang keluar; positif = masuk.',aerisV3RowsTable(['TANGGAL','REFERENSI / KETERANGAN','MUTASI','STATUS','AKSI'],lines))}<p class="aeris-v3-footnote">Pencocokan mutasi tidak membuat transaksi baru ataupun mengubah saldo. Tanggal, rekening, arah transaksi, dan nominal diperiksa sebelum dipasangkan.</p></div>`;
+ }
+ if(view==='closing'){
+  const locks=getRows('PeriodLocks'),rows=locks.slice().reverse().map(r=>`<tr><td><strong>${esc(r.period)}</strong></td><td><span class="aeris-v3-chip ${r.status==='closed'?'ok':''}">${r.status==='closed'?'Ditutup':'Terbuka'}</span></td><td>${esc(r.actor||'—')}</td><td>${esc(String(r.closedAt||'').slice(0,10)||'—')}</td><td>${isOwner()&&r.status==='closed'?aerisV3Btn('reopenPeriod','Buka Lagi',r.period):''}</td></tr>`);
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],isOwner()?aerisV3Btn('closePeriod','✧ Tutup Periode','','blue'):'')}<div class="aeris-v3-stats">${aerisV3Stat('PERIODE TERTUTUP',locks.filter(x=>x.status==='closed').length)}${aerisV3Stat('DRAFT JURNAL',getRows('Journals').filter(x=>x.status==='draft').length)}${aerisV3Stat('PERLINDUNGAN','Server-side','Mutasi jurnal dan kas periode tertutup ditolak')}</div>${aerisV3Panel('Riwayat Closing','Tutup buku membutuhkan checklist dan tidak boleh menyisakan draft jurnal.',aerisV3RowsTable(['PERIODE','STATUS','DISETUJUI OLEH','TANGGAL TUTUP','AKSI'],rows))}</div>`;
+ }
+ if(view==='araging'){
+  const now=today(),unpaid=getRows('Invoices').filter(i=>!['paid','cancelled','draft'].includes(i.status));
+  const buckets=[{name:'Belum jatuh tempo',f:r=>r.days<=0},{name:'1–30 hari',f:r=>r.days>=1&&r.days<=30},{name:'31–60 hari',f:r=>r.days>=31&&r.days<=60},{name:'61–90 hari',f:r=>r.days>=61&&r.days<=90},{name:'>90 hari',f:r=>r.days>90}];
+  const aged=unpaid.map(i=>({...i,days:Math.floor((new Date(now+'T12:00:00Z')-new Date(i.dueDate+'T12:00:00Z'))/86400000)}));
+  const cards=buckets.map(b=>aerisV3Stat(b.name.toUpperCase(),money(aged.filter(b.f).reduce((s,x)=>s+num(x.amount),0)),aged.filter(b.f).length+' invoice'));
+  const rows=aged.sort((a,b)=>b.days-a.days).map(i=>`<tr><td><strong>${esc(i.number)}</strong></td><td>${esc(labelFor('Contacts',i.customerId))}</td><td>${esc(i.dueDate)}</td><td><span class="aeris-v3-chip ${i.days<=0?'ok':''}">${i.days<=0?'Belum jatuh tempo':i.days+' hari'}</span></td><td><strong>${money(i.amount)}</strong></td></tr>`);
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view])}<div class="aeris-v3-stats aeris-v3-stats-five">${cards.join('')}</div>${aerisV3Panel('Prioritas Penagihan','Urutan keterlambatan dihitung berdasarkan jatuh tempo invoice dan tanggal hari ini.',aerisV3RowsTable(['INVOICE','PELANGGAN','JATUH TEMPO','UMUR','TAGIHAN'],rows))}</div>`;
+ }
+ if(view==='credit'){
+  const credits=getRows('CreditLimits'),invoices=getRows('Invoices');
+  const viewRows=credits.map(c=>{const exp=invoices.filter(i=>i.customerId===c.customerId&&!['paid','cancelled','draft'].includes(i.status)).reduce((s,i)=>s+num(i.amount),0);const percent=num(c.limitAmount)>0?exp/num(c.limitAmount)*100:0;return `<tr><td><strong>${esc(labelFor('Contacts',c.customerId))}</strong></td><td>${money(c.limitAmount)}</td><td>${money(exp)}</td><td><div class="aeris-v3-progress"><i style="width:${Math.min(100,percent)}%;background:${percent>=100?'#e45468':'#22abd4'}"></i></div><small>${percent.toFixed(1)}%</small></td><td><span class="aeris-v3-chip ${percent<num(c.warnPercent)?'ok':''}">${percent>=100?'Limit terlampaui':percent>=num(c.warnPercent)?'Perhatian':'Normal'}</span></td><td>${canWrite()?aerisV3Btn('editCredit','Edit',c.id):''}</td></tr>`;});
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],canWrite()?aerisV3Btn('addCredit','＋ Atur Limit','','blue'):'')}<div class="aeris-v3-stats">${aerisV3Stat('PELANGGAN DENGAN LIMIT',credits.length)}${aerisV3Stat('TOTAL LIMIT',money(credits.reduce((s,x)=>s+num(x.limitAmount),0)))}${aerisV3Stat('KONTROL RISIKO','Advisory','Peringatan belum memblokir pembuatan invoice')}</div>${aerisV3Panel('Exposure Piutang Pelanggan','Perhitungan menggunakan invoice terbuka (bukan transaksi kas).',aerisV3RowsTable(['PELANGGAN','LIMIT','PIUTANG','PEMAKAIAN','RISIKO','AKSI'],viewRows))}</div>`;
+ }
+ if(view==='quotes'){
+  const quotes=getRows('Quotations'),orders=getRows('SalesOrders');
+  const qrows=quotes.map(q=>`<tr><td><strong>${esc(q.number)}</strong></td><td>${esc(labelFor('Contacts',q.customerId))}</td><td>${money(q.amount)}</td><td>${esc(q.status)}</td><td>${canWrite()?(q.status==='accepted'?aerisV3Btn('convertQuote','→ Buat SO',q.id,'blue'):'')+(q.status==='converted'?'':aerisV3Btn('editQuote','Edit',q.id)):''}</td></tr>`);
+  const orows=orders.map(o=>`<tr><td>${esc(o.number)}</td><td>${esc(labelFor('Contacts',o.customerId))}</td><td>${money(o.amount)}</td><td>${esc(o.status)}</td><td>${canWrite()&&o.status==='approved'?aerisV3Btn('orderInvoice','Buat Invoice',o.id,'blue'):''}</td></tr>`);
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],canWrite()?aerisV3Btn('addQuote','＋ Quotation Baru','','blue')+aerisV3Btn('addOrder','＋ Sales Order'):'')}<div class="aeris-v3-stats">${aerisV3Stat('QUOTATION',quotes.length)}${aerisV3Stat('SALES ORDER',orders.length)}${aerisV3Stat('NILAI PENAWARAN',money(quotes.reduce((s,q)=>s+num(q.amount),0)))}</div>${aerisV3Panel('Daftar Penawaran','Konversi penawaran menjadi order tanpa mengulang input data.',aerisV3RowsTable(['NO. PENAWARAN','PELANGGAN','NILAI','STATUS','AKSI'],qrows))}${aerisV3Panel('Sales Orders','Pesanan penjualan yang telah tercatat.',aerisV3RowsTable(['NO. SO','PELANGGAN','NILAI','STATUS','AKSI'],orows))}</div>`;
+ }
+ if(view==='procurement'){
+  const pos=getRows('PurchaseOrders'),rec=getRows('GoodsReceipts'),matched=getRows('POMatches'),bills=getRows('Bills');
+  const rows=pos.map(po=>{const goods=rec.filter(x=>x.poId===po.id).reduce((s,x)=>s+num(x.amount),0),match=matched.some(x=>x.poId===po.id);return `<tr><td><strong>${esc(po.number)}</strong></td><td>${esc(labelFor('Contacts',po.vendorId))}</td><td>${money(po.amount)}</td><td>${money(goods)}</td><td><span class="aeris-v3-chip ${match?'ok':''}">${match?'Sudah cocok':'Perlu dicocokkan'}</span></td><td>${canWrite()?aerisV3Btn('addReceipt','Terima',po.id)+aerisV3Btn('matchPO','Cocokkan',po.id,'blue'):''}</td></tr>`;});
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],canWrite()?aerisV3Btn('addPO','＋ Buat PO','','blue'):'')}<div class="aeris-v3-stats">${aerisV3Stat('PURCHASE ORDER',pos.length)}${aerisV3Stat('PENERIMAAN',rec.length)}${aerisV3Stat('MATCHED',matched.length)}</div>${aerisV3Panel('PO, Penerimaan & Tagihan','Three-way matching pada versi ini membandingkan nilai total, bukan detail SKU/kuantitas.',aerisV3RowsTable(['NO. PO','VENDOR','NILAI PO','DITERIMA','STATUS','AKSI'],rows))}</div>`;
+ }
+ if(view==='vendorpay'){
+  const bills=getRows('Bills').filter(x=>!['paid','cancelled'].includes(x.status)),batches=getRows('PaymentBatches');
+  const rows=bills.map(b=>`<tr><td><input type="checkbox" class="aeris-v3-billcheck" value="${esc(b.id)}" aria-label="Pilih tagihan ${esc(b.number)}"></td><td><strong>${esc(b.number)}</strong></td><td>${esc(labelFor('Contacts',b.vendorId))}</td><td>${esc(b.dueDate)}</td><td>${money(b.amount)}</td></tr>`);
+  const br=batches.slice().reverse().slice(0,30).map(b=>`<tr><td>${esc(b.date)}</td><td>${esc(labelFor('Accounts',b.accountId))}</td><td>${money(b.amount)}</td><td>${String(b.billIds||'').split(',').filter(Boolean).length} tagihan</td></tr>`);
+  return `<div class="view">${aerisV3Header(TITLES[view],DESC[view],canWrite()?aerisV3Btn('payBatch','✓ Catat Pembayaran Pilihan','','blue'):'')}<div class="aeris-v3-stats">${aerisV3Stat('TAGIHAN TERBUKA',bills.length)}${aerisV3Stat('TOTAL BELUM LUNAS',money(bills.reduce((s,x)=>s+num(x.amount),0)))}${aerisV3Stat('BATCH TERCATAT',batches.length)}</div>${aerisV3Panel('Pilih Tagihan','Tandai tagihan yang sudah dibayar di bank. Sistem mencatat transaksi kas dan memperbarui status.',aerisV3RowsTable(['PILIH','TAGIHAN','VENDOR','JATUH TEMPO','NOMINAL'],rows))}${aerisV3Panel('Riwayat Batch','Pencatatan akuntansi saja, bukan eksekusi transfer bank.',aerisV3RowsTable(['TANGGAL','REKENING','TOTAL','JUMLAH'],br))}</div>`;
+ }
+ return '<div class="empty">Modul tidak ditemukan.</div>';
+}
+function aerisV3Attach(){
+ $('content').querySelectorAll('[data-v3]').forEach(b=>b.addEventListener('click',()=>void aerisV3Action(b.dataset.v3,b.dataset.id)));
+}
+async function aerisV3Reload(){
+ const view=S.view;await aerisV3Ensure(view,{force:true});if(S.view===view)render();
+ S.loaded.delete('Audit');
+}
+function aerisV3Select(name,opts){return `<label class="field"><span>${esc(name)}</span><select class="select" name="${esc(opts.name)}" required>${opts.rows.map(r=>`<option value="${esc(r.id)}">${esc(r.name||r.number)}</option>`).join('')}</select></label>`;}
+function aerisV3Modal(title,subtitle,fields,submit){
+ openModal(title,subtitle,`<form id="activeModalForm"><div class="form-grid">${fields}</div></form>`,'Simpan');
+ $('activeModalForm').addEventListener('submit',async e=>{
+  e.preventDefault();const btn=$('modalSubmit');if(btn.disabled)return;const p=Object.fromEntries(new FormData(e.currentTarget));btn.disabled=true;
+  try{await submit(p);closeModal();toast('Perubahan berhasil disimpan.');await aerisV3Reload();}
+  catch(err){toast(err.message,true);btn.disabled=false;}
+ });
+}
+function aerisV3JournalForm(prefill=null){
+ const coa=getRows('COA').filter(x=>String(x.active)!=='false');if(coa.length<2)return toast('Buat minimal dua akun COA aktif dahulu.',true);
+ const opts=coa.map(c=>`<option value="${esc(c.id)}">${esc(c.code+' · '+c.name)}</option>`).join('');
+ const row=(n,v={})=>`<div class="aeris-v3-journal-row" data-jrow><select class="select" name="accountId" aria-label="Akun COA baris ${n}">${coa.map(c=>`<option value="${esc(c.id)}" ${c.id===v.accountId?'selected':''}>${esc(c.code+' · '+c.name)}</option>`).join('')}</select><input class="input" type="number" name="debit" min="0" step="0.01" value="${num(v.debit)}" aria-label="Debit"><input class="input" type="number" name="credit" min="0" step="0.01" value="${num(v.credit)}" aria-label="Kredit"></div>`;
+ const seed=prefill?.lines||[{},{}];
+ openModal('Jurnal Baru · Debit & Kredit','Jurnal draft harus seimbang. Posting dilakukan melalui General Ledger.',`<form id="activeModalForm"><div class="form-grid"><label class="field"><span>Tanggal jurnal</span><input class="input" type="date" name="date" value="${esc(prefill?.date||today())}" required></label><label class="field"><span>Nomor jurnal (opsional)</span><input class="input" name="number" placeholder="JR-2026-001"></label><label class="field wide"><span>Keterangan jurnal</span><input class="input" name="memo" value="${esc(prefill?.memo||'')}" required></label></div><div class="aeris-v3-journal-head"><span>Akun COA</span><span>DEBIT</span><span>KREDIT</span></div><div id="v3JournalLines">${seed.map((v,i)=>row(i+1,v)).join('')}</div><div class="aeris-v3-journal-tools"><button class="btn sm" type="button" id="v3AddLine">＋ Tambah Baris</button><strong id="v3JournalBalance">Saldo debit dan kredit</strong></div></form>`,'Simpan Draft');
+ const form=$('activeModalForm'),container=$('v3JournalLines');
+ $('v3AddLine').addEventListener('click',()=>{if(container.children.length>=30)return toast('Maksimal 30 baris jurnal.',true);container.insertAdjacentHTML('beforeend',row(container.children.length+1));});
+ const calculate=()=>{const rows=[...container.querySelectorAll('[data-jrow]')],debit=rows.reduce((s,r)=>s+num(r.querySelector('[name=debit]').value),0),credit=rows.reduce((s,r)=>s+num(r.querySelector('[name=credit]').value),0);$('v3JournalBalance').textContent=`Debit ${money(debit)} · Kredit ${money(credit)} ${Math.abs(debit-credit)<.01&&debit>0?'✓':'· belum seimbang'}`;};
+ container.addEventListener('input',calculate);calculate();
+ form.addEventListener('submit',async e=>{
+  e.preventDefault();const btn=$('modalSubmit');if(btn.disabled)return;
+  const lines=[...container.querySelectorAll('[data-jrow]')].map(r=>({accountId:r.querySelector('[name=accountId]').value,debit:num(r.querySelector('[name=debit]').value),credit:num(r.querySelector('[name=credit]').value)}));
+  const sum=key=>lines.reduce((s,l)=>s+l[key],0);
+  if(!sum('debit')||Math.abs(sum('debit')-sum('credit'))>.01)return toast('Jurnal harus seimbang.',true);
+  btn.disabled=true;
+  try{await rpc('saveJournal',{date:form.elements.date.value,number:form.elements.number.value,memo:form.elements.memo.value,lines,sourceTable:prefill?.sourceTable||'',sourceId:prefill?.sourceId||'',requestId:uuid()});closeModal();toast('Draft jurnal dibuat. Posting melalui General Ledger.');S.loaded.delete('Journals');S.loaded.delete('JournalLines');if(S.view==='smartjournal')navigate('ledger');else await aerisV3Reload();}
+  catch(err){toast(err.message,true);btn.disabled=false;}
+ });
+}
+function aerisV3ParseCSV(text){
+ const rows=[];let row=[],cell='',quoted=false;
+ text=String(text).replace(/^\uFEFF/,'');
+ for(let i=0;i<text.length;i++){let c=text[i];if(c==='"'&&quoted&&text[i+1]==='"'){cell+='"';i++;}else if(c==='"')quoted=!quoted;else if(c===','&&!quoted){row.push(cell);cell='';}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(cell);cell='';if(row.some(x=>x.trim()))rows.push(row);row=[];}else cell+=c;}
+ row.push(cell);if(row.some(x=>x.trim()))rows.push(row);
+ const header=(rows.shift()||[]).map(x=>x.trim().toLowerCase());const names=['date','description','reference','amount'];if(names.some(x=>!header.includes(x)))throw new Error('CSV wajib memiliki header date,description,reference,amount.');
+ return rows.map(r=>Object.fromEntries(names.map(n=>[n,r[header.indexOf(n)]||''])));
+}
+function aerisV3Action(action,id){
+ const edit=(t,i='')=>openForm(t,i);
+ if(action==='goCoa')return navigate('coa');
+ if(action==='addCOA')return edit('COA');if(action==='addAccountLinks')return edit('AccountLinks');
+ if(action==='addCredit')return edit('CreditLimits');if(action==='editCredit')return edit('CreditLimits',id);
+ if(action==='addQuote')return edit('Quotations');if(action==='editQuote')return edit('Quotations',id);
+ if(action==='addOrder')return edit('SalesOrders');
+ if(action==='orderInvoice')return aerisV3Modal('Buat Invoice dari Sales Order','Invoice yang dibuat akan masuk Accounts Receivable, tidak langsung menambah saldo bank.',`<label class="field"><span>Nomor invoice</span><input class="input" name="number" value="${esc('INV-'+pick('SalesOrders',id).number)}" required></label><label class="field"><span>Tanggal invoice</span><input class="input" type="date" name="date" value="${today()}" required></label><label class="field"><span>Jatuh tempo</span><input class="input" type="date" name="dueDate" value="${today()}" required></label>`,p=>rpc('convertOrderToInvoice',{...p,id,requestId:uuid()}));if(action==='addPO')return edit('PurchaseOrders');
+ if(action==='newJournal')return aerisV3JournalForm();
+ if(action==='detailsJournal'){
+  const j=pick('Journals',id),lines=getRows('JournalLines').filter(l=>l.journalId===id);
+  openModal('Detail Jurnal '+j.number,'Ringkasan debit / kredit yang tersimpan.',`<div class="aeris-v3-journal-details">${lines.map(l=>`<div><span>${esc(labelFor('COA',l.accountId))}</span><b>Debit ${money(l.debit)} · Kredit ${money(l.credit)}</b></div>`).join('')}</div><p class="muted">Status: ${esc(j.status)}</p>`,'Tutup');$('modalSubmit').addEventListener('click',closeModal);return;
+ }
+ if(action==='postJournal')return (async()=>{if(!await aerisConfirm_('Posting jurnal yang sudah seimbang? Setelah diposting jurnal tidak bisa diedit.',{title:'Konfirmasi posting jurnal'}))return;try{await rpc('postJournal',{id,requestId:uuid()});toast('Jurnal telah diposting.');await aerisV3Reload();}catch(e){toast(e.message,true);}})();
+ if(action==='suggestJournal')return (async()=>{try{const p=await rpc('createJournalDraft',{id});if(p.warnings?.length)toast(p.warnings.join(' '),true);aerisV3JournalForm(p);}catch(e){toast(e.message,true);}})();
+ if(action==='closePeriod')return aerisV3Modal('Tutup Buku Periode','Checklist harus diselesaikan sebelum periode dikunci.',`<label class="field"><span>Periode</span><input class="input" type="month" name="period" value="${today().slice(0,7)}" required></label><div class="field wide aeris-v3-checks"><label><input type="checkbox" name="bankChecked" value="true" required> Rekonsiliasi bank sudah ditinjau</label><label><input type="checkbox" name="journalChecked" value="true" required> Jurnal penyesuaian dan posting sudah diperiksa</label><label><input type="checkbox" name="reportsChecked" value="true" required> Laporan keuangan sudah direview</label></div>`,p=>rpc('setPeriodLock',{...p,status:'closed',requestId:uuid()}));
+ if(action==='reopenPeriod')return (async()=>{if(!await aerisConfirm_('Buka kembali periode '+id+'? Perubahan akan tercatat di Audit Trail.',{title:'Buka kembali periode'}))return;try{await rpc('setPeriodLock',{period:id,status:'open',requestId:uuid()});toast('Periode dibuka kembali.');await aerisV3Reload();}catch(e){toast(e.message,true);}})();
+ if(action==='convertQuote')return (async()=>{if(!await aerisConfirm_('Konversi quotation menjadi sales order?',{title:'Buat Sales Order'}))return;try{const r=await rpc('convertQuotation',{id,date:today(),requestId:uuid()});toast('Sales order '+r.order.number+' berhasil dibuat.');await aerisV3Reload();}catch(e){toast(e.message,true);}})();
+ if(action==='addReceipt')return aerisV3Modal('Penerimaan Barang / Jasa','Nilai penerimaan harus mengacu pada PO.',`<label class="field"><span>Purchase Order</span><select class="select" name="poId">${getRows('PurchaseOrders').map(p=>`<option value="${esc(p.id)}" ${p.id===id?'selected':''}>${esc(p.number)}</option>`).join('')}</select></label><label class="field"><span>Tanggal</span><input type="date" class="input" name="date" required value="${today()}"></label><label class="field"><span>Nilai diterima</span><input class="input" type="number" min="1" name="amount" required></label><label class="field wide"><span>Berita acara</span><textarea class="textarea" name="notes"></textarea></label>`,p=>rpc('upsert',{table:'GoodsReceipts',record:p,requestId:uuid()}));
+ if(action==='matchPO')return aerisV3Modal('Three-Way Matching','PO, nilai penerimaan, dan tagihan harus konsisten. Tidak memindahkan uang.',`<label class="field"><span>Purchase Order</span><select class="select" name="poId">${getRows('PurchaseOrders').map(p=>`<option value="${esc(p.id)}" ${p.id===id?'selected':''}>${esc(p.number)}</option>`).join('')}</select></label><label class="field"><span>Tagihan vendor</span><select class="select" name="billId">${getRows('Bills').filter(x=>!['cancelled','paid'].includes(x.status)).map(b=>`<option value="${esc(b.id)}">${esc(b.number)} · ${esc(money(b.amount))}</option>`).join('')}</select></label>`,p=>rpc('matchPO',{...p,requestId:uuid()}));
+ if(action==='payBatch'){
+  const billIds=[...$('content').querySelectorAll('.aeris-v3-billcheck:checked')].map(x=>x.value);
+  if(!billIds.length)return toast('Pilih satu atau beberapa tagihan dahulu.',true);
+  if(!getRows('Accounts').length)return toast('Tambahkan rekening perusahaan dahulu.',true);
+  const amt=getRows('Bills').filter(b=>billIds.includes(b.id)).reduce((s,b)=>s+num(b.amount),0);
+  return aerisV3Modal('Catat Pembayaran Vendor · Batch','Konfirmasi setelah pembayaran benar-benar dilakukan di bank. AERIS tidak melakukan transfer otomatis.',`<div class="field wide"><span>${billIds.length} tagihan dipilih</span><strong class="aeris-v3-payment-total">${money(amt)}</strong></div>${aerisV3Select('Rekening pembayaran',{name:'accountId',rows:getRows('Accounts')})}<label class="field"><span>Tanggal pembayaran</span><input class="input" type="date" name="date" value="${today()}" required></label>`,p=>rpc('payVendorBatch',{...p,billIds,requestId:uuid()}));
+ }
+ if(action==='importBank'){
+  if(!getRows('Accounts').length)return toast('Buat rekening bisnis terlebih dahulu.',true);
+  openModal('Impor Mutasi Bank','CSV berisi date, description, reference, amount. Maksimum 100 baris sekali upload.',`<form id="activeModalForm"><div class="form-grid">${aerisV3Select('Rekening',{name:'accountId',rows:getRows('Accounts')})}<label class="field"><span>File CSV mutasi</span><input class="input" type="file" name="file" accept=".csv,text/csv" required></label></div></form>`,'Impor Mutasi');
+  $('activeModalForm').addEventListener('submit',async e=>{e.preventDefault();const f=e.currentTarget,btn=$('modalSubmit');if(btn.disabled)return;const file=f.elements.file.files[0];if(!file)return;btn.disabled=true;
+   try{const rows=aerisV3ParseCSV(await file.text());if(!rows.length||rows.length>100)throw new Error('File CSV harus berisi 1–100 baris.');const r=await rpc('importBankCsv',{accountId:f.elements.accountId.value,rows,requestId:uuid()});closeModal();toast(`${r.created} mutasi diimpor, ${r.duplicates} duplikat dilewati.`);await aerisV3Reload();}catch(e){toast(e.message,true);btn.disabled=false;}
+  });return;
+ }
+ if(action==='matchBank'){
+  const row=pick('BankStatements',id),possible=getRows('Transactions').filter(t=>t.accountId===row.accountId&&t.type===(num(row.amount)>0?'income':'expense')&&Math.abs(num(t.amount)-Math.abs(num(row.amount)))<.01);
+  if(!possible.length)return toast('Belum ada transaksi kas dengan rekening, arah, dan nominal yang cocok.',true);
+  return aerisV3Modal('Cocokkan Mutasi Bank','Pastikan transaksi yang dipilih sesuai dengan bukti bank.',`<label class="field wide"><span>Transaksi Kas</span><select class="select" name="transactionId">${possible.map(t=>`<option value="${esc(t.id)}">${esc(t.date)} · ${esc(t.description)} · ${money(t.amount)}</option>`).join('')}</select></label>`,p=>rpc('matchBankStatement',{id,transactionId:p.transactionId,requestId:uuid()}));
+ }
+}
+
 // Firebase guards the visible interface; backend independently verifies token + company role.
 onAuthStateChanged(auth,async user=>{if(!user){location.replace('index.html');return;}if(!user.emailVerified){await user.reload().catch(()=>{});if(!auth.currentUser?.emailVerified){location.replace('verify.html');return;}}S.user=auth.currentUser;await boot();});
 </script></body></html>
