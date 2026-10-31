@@ -2,7 +2,7 @@
 window.AERIS_CONFIG = Object.freeze({
   firebase: {
     apiKey: 'AIzaSyCQ_nHiXFHdqLJ5WroSWcqA2bpcRLyIvdw',
-    authDomain: 'convert-e7145.firebaseapp.com"',
+    authDomain: 'convert-e7145.firebaseapp.com',
     projectId: 'convert-e7145',
     appId: '1:907768708692:web:92f37a27191ef9dbbbb7c1'
   },
