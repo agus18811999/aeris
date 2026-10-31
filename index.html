@@ -189,6 +189,218 @@
     @media (prefers-reduced-motion:reduce){
       *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
     }
+    
+/* =========================================
+   AERIS — DESKTOP HERO REFINEMENT
+   Hanya mengubah bagian kiri
+========================================= */
+
+@media (min-width: 1081px) {
+
+  .layout {
+    align-items: start;
+  }
+
+  /* Panel kiri lebih compact */
+  .showcase {
+    min-height: 0;
+    height: auto;
+    padding-bottom: 0;
+    background:
+      radial-gradient(
+        ellipse at 57% 72%,
+        rgba(72,193,245,.21),
+        transparent 56%
+      ),
+      radial-gradient(
+        ellipse at 5% 5%,
+        rgba(255,255,255,.93),
+        transparent 57%
+      ),
+      linear-gradient(
+        143deg,
+        #f3fbff 0%,
+        #d9f1ff 50%,
+        #9ad4f8 100%
+      );
+  }
+
+  /* Brand lebih ringkas */
+  .brand-row {
+    padding: 23px 31px 0;
+  }
+
+  .brand-mark {
+    width: 45px;
+    height: 45px;
+    border-radius: 14px;
+    font-size: 23px;
+  }
+
+  .brand-name {
+    font-size: 25px;
+  }
+
+  /* Kurangi ruang kosong judul */
+  .showcase-content {
+    padding: 22px 33px 0;
+  }
+
+  .headline {
+    max-width: 680px;
+    font-size: clamp(39px, 3.45vw, 55px);
+    line-height: 1.07;
+    margin: 12px 0;
+    letter-spacing: -.066em;
+  }
+
+  .intro {
+    max-width: 595px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .selling-points {
+    margin-top: 15px;
+    gap: 7px;
+  }
+
+  .selling-point {
+    padding: 7px 10px;
+  }
+
+  /* Ilustrasi lebih pendek */
+  .showcase-visual {
+    width: calc(100% - 46px);
+    max-width: 705px;
+    height: clamp(355px, 32vw, 470px);
+    aspect-ratio: auto;
+    margin: -4px auto -14px;
+    transform: none;
+    flex: none;
+    overflow: visible;
+  }
+
+  /* Ambient lighting di belakang ilustrasi */
+  .showcase-visual::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 7% 3% 0;
+    border-radius: 50%;
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(7,150,227,.20),
+        transparent 70%
+      );
+    filter: blur(20px);
+    pointer-events: none;
+  }
+
+  /* Hilangkan batas persegi gambar */
+  .showcase-art {
+    border-radius: 0;
+    background-size: 100% 100%;
+    background-position: center;
+
+    filter: drop-shadow(
+      0 13px 20px rgba(12,106,176,.09)
+    );
+
+    -webkit-mask-image:
+      linear-gradient(
+        to right,
+        transparent 0%,
+        #000 9%,
+        #000 91%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to bottom,
+        transparent 0%,
+        #000 10%,
+        #000 84%,
+        transparent 100%
+      );
+
+    -webkit-mask-composite: source-in;
+
+    mask-image:
+      linear-gradient(
+        to right,
+        transparent 0%,
+        #000 9%,
+        #000 91%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to bottom,
+        transparent 0%,
+        #000 10%,
+        #000 84%,
+        transparent 100%
+      );
+
+    mask-composite: intersect;
+  }
+
+  /* Floating cards */
+  .float-chip {
+    box-shadow:
+      0 10px 26px rgba(12,103,178,.11);
+  }
+
+  .float-chip.approval {
+    left: 0;
+    top: 48%;
+  }
+
+  .float-chip.reconcile {
+    right: 0;
+    bottom: 16%;
+  }
+
+  .visual-caption {
+    left: 7%;
+    bottom: 11%;
+  }
+
+  /* Footer lebih dekat */
+  .showcase-footer {
+    padding: 3px 31px 23px;
+  }
+}
+
+/* Laptop desktop lebih kecil */
+@media (min-width:1081px) and (max-width:1250px) {
+
+  .showcase-content {
+    padding: 19px 26px 0;
+  }
+
+  .headline {
+    font-size: 40px;
+  }
+
+  .intro {
+    font-size: 12px;
+  }
+
+  .showcase-visual {
+    height: 370px;
+    width: calc(100% - 24px);
+  }
+
+  .brand-row {
+    padding: 21px 25px 0;
+  }
+
+  .showcase-footer {
+    padding: 3px 24px 20px;
+  }
+}
+
   </style>
 </head>
 <body>
